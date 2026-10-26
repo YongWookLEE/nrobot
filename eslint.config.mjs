@@ -12,6 +12,10 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // 개발 도구 작업 공간·변환 산출물·비공개 자료
+    ".dryforge/**",
+    "generated/**",
+    "private/**",
   ]),
 ]);
 
