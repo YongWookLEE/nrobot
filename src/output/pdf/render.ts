@@ -1,5 +1,6 @@
 // 서버 전용: 견적서 PDF (spec 12절). 기존 pdf_quote.py 의 배치를 그대로 옮긴다.
 import path from "node:path";
+import { readFileSync } from "node:fs";
 import PDFDocument from "pdfkit";
 import baseLayout from "../../../assets/layout/base_layout.json";
 import { calculate, lineAmount } from "@/domain/calculate";
@@ -442,7 +443,10 @@ export async function renderQuotePdfWithInfo(quote: QuoteInput, deps: PdfDeps): 
     if (idx === 0) {
       for (const [file, x, by, w, h] of logos) {
         // 기존 좌표는 아래에서 위로 잰 그림 아래쪽(by). 위쪽 = -(by + h)
-        doc.image(path.join(root, file), x, -(by + h), { width: w, height: h });
+        // root는 시험에서 바뀔 수 있으므로 추적 범위를 넓히지 않는다.
+        // 배포에는 next.config.ts가 지정한 세 로고만 포함한다.
+        const logo = readFileSync(/* turbopackIgnore: true */ path.join(/* turbopackIgnore: true */ root, file));
+        doc.image(logo, x, -(by + h), { width: w, height: h });
       }
     }
     doc.restore();
