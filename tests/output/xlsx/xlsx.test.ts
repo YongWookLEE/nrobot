@@ -1,11 +1,13 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import ExcelJS from "exceljs";
+import sharp from "sharp";
 import { describe, expect, it } from "vitest";
 import { calculate, isCatalogType, lineAmount, money, type QuoteInput, type QuoteItem } from "@/domain";
 import { renderQuoteXlsx } from "@/output/xlsx";
 import { colName } from "@/output/xlsx/layout";
 import { round2, splitLines, textHeight } from "@/output/xlsx/pymath";
+import { createLoader } from "@/pricelists/load";
 import {
   buildQuote,
   fixtureCatalog,
@@ -175,6 +177,38 @@ function manualQuote(type: QuoteInput["quoteType"], items: Array<Partial<QuoteIt
 }
 
 describe("Excel 생성 — 규칙", () => {
+  it.skipIf(!existsSync(path.join(ROOT, "generated/pricelists/catalog.json")))("실제 사진의 큰 파일 반복·전체 종류도 100품목 응답 한도 안이다", async () => {
+    const loader = createLoader(path.join(ROOT, "generated/pricelists"));
+    const ids = Object.keys(loader.loadProductCatalog().images);
+    const largest = [...ids].sort((a, b) => loader.loadCatalogImage(b)!.data.length - loader.loadCatalogImage(a)!.data.length)[0];
+    const sizes: number[] = [];
+    for (const imageIds of [[largest], ids]) {
+      const quote = manualQuote("catalog", Array.from({ length: 100 }, (_, i) => ({ price: 1000, imageIds: [imageIds[i % imageIds.length]] })));
+      const buf = await renderQuoteXlsx(quote, { getImage: (id) => loader.loadCatalogImage(id) });
+      sizes.push(buf.length);
+    }
+    console.info(`실제 사진 100품목 xlsx 크기(반복/전체): ${sizes.join(" / ")} bytes`);
+    sizes.forEach((size) => expect(size).toBeLessThan(4_500_000));
+  }, 30_000);
+
+  it("같은 큰 사진을 100번 배치해도 파일에는 한 번만 저장한다", async () => {
+    const pixels = Buffer.alloc(600 * 600 * 3);
+    let seed = 123456789;
+    for (let i = 0; i < pixels.length; i++) {
+      seed ^= seed << 13;
+      seed ^= seed >>> 17;
+      seed ^= seed << 5;
+      pixels[i] = seed & 255;
+    }
+    const photo = await sharp(pixels, { raw: { width: 600, height: 600, channels: 3 } }).png().toBuffer();
+    const quote = manualQuote("catalog", Array.from({ length: 100 }, () => ({ price: 1000, imageIds: ["same-photo"] })));
+    const buf = await renderQuoteXlsx(quote, { getImage: () => ({ data: photo, ext: "png" }) });
+    expect(buf.length).toBeLessThan(4_500_000);
+    const { wb, media } = await loadXlsx(buf);
+    expect(media).toBe(4); // 세 로고 + 재사용하는 제품 사진 하나
+    expect(wb.worksheets.reduce((n, ws) => n + ws.getImages().length, 0)).toBe(103);
+  }, 30_000);
+
   for (const type of ["vat", "total", "cost", "catalog", "catalog2"] as const) {
     it(`${type}: 1~100품목의 수식·시트 분할과 0원 계산값`, async () => {
       for (const count of [1, 2, 3, 4, 5, 8, 9, 10, 20, 40, 100]) {
@@ -347,7 +381,14 @@ describe.skipIf(!hasLegacy)("기존 xlsx와 비교 (private/compare)", () => {
       expect(formulaMap(mine.wb)).toEqual(formulaMap(legacy.wb));
       const results = (wb: ExcelJS.Workbook) => formulaCells(wb).map((f) => f.result);
       expect(results(mine.wb)).toEqual(results(legacy.wb));
-      expect(mine.media).toBe(legacy.media);
+      // 사진 재사용으로 ZIP의 이미지 파일 수는 줄어도 표시되는 그림 수는 같다.
+      expect(mine.media).toBeLessThanOrEqual(legacy.media);
+      const anchors = async (zip: typeof mine.zip) => {
+        const drawings = Object.keys(zip.files).filter((n) => /^xl\/drawings\/drawing\d+\.xml$/.test(n));
+        const xml = await Promise.all(drawings.map((n) => zip.file(n)!.async("string")));
+        return xml.reduce((sum, text) => sum + (text.match(/<(?:\w+:)?oneCellAnchor(?:\s[^>]*)?>/g)?.length ?? 0), 0);
+      };
+      expect(await anchors(mine.zip)).toBe(await anchors(legacy.zip));
       mine.wb.worksheets.forEach((ws, i) => {
         const old = legacy.wb.worksheets[i];
         expect(ws.model.merges.length).toBe(old.model.merges.length);

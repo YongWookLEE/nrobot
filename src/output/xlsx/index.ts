@@ -1,5 +1,6 @@
 // 편집 가능한 견적서 xlsx (spec 13절 — 기존 xlsx_quote.py write_xlsx 이식, ExcelJS 사용).
 import { readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
 import path from "node:path";
 import ExcelJS from "exceljs";
 import type { QuoteInput } from "@/domain";
@@ -59,7 +60,7 @@ function columnWidth(pt: number): number {
   return Math.max(0.01, cw);
 }
 
-function writeSheet(wb: ExcelJS.Workbook, page: Page, index: number, count: number): void {
+function writeSheet(wb: ExcelJS.Workbook, page: Page, index: number, count: number, imageCache: Map<string, number>): void {
   const lastCol = page.xs.length - 1;
   const lastRow = page.ys.length - 1;
   const ws = wb.addWorksheet(page.name, {
@@ -114,7 +115,14 @@ function writeSheet(wb: ExcelJS.Workbook, page: Page, index: number, count: numb
 
   for (const img of page.images) {
     const extension = img.ext === "png" || isPng(img.data) ? "png" : "jpeg";
-    const id = wb.addImage({ buffer: img.data as unknown as ExcelJS.Buffer, extension });
+    // 같은 사진이 여러 품목·시트에 반복되어도 ZIP에는 한 번만 넣는다.
+    // 셀마다 그림 앵커는 따로 유지하므로 위치·크기와 편집 동작은 같다.
+    const key = `${extension}:${createHash("sha256").update(img.data).digest("hex")}`;
+    let id = imageCache.get(key);
+    if (id === undefined) {
+      id = wb.addImage({ buffer: img.data as unknown as ExcelJS.Buffer, extension });
+      imageCache.set(key, id);
+    }
     let col = 0;
     let row = 0;
     page.xs.forEach((v, k) => {
@@ -140,7 +148,8 @@ export async function renderQuoteXlsx(quote: QuoteInput, deps: XlsxDeps): Promis
   const { pages } = makePages(quote, { getImage: (id) => deps.getImage(id), logos: loadLogos() });
   const wb = new ExcelJS.Workbook();
   wb.calcProperties.fullCalcOnLoad = true;
-  pages.forEach((page, i) => writeSheet(wb, page, i + 1, pages.length));
+  const imageCache = new Map<string, number>();
+  pages.forEach((page, i) => writeSheet(wb, page, i + 1, pages.length, imageCache));
   const out = await wb.xlsx.writeBuffer();
   return Buffer.from(out as ArrayBuffer);
 }
