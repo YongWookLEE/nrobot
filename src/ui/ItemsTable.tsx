@@ -104,13 +104,13 @@ export function ItemsTable({ quoteType, items, lines, groups, catalog, onEdit, o
                   )}
                 </td>
                 <td className="px-1 py-2">
-                  <input className={cls.cellInput} aria-label="적용률" inputMode="decimal" value={row.priceRate} onChange={edit("priceRate")} title="100%는 정상가, 90%는 10% 할인" />
+                  <input className={cls.cellInput} aria-label="적용률" inputMode="decimal" maxLength={6} value={row.priceRate} onChange={edit("priceRate")} title="100%는 정상가, 90%는 10% 할인" />
                 </td>
                 <td className="px-1 py-2">
                   <input className={cls.cellInput} aria-label="단위" value={row.unit} readOnly={linked} maxLength={catalogType ? 10000 : 20} onChange={edit("unit")} />
                 </td>
                 <td className="px-1 py-2">
-                  <input className={cls.cellInput} aria-label="수량" inputMode="decimal" value={row.qty} onChange={edit("qty")} />
+                  <input className={cls.cellInput} aria-label="수량" inputMode="decimal" maxLength={11} value={row.qty} onChange={edit("qty")} />
                 </td>
                 {cost ? (
                   <>

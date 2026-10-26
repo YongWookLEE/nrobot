@@ -238,7 +238,8 @@ describe("저장된 초안 복원", () => {
     const { items, ...rest } = restored!;
     const { items: original, ...originalRest } = d;
     expect(rest).toEqual(originalRest);
-    expect(items.map(({ key: _key, ...r }) => r)).toEqual(original.map(({ key: _key, ...r }) => r));
+    const withoutKey = (rows: typeof items) => rows.map((r) => ({ ...r, key: "" }));
+    expect(withoutKey(items)).toEqual(withoutKey(original));
   });
   it("모양이 다르면 null", () => {
     expect(normalizeDraft(null, base())).toBeNull();

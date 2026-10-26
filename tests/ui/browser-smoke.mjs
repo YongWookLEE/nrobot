@@ -38,7 +38,7 @@ async function submitAndCollect(page, count) {
   await page.getByTestId("status").filter({ hasText: /견적서를 저장했습니다|입력내용은 유지/ }).waitFor();
   for (let i = 0; i < 50 && downloads.length < count; i++) await page.waitForTimeout(100);
   page.off("download", listener);
-  return { downloads, status: await page.getByTestId("status").innerText() };
+  return { downloads, status: (await page.getByTestId("status").innerText()).replace(/\n?[^\n]*다시 내려받기.*$/s, "") };
 }
 
 const numberInput = (page) => page.locator("#quote-number");
@@ -92,7 +92,8 @@ try {
   assert.notEqual(await page.getByLabel("품목명", { exact: true }).first().inputValue(), "");
   await page.getByLabel("저장 형식").selectOption("both");
   let r = await submitAndCollect(page, 2);
-  assert.equal(r.status, `견적서를 저장했습니다. ${first}`);
+  assert.equal(r.status.split("\n")[0], `견적서를 저장했습니다. ${first}`);
+  assert.equal(await page.getByRole("link", { name: /다시 내려받기$/ }).count(), 2);
   assert.deepEqual(r.downloads.sort(), ["견적서_시험 거래처.pdf", "견적서_시험 거래처.xlsx"]);
   await page.waitForFunction((n) => document.querySelector("#quote-number").value !== n, first);
   assert.equal(serial(await numberInput(page).inputValue()), 2);
@@ -184,6 +185,17 @@ try {
   await page.getByLabel(/홍길동 · 001부터/).check();
   assert.equal(await page.getByLabel("담당자 휴대폰번호").inputValue(), "010-0000-0009");
   results.push("담당자 변경 시 표시·번호(010부터) 전환, 휴대폰 수정값 기억");
+
+  // 직접 입력 번호는 작성일을 바꾸면 자동 번호로 돌아간다
+  const today = await page.getByLabel("작성일 *").inputValue();
+  await numberInput(page).fill("직접-1");
+  await page.getByText("견적번호 (직접 입력)").waitFor();
+  await page.getByLabel("작성일 *").fill("2026-01-02");
+  await page.waitForFunction(() => document.querySelector("#quote-number").value === "NSFF0-20260102-001");
+  await page.getByText("견적번호 (자동)").waitFor();
+  await page.getByLabel("작성일 *").fill(today);
+  await page.waitForFunction(() => document.querySelector("#quote-number").value.endsWith("-006"));
+  results.push("직접 입력 번호 → 작성일 변경 시 자동 번호 복귀");
 
   // 12. 휴대폰 화면 폭: 페이지가 가로로 넘치지 않는다 (품목 표는 자체 스크롤)
   for (const pathName of ["/", "/quote"]) {

@@ -202,7 +202,7 @@ export function applyAutoCosts(row: ItemRow): ItemRow {
 /**
  * 줄의 한 칸을 고친다. 노무비·경비를 직접 고치면 그 자동 상태를 끄고, 자동 비용을 다시 계산한다.
  * @param {ItemRow} row 줄
- * @param {keyof ItemRow} field 고친 칸
+ * @param {EditableField} field 고친 칸
  * @param {string} value 새 값
  * @returns {ItemRow} 바뀐 줄
  */
@@ -464,7 +464,8 @@ export function draftTotals(draft: QuoteDraft): DraftTotals {
   }
   let discounted = subtotal;
   let fee = BigInt(0);
-  if (isCatalogType(draft.quoteType)) {
+  // 범위를 넘으면 수수료를 계산하지 않는다 (숫자 변환 정밀도 손실 방지).
+  if (isCatalogType(draft.quoteType) && !error) {
     const c = catalogTotals(subtotal);
     discounted = BigInt(c.discounted);
     fee = BigInt(c.fee);

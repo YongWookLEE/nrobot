@@ -60,13 +60,16 @@ async function getJson<T>(url: string, fallback: string): Promise<T> {
   return data;
 }
 
+/** 다시 내려받기 링크 */
+type FileLink = { name: string; url: string };
+
 /**
- * 받은 파일을 내려받기로 저장한다.
+ * 받은 파일을 내려받기로 저장하고, 브라우저가 두 번째 내려받기를 막는 경우를 위해 링크를 돌려준다.
  * @param {GeneratedFile[]} files 파일 목록
- * @returns {void}
+ * @returns {FileLink[]} 다시 내려받기 링크
  */
-function downloadFiles(files: GeneratedFile[]): void {
-  for (const file of files) {
+function downloadFiles(files: GeneratedFile[]): FileLink[] {
+  return files.map((file) => {
     const url = URL.createObjectURL(file.blob);
     const a = document.createElement("a");
     a.href = url;
@@ -74,8 +77,8 @@ function downloadFiles(files: GeneratedFile[]): void {
     document.body.append(a);
     a.click();
     a.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 60_000);
-  }
+    return { name: file.name, url };
+  });
 }
 
 /**
@@ -106,6 +109,9 @@ export function QuoteForm() {
   const [status, setStatus] = useState<Status>({ text: "", error: false });
   const [fatal, setFatal] = useState("");
   const [busy, setBusy] = useState(false);
+  const busyRef = useRef(false);
+  const [links, setLinks] = useState<FileLink[]>([]);
+  const statusRef = useRef<HTMLDivElement>(null);
   const storeRef = useRef<QuoteNumberStore | null>(null);
   const numberRequest = useRef(0);
 
@@ -340,7 +346,9 @@ export function QuoteForm() {
    */
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (busy || !storeRef.current) return;
+    // 다시 그리기 전에 두 번 눌러도 한 번만 만든다.
+    if (busyRef.current || !storeRef.current) return;
+    busyRef.current = true;
     setBusy(true);
     try {
       let productCatalog = catalogRef.current;
@@ -364,7 +372,10 @@ export function QuoteForm() {
       const number = await generateQuote(
         { date: d.date, staffId: d.staffId, manualNumber: d.numberManual ? d.number : undefined, saveFormat: d.outputFormat, body },
         storeRef.current,
-        downloadFiles,
+        (files) => {
+          for (const old of links) URL.revokeObjectURL(old.url);
+          setLinks(downloadFiles(files));
+        },
       );
       say(`견적서를 저장했습니다. ${number}`);
       change((x) => ({ ...x, numberManual: false }));
@@ -372,7 +383,9 @@ export function QuoteForm() {
     } catch (err) {
       say(`${errorText(err)}${KEEP_INPUT}`, true);
     } finally {
+      busyRef.current = false;
       setBusy(false);
+      requestAnimationFrame(() => statusRef.current?.scrollIntoView({ behavior: "smooth", block: "center" }));
     }
   }
 
@@ -386,7 +399,7 @@ export function QuoteForm() {
   );
 
   return (
-    <main className="mx-auto w-full max-w-[1320px] px-6 pt-8 pb-40 max-[800px]:px-3">
+    <main className="mx-auto w-full max-w-[1320px] px-6 pt-8 pb-40 max-[800px]:pb-64 max-[800px]:px-3">
       <div className="mb-2 flex justify-end gap-2 text-sm">
         <Link href="/" className={cls.button}>
           처음 화면
@@ -592,12 +605,22 @@ export function QuoteForm() {
         </p>
         {status.text && (
           <div
+            ref={statusRef}
             role="status"
             aria-live="polite"
             data-testid="status"
             className={`my-4 whitespace-pre-wrap break-all rounded-lg p-4 ${status.error ? "bg-[#fff0ee] text-[#a33227]" : "bg-[#e8f3eb] text-[#225533]"}`}
           >
             {status.text}
+            {status.text.startsWith("견적서를 저장했습니다.") && links.length > 0 && (
+              <span className="mt-2 flex flex-wrap gap-3">
+                {links.map((l) => (
+                  <a key={l.url} href={l.url} download={l.name} className="underline">
+                    {l.name} 다시 내려받기
+                  </a>
+                ))}
+              </span>
+            )}
           </div>
         )}
 
