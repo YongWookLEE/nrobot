@@ -48,6 +48,7 @@
 │   ├── staff/             담당자 설정(STAFF_CONFIG) 읽기·검증
 │   └── server/            API 공통 처리(입장 확인·크기 제한·파일 응답)
 ├── scripts/prepare-data.ts  빌드 전 가격표 변환 (private/prices → generated/pricelists)
+├── scripts/vercel-build.mjs 배포용 빌드 (npm run build:vercel, .env 제외·결과물 검사)
 ├── tests/                 자동 검사 (기준 정답 tests/golden은 고치지 않음)
 ├── tools/                 기준 정답 생성·모양 비교 도구
 ├── assets/                KoPub 글꼴·로고·기본 열 비율
