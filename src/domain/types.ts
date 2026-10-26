@@ -71,6 +71,8 @@ export interface QuoteItem {
 
 /** 검증·정규화된 견적 */
 export interface QuoteInput {
+  /** 요청한 파일 형식 (검증 결과에 실어 보낸다. 선택 항목) */
+  format?: OutputFormat;
   quoteType: QuoteType;
   customer: string;
   contact: string;

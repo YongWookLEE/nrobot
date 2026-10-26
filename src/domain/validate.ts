@@ -6,6 +6,7 @@ import { calculate, QuoteRangeError } from "./calculate";
 import { B0, parseDecimal, pow10, scaledToNumber, toScaled, type Decimal } from "./money";
 import {
   isCatalogType,
+  type CatalogEntry,
   OUTPUT_FORMATS,
   QUOTE_TYPES,
   type OutputFormat,
@@ -22,7 +23,7 @@ export type ValidationResult = { ok: true; value: QuoteInput } | { ok: false; er
 export interface ValidateOptions {
   /** ④⑤ 가격표. 주면 catalogRevision 확인과 연동 행 덮어쓰기를 한다. */
   catalog?: ProductCatalog;
-  /** 직접 입력 행의 사진 id가 실제로 있는지. 주지 않으면 문자열 id를 그대로 둔다. */
+  /** 직접 입력 행의 사진 id가 실제로 있는지. 주지 않으면 가격표 항목의 사진 id 기준, 가격표도 없으면 그대로 둔다. */
   imageExists?: (id: string) => boolean;
 }
 
@@ -127,24 +128,47 @@ function stringIds(value: unknown): string[] {
   return value.filter((v): v is string => typeof v === "string" && v !== "");
 }
 
+/** 확인 함수가 없으면 가격표 항목에 붙은 사진 id만 인정한다 (기존: 가격표 사진 목록 기준). */
+function defaultImageExists(catalog: ProductCatalog | undefined): ((id: string) => boolean) | undefined {
+  if (!catalog) return undefined;
+  const known = new Set(catalog.entries.flatMap((e) => e.imageIds));
+  return (id) => known.has(id);
+}
+
 function validateItem(
   raw: unknown,
   i: number,
   quoteType: QuoteType,
   options: ValidateOptions,
+  imageExists: ((id: string) => boolean) | undefined,
 ): QuoteItem {
   if (!isRecord(raw)) fail(MESSAGES.generic);
   const catalogType = isCatalogType(quoteType);
+  const isCost = quoteType === "cost";
+
+  // 기존 validation.py처럼 연동 행은 검증 전에 가격표 값으로 덮어쓴다.
+  const src: Record<string, unknown> = { ...raw };
+  const catalogId = catalogType && typeof raw.catalogId === "string" ? raw.catalogId.trim() : "";
+  let entry: CatalogEntry | undefined;
+  if (catalogId && options.catalog) {
+    entry = options.catalog.entries.find((e) => e.id === catalogId);
+    if (!entry) fail(MESSAGES.itemCatalogMissing(i));
+    src.name = entry.name;
+    src.category = entry.category;
+    src.unit = entry.unit;
+    src.note = entry.note;
+    if (entry.price !== null) src.price = entry.price;
+  }
+
   const limit = catalogType ? CATALOG_ITEM_TEXT_LIMIT : TEXT_LIMIT;
-  const category = text(raw.category, limit, MESSAGES.itemText(i));
-  const name = text(raw.name, limit, MESSAGES.itemText(i));
-  const unit = text(raw.unit, limit, MESSAGES.itemText(i));
-  const note = text(raw.note, limit, MESSAGES.itemText(i));
+  const category = text(src.category, limit, MESSAGES.itemText(i));
+  const name = text(src.name, limit, MESSAGES.itemText(i));
+  const unit = text(src.unit, limit, MESSAGES.itemText(i));
+  const note = text(src.note, limit, MESSAGES.itemText(i));
   if (!name || !unit) fail(MESSAGES.itemRequired(i));
 
-  const isCost = quoteType === "cost";
-  const qtyDec = parseDecimal(raw.qty);
-  const priceDec = isCost ? null : parseDecimal(raw.price);
+  const qtyDec = parseDecimal(src.qty);
+  const priceDec = isCost ? null : parseDecimal(src.price);
   if (!qtyDec || (!isCost && !priceDec)) fail(MESSAGES.itemMissingNumber(i));
   const qty = toScaled(qtyDec, 3);
   if (qty === null || qty <= B0 || qty > MAX_QTY) fail(MESSAGES.itemNumber(i));
@@ -156,8 +180,8 @@ function validateItem(
   }
 
   let rate = MAX_RATE;
-  if (raw.priceRate !== undefined) {
-    const rateDec = parseDecimal(raw.priceRate);
+  if (src.priceRate !== undefined) {
+    const rateDec = parseDecimal(src.priceRate);
     if (!rateDec) fail(MESSAGES.itemMissingRate(i));
     const r = toScaled(rateDec, 2);
     if (r === null || r < B0 || r > MAX_RATE) fail(MESSAGES.itemRate(i));
@@ -175,10 +199,10 @@ function validateItem(
   };
 
   if (isCost) {
-    if (isBlank(raw.material) || isBlank(raw.labor) || isBlank(raw.expense)) fail(MESSAGES.itemMissingCost(i));
-    const material = wholeWon(parseDecimal(raw.material));
-    const labor = wholeWon(parseDecimal(raw.labor));
-    const expense = wholeWon(parseDecimal(raw.expense));
+    // 기존 Decimal(str(x))가 실패하는 값(없음·빈칸·숫자 아님)은 '모두 입력하세요'
+    const costs = [src.material, src.labor, src.expense].map((v) => (isBlank(v) ? null : parseDecimal(v)));
+    if (costs.some((d) => d === null)) fail(MESSAGES.itemMissingCost(i));
+    const [material, labor, expense] = costs.map(wholeWon);
     if (material === null || labor === null || expense === null) fail(MESSAGES.itemCost(i));
     item.material = Number(material);
     item.labor = Number(labor);
@@ -186,23 +210,15 @@ function validateItem(
   }
 
   if (catalogType) {
-    const catalogId = typeof raw.catalogId === "string" ? raw.catalogId.trim() : "";
-    const ids = stringIds(raw.imageIds);
-    if (catalogId && options.catalog) {
-      const entry = options.catalog.entries.find((e) => e.id === catalogId);
-      if (!entry) fail(MESSAGES.itemCatalogMissing(i));
-      item.name = entry.name;
-      item.category = entry.category;
-      item.unit = entry.unit;
-      item.note = entry.note;
-      if (entry.price !== null) item.price = entry.price;
+    if (entry) {
       item.template = entry.template;
       item.catalogId = entry.id;
       item.imageIds = [...entry.imageIds];
       item.model = entry.model;
     } else {
       if (catalogId) item.catalogId = catalogId;
-      item.imageIds = options.imageExists ? ids.filter((id) => options.imageExists!(id)) : ids;
+      const ids = stringIds(raw.imageIds);
+      item.imageIds = imageExists ? ids.filter((id) => imageExists(id)) : ids;
     }
   }
   return item;
@@ -212,6 +228,7 @@ function run(raw: unknown, staffList: readonly Staff[], options: ValidateOptions
   if (!isRecord(raw)) fail(MESSAGES.generic);
 
   if (!OUTPUT_FORMATS.includes(raw.format as OutputFormat)) fail(MESSAGES.format);
+  const format = raw.format as OutputFormat;
   if (!QUOTE_TYPES.includes(raw.quoteType as QuoteType)) fail(MESSAGES.quoteType);
   const quoteType = raw.quoteType as QuoteType;
 
@@ -244,8 +261,9 @@ function run(raw: unknown, staffList: readonly Staff[], options: ValidateOptions
     if (options.catalog && catalogRevision !== options.catalog.revision) fail(MESSAGES.catalogRevision);
   }
 
+  const imageExists = options.imageExists ?? defaultImageExists(options.catalog);
   if (!Array.isArray(raw.items) || raw.items.length < 1 || raw.items.length > MAX_ITEMS) fail(MESSAGES.itemCount);
-  const items = raw.items.map((it, idx) => validateItem(it, idx + 1, quoteType, options));
+  const items = raw.items.map((it, idx) => validateItem(it, idx + 1, quoteType, options, imageExists));
 
   const notesRaw = raw.notes === undefined ? "" : raw.notes;
   if (typeof notesRaw !== "string" || charCount(notesRaw) > NOTES_LIMIT) fail(MESSAGES.notes);
@@ -258,6 +276,7 @@ function run(raw: unknown, staffList: readonly Staff[], options: ValidateOptions
   }
 
   const value: QuoteInput = {
+    format,
     quoteType,
     customer,
     contact,

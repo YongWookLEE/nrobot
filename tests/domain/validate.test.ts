@@ -228,3 +228,79 @@ describe("입력 검증 — 추가 규칙", () => {
     expect(r.ok && r.value.catalogRevision).toBe(CATALOG.revision);
   });
 });
+
+describe("입력 검증 — 가격표 연동 순서·사진·비용·형식", () => {
+  const priced = () => CATALOG.entries.find((e) => e.price !== null)!;
+
+  it("연동 행은 검증 전에 가격표 값으로 덮어쓴다: catalogId와 수량만 있어도 통과", () => {
+    const entry = priced();
+    const r = validateQuote(
+      base({ quoteType: "catalog", catalogRevision: CATALOG.revision, items: [{ catalogId: entry.id, qty: "1" }] }),
+      STAFF,
+      { catalog: CATALOG },
+    );
+    expect(r.ok && r.value.items[0]).toMatchObject({
+      name: entry.name,
+      category: entry.category,
+      unit: entry.unit,
+      note: entry.note,
+      price: entry.price,
+      qty: 1,
+      priceRate: 100,
+      catalogId: entry.id,
+    });
+  });
+
+  it("품목명이 비어 있어도 삭제된 제품이면 삭제 메시지가 먼저", () => {
+    const r = validateQuote(
+      base({ quoteType: "catalog", catalogRevision: CATALOG.revision, items: [{ catalogId: "gone", name: " ", unit: "", qty: "1", price: "1" }] }),
+      STAFF,
+      { catalog: CATALOG },
+    );
+    expect(r).toEqual({ ok: false, error: "1번 제품이 엑셀에서 삭제되거나 이름이 변경되었습니다. 다시 선택하세요." });
+  });
+
+  it("가격표 값의 앞뒤 공백도 지운다", () => {
+    const entry = priced();
+    const spaced: ProductCatalog = {
+      ...CATALOG,
+      entries: [{ ...entry, name: "  공백 이름  ", category: " 구분 ", unit: " 대 ", note: " 비고 " }],
+    };
+    const r = validateQuote(
+      base({ quoteType: "catalog", catalogRevision: CATALOG.revision, items: [{ catalogId: entry.id, qty: "1" }] }),
+      STAFF,
+      { catalog: spaced },
+    );
+    expect(r.ok && r.value.items[0]).toMatchObject({ name: "공백 이름", category: "구분", unit: "대", note: "비고" });
+  });
+
+  it("사진 확인 함수가 없으면 가격표에 붙은 사진 id만 남긴다", () => {
+    const known = CATALOG.entries.find((e) => e.imageIds.length > 0)!.imageIds[0];
+    const r = validateQuote(
+      base({
+        quoteType: "catalog2",
+        catalogRevision: CATALOG.revision,
+        items: [{ name: "직접", unit: "대", qty: "1", price: "1", imageIds: ["없는사진", known] }],
+      }),
+      STAFF,
+      { catalog: CATALOG },
+    );
+    expect(r.ok && r.value.items[0].imageIds).toEqual([known]);
+  });
+
+  it("숫자가 아닌 비용은 '모두 입력하세요', 음수·소수·초과는 '원 단위 정수'", () => {
+    const item = (expense: unknown) => [{ name: "a", unit: "식", qty: "1", material: "1", labor: "1", expense }];
+    const missing = { ok: false, error: "1번 재료비·노무비·경비를 모두 입력하세요. 없는 비용은 0으로 입력하세요." };
+    const bad = { ok: false, error: "1번 비용은 0 이상의 원 단위 정수로 입력하세요." };
+    expect(validateQuote(base({ quoteType: "cost", items: item("abc") }), STAFF)).toEqual(missing);
+    expect(validateQuote(base({ quoteType: "cost", items: item(true) }), STAFF)).toEqual(missing);
+    expect(validateQuote(base({ quoteType: "cost", items: item("-1") }), STAFF)).toEqual(bad);
+    expect(validateQuote(base({ quoteType: "cost", items: item("0.5") }), STAFF)).toEqual(bad);
+    expect(validateQuote(base({ quoteType: "cost", items: item("100000000001") }), STAFF)).toEqual(bad);
+  });
+
+  it("저장 형식을 결과에 싣는다", () => {
+    const r = validateQuote(base({ format: "xlsx" }), STAFF);
+    expect(r.ok && r.value.format).toBe("xlsx");
+  });
+});
