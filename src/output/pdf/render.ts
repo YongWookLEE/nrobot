@@ -255,7 +255,11 @@ export async function renderQuotePdfWithInfo(quote: QuoteInput, deps: PdfDeps): 
     const blob = deps.getImage(id);
     let opened: { image: unknown; width: number; height: number } | null = null;
     if (blob) {
-      const image = doc.openImage(blob.data) as unknown as { width: number; height: number };
+      // PDFKit은 이미지 객체를 재사용할 수 있지만 @types/pdfkit에는 openImage가 빠져 있다.
+      // 바이트마다 다시 image()를 호출하면 같은 사진도 중복 내장되어 응답 크기가 커진다.
+      const image = (doc as PDFKit.PDFDocument & {
+        openImage(data: Buffer): { width: number; height: number };
+      }).openImage(blob.data);
       opened = { image, width: image.width, height: image.height };
     }
     imageCache.set(id, opened);
