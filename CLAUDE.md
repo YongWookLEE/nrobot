@@ -23,9 +23,11 @@ nrobot-web/
 │   ├── auth/ + proxy.ts         ← 공용 비밀번호 입장(서명 쿠키)
 │   ├── staff/                   ← STAFF_CONFIG 환경 변수 읽기·검증
 │   ├── output/                  ← PDF·Excel 생성기 (합성 입력 비교 모양 승인 완료)
-│   └── app/                     ← 페이지·API (입장 화면만 있음, 메인 화면 미구현)
+│   ├── server/                  ← 인증·입력 크기 제한·파일 생성 응답 경계
+│   └── app/                     ← 입장 화면·조회/생성 API (랜딩·견적 입력 화면 미구현)
 ├── scripts/prepare-data.ts      ← 빌드 전 가격표 변환(private/prices → generated/pricelists)
 ├── tools/golden/generate.py     ← 기존 Python 코드로 기준 정답 생성(일회성)
+├── tools/compare/               ← 기존/새 PDF 비교·실제 예시 입력 복원 (산출물은 private)
 ├── tests/golden/, tests/fixtures/ ← 기준 정답·합성 시험 엑셀(가짜 데이터)
 ├── assets/                      ← KoPub 글꼴(무료)·로고·기본 열 비율
 ├── private/   (git 제외)        ← 가격표 원본, 맑은 고딕, 기존 견적서 예시, 실제 가격표 정답, 비교 산출물
@@ -48,6 +50,7 @@ nrobot-web/
 5. `nrobot-web` 밖의 경로를 빌드·실행 코드에서 참조하지 않는다. 예외는 기준 정답 생성 도구다.
 6. 모양(PDF 배치)은 사용자가 비교 그림을 보고 승인해야 완료다.
 7. 검사 명령 `npm run lint && npm run typecheck && npm test && npm run build`가 모두 0이어야 한다. `build`에는 `private/`가 필요하다.
+8. 배포 번들에는 비공개 원본 가격표·견적 예시·환경 변수 파일을 넣지 않는다. `node tests/api/check-traces.mjs`로 필요한 변환 자료·글꼴·로고 포함과 원본 제외를 함께 확인한다.
 
 ## 작업 전에 읽을 것
 
