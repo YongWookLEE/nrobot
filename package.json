@@ -6,6 +6,7 @@
     "dev": "next dev",
     "prepare-data": "tsx scripts/prepare-data.ts",
     "build": "npm run prepare-data && next build",
+    "build:vercel": "node scripts/vercel-build.mjs",
     "start": "next start",
     "lint": "eslint",
     "typecheck": "next typegen && tsc --noEmit",

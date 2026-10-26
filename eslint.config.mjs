@@ -16,6 +16,8 @@ const eslintConfig = defineConfig([
     ".dryforge/**",
     "generated/**",
     "private/**",
+    // Vercel 빌드 결과물·연결 정보
+    ".vercel/**",
   ]),
 ]);
 
