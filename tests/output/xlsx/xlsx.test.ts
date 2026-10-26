@@ -8,6 +8,7 @@ import { colName } from "@/output/xlsx/layout";
 import { round2, splitLines, textHeight } from "@/output/xlsx/pymath";
 import {
   buildQuote,
+  fixtureCatalog,
   evaluate,
   formulaCells,
   imageDeps,
@@ -174,6 +175,50 @@ function manualQuote(type: QuoteInput["quoteType"], items: Array<Partial<QuoteIt
 }
 
 describe("Excel 생성 — 규칙", () => {
+  for (const type of ["vat", "total", "cost", "catalog", "catalog2"] as const) {
+    it(`${type}: 1~100품목의 수식·시트 분할과 0원 계산값`, async () => {
+      for (const count of [1, 2, 3, 4, 5, 8, 9, 10, 20, 40, 100]) {
+        const quote = manualQuote(type, Array.from({ length: count }, (_, i) => ({
+          name: `시험 ${i + 1}`,
+          category: i % 3 ? "같은 구분" : "",
+          price: 12_345,
+          material: 1000,
+          labor: 2813,
+          expense: 84,
+          qty: [1, 1.125, 3][i % 3],
+          priceRate: [0, 77, 99.99, 100][i % 4],
+        })));
+        await checkWorkbook(quote, await renderQuoteXlsx(quote, NO_IMAGES));
+      }
+    }, 30_000);
+  }
+
+  it("받은 사람이 수량과 단가를 바꾸면 마지막 시트와 상단 수식도 다시 계산된다", async () => {
+    const quote = manualQuote("catalog", Array.from({ length: 5 }, () => ({ price: 1000 })));
+    const { wb, roles } = await checkWorkbook(quote, await renderQuoteXlsx(quote, NO_IMAGES));
+    const first = roles.lines[0];
+    const refs = LINE_RE.exec(first.formula)!;
+    wb.getWorksheet(first.sheet)!.getCell(refs[1].split("!")[1]).value = 2;
+    wb.getWorksheet(first.sheet)!.getCell(refs[2].split("!")[1]).value = 25_000_000;
+    expect(evaluate(wb, roles.summary[0].sheet, roles.summary[0].formula)).toBe(49_003_920);
+    expect(evaluate(wb, roles.topValue.sheet, roles.topValue.formula)).toBe(49_003_920);
+    expect(evaluate(wb, roles.topText.sheet, roles.topText.formula)).toBe("일금 49,003,920 원정");
+  });
+
+  it("100개 연동 제품은 사진과 줄별 서식을 유지하며 4.5MB 미만이다", async () => {
+    const sample = RENDER_CASES.find((c) => c.name === "catalog-4")!;
+    const seed = await buildQuote(sample.input);
+    const quote = { ...seed, items: Array.from({ length: 100 }, (_, i) => seed.items[i % seed.items.length]) };
+    const buf = await renderQuoteXlsx(quote, await imageDeps());
+    expect(buf.length).toBeLessThan(4_500_000);
+    const { wb } = await checkWorkbook(quote, buf);
+    expect(wb.worksheets).toHaveLength(25);
+    const imagesPerItem = quote.items.reduce((n, item) => n + (item.imageIds?.length ?? 0), 0);
+    expect(wb.worksheets.reduce((n, ws) => n + ws.getImages().length, 0)).toBe(imagesPerItem + 3);
+    const { images } = await fixtureCatalog();
+    expect(images.size).toBeGreaterThan(0);
+  }, 30_000);
+
   it("'=', '+', '@'로 시작하는 입력은 문자로 들어간다", async () => {
     const quote = manualQuote("vat", [{ name: "=1+1", note: "+SUM(A1:A2)", category: "@cat", unit: "=A1" }], {
       customer: "=HYPERLINK(\"http://example.com\")",
@@ -198,6 +243,7 @@ describe("Excel 생성 — 규칙", () => {
     for (const [price, want] of [
       [49_999_999, 49_999_999],
       [50_000_000, 49_000_000],
+      [50_000_001, 49_000_001],
     ]) {
       for (const type of ["catalog", "catalog2"] as const) {
         const quote = manualQuote(type, [{ price }]);
@@ -208,7 +254,7 @@ describe("Excel 생성 — 규칙", () => {
     }
     // 여러 줄 합으로 경계를 넘는 경우 (시트 2개)
     const quote = manualQuote("catalog", [{ price: 10_000_000, qty: 4 }, { price: 3_333_333, qty: 3 }, { price: 1 }, { price: 1 }, { price: 1 }]);
-    expect(calculate(quote.items, "catalog").total).toBe(49_999_999 + 3);
+    expect(calculate(quote.items, "catalog").total).toBe(49_000_002);
     await checkWorkbook(quote, await renderQuoteXlsx(quote, NO_IMAGES));
   });
 
@@ -324,7 +370,10 @@ describe.skipIf(!hasLegacy)("기존 xlsx와 비교 (private/compare)", () => {
           for (let col = 1; col <= ws.columnCount; col++) {
             const a = ws.getCell(r, col);
             const b = old.getCell(r, col);
-            const val = (x: ExcelJS.Cell) => (x.type === ExcelJS.ValueType.Formula ? x.result : x.value === "" ? null : x.value);
+            const val = (x: ExcelJS.Cell) => {
+              const master = x.master;
+              return master.type === ExcelJS.ValueType.Formula ? master.result : x.value === "" ? null : x.value;
+            };
             expect({ at: a.address, v: val(a) }).toEqual({ at: b.address, v: val(b) });
             expect({ at: a.address, name: a.font?.name, size: a.font?.size, bold: !!a.font?.bold, color: a.font?.color?.argb?.toUpperCase() }).toEqual({
               at: b.address,

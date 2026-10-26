@@ -30,7 +30,10 @@ export function fixtureCatalog(): Promise<ParsedProductCatalog> {
 
 export async function buildQuote(input: Record<string, unknown>): Promise<QuoteInput> {
   const catalog = isCatalogType(input.quoteType as QuoteInput["quoteType"]) ? (await fixtureCatalog()).catalog : undefined;
-  const r = validateQuote(input, STAFF, catalog ? { catalog } : {});
+  // Python 기준 입력은 당시 변환기의 revision을 담고 있다. 출력 비교에서는
+  // 같은 합성 원본을 현 변환기로 읽어 현재 revision으로 검증한다.
+  const raw = catalog ? { ...input, catalogRevision: catalog.revision } : input;
+  const r = validateQuote(raw, STAFF, catalog ? { catalog } : {});
   if (!r.ok) throw new Error(r.error);
   return r.value;
 }
@@ -51,7 +54,7 @@ export async function imageDeps() {
  */
 export async function loadXlsx(buf: Buffer, stripDrawings = false): Promise<{ wb: ExcelJS.Workbook; media: number; zip: JSZip }> {
   const zip = await JSZip.loadAsync(buf);
-  const media = Object.keys(zip.files).filter((n) => n.startsWith("xl/media/")).length;
+  const media = Object.entries(zip.files).filter(([n, entry]) => n.startsWith("xl/media/") && !entry.dir).length;
   let data = buf;
   if (stripDrawings) {
     const copy = await JSZip.loadAsync(buf);
