@@ -31,7 +31,10 @@ export const KOPUB_MISSING = "KoPub돋움체 글꼴 파일(assets/fonts)이 없�
 
 /** 글꼴 파일의 절대 경로 */
 export function fontFilePath(key: FontFileKey, root: string = process.cwd()): string {
-  return path.join(root, FONT_FILES[key]);
+  // root 재정의는 글꼴 누락 시험용이다. 동적 root 전체를 번들에 훑어 넣지 않고,
+  // 실제 네 글꼴은 next.config.ts의 좁은 outputFileTracingIncludes로 포함한다.
+  // Next 자체도 동적 path.join/fs 인자에 이 주석을 사용한다.
+  return path.join(/* turbopackIgnore: true */ root, FONT_FILES[key]);
 }
 
 /** PDF 본문 글꼴 (보통·굵게 파일 경로) */
@@ -48,16 +51,16 @@ export interface PdfFontFiles {
 export function pdfFontFiles(type: QuoteType, root: string = process.cwd()): PdfFontFiles {
   if (isCatalogType(type)) {
     const medium = fontFilePath("kopubMedium", root);
-    if (!existsSync(medium)) throw new Error(KOPUB_MISSING);
+    if (!existsSync(/* turbopackIgnore: true */ medium)) throw new Error(KOPUB_MISSING);
     return { regular: medium, bold: medium };
   }
   const regular = fontFilePath("malgun", root);
   const bold = fontFilePath("malgunBold", root);
-  if (!existsSync(regular) || !existsSync(bold)) throw new Error(MALGUN_MISSING);
+  if (!existsSync(/* turbopackIgnore: true */ regular) || !existsSync(/* turbopackIgnore: true */ bold)) throw new Error(MALGUN_MISSING);
   return { regular, bold };
 }
 
 /** 맑은 고딕 파일이 모두 있는지 (시험에서 건너뛰기 판단용) */
 export function hasMalgunFonts(root: string = process.cwd()): boolean {
-  return existsSync(fontFilePath("malgun", root)) && existsSync(fontFilePath("malgunBold", root));
+  return existsSync(/* turbopackIgnore: true */ fontFilePath("malgun", root)) && existsSync(/* turbopackIgnore: true */ fontFilePath("malgunBold", root));
 }
