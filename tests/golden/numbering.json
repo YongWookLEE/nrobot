@@ -1,0 +1,422 @@
+{
+ "starts": {
+  "a": 1,
+  "b": 10,
+  "c": 20
+ },
+ "scenarios": [
+  {
+   "name": "first-each",
+   "steps": [
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "result": "NSFF0-20261026-001",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "김철수",
+     "result": "NSFF0-20261026-010",
+     "staffId": "b"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "이영희",
+     "result": "NSFF0-20261026-020",
+     "staffId": "c"
+    }
+   ]
+  },
+  {
+   "name": "sequence",
+   "steps": [
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "result": "NSFF0-20261026-001",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "result": "NSFF0-20261026-002",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "result": "NSFF0-20261026-003",
+     "staffId": "a"
+    },
+    {
+     "op": "preview",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "result": "NSFF0-20261026-004",
+     "staffId": "a"
+    }
+   ]
+  },
+  {
+   "name": "overflow-into-next-range",
+   "steps": [
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "result": "NSFF0-20261026-001",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "result": "NSFF0-20261026-002",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "result": "NSFF0-20261026-003",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "result": "NSFF0-20261026-004",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "result": "NSFF0-20261026-005",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "result": "NSFF0-20261026-006",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "result": "NSFF0-20261026-007",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "result": "NSFF0-20261026-008",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "result": "NSFF0-20261026-009",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "result": "NSFF0-20261026-010",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "김철수",
+     "result": "NSFF0-20261026-011",
+     "staffId": "b"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "result": "NSFF0-20261026-012",
+     "staffId": "a"
+    }
+   ]
+  },
+  {
+   "name": "manual-skip",
+   "steps": [
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "manual": "NSFF0-20261026-002",
+     "result": "NSFF0-20261026-002",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "result": "NSFF0-20261026-001",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "result": "NSFF0-20261026-003",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "manual": "NSFF0-20261026-002",
+     "error": "이미 발급된 견적번호입니다. 다른 번호를 입력하세요.",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "김철수",
+     "manual": "NSFF0-20261026-001",
+     "error": "이미 발급된 견적번호입니다. 다른 번호를 입력하세요.",
+     "staffId": "b"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "김철수",
+     "manual": "ABC-1",
+     "result": "ABC-1",
+     "staffId": "b"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "이영희",
+     "manual": "ABC-1",
+     "error": "이미 발급된 견적번호입니다. 다른 번호를 입력하세요.",
+     "staffId": "c"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "김철수",
+     "manual": "NSFF0-20261026-010",
+     "result": "NSFF0-20261026-010",
+     "staffId": "b"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "김철수",
+     "result": "NSFF0-20261026-011",
+     "staffId": "b"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-27",
+     "staff": "홍길동",
+     "manual": "NSFF0-20261026-003",
+     "error": "이미 발급된 견적번호입니다. 다른 번호를 입력하세요.",
+     "staffId": "a"
+    }
+   ]
+  },
+  {
+   "name": "manual-invalid",
+   "steps": [
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "manual": " ",
+     "error": "견적번호는 1~100자로 입력하세요.",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "manual": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+     "error": "견적번호는 1~100자로 입력하세요.",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "manual": "A\tB",
+     "error": "견적번호는 1~100자로 입력하세요.",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "manual": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+     "result": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+     "staffId": "a"
+    }
+   ]
+  },
+  {
+   "name": "failure-not-consumed",
+   "steps": [
+    {
+     "op": "preview",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "result": "NSFF0-20261026-001",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "fail": true,
+     "error": "FAILED_GENERATION",
+     "staffId": "a"
+    },
+    {
+     "op": "preview",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "result": "NSFF0-20261026-001",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "result": "NSFF0-20261026-001",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "manual": "M-1",
+     "fail": true,
+     "error": "FAILED_GENERATION",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "manual": "M-1",
+     "result": "M-1",
+     "staffId": "a"
+    }
+   ]
+  },
+  {
+   "name": "day-reset",
+   "steps": [
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "result": "NSFF0-20261026-001",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-27",
+     "staff": "홍길동",
+     "result": "NSFF0-20261027-001",
+     "staffId": "a"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "result": "NSFF0-20261026-002",
+     "staffId": "a"
+    }
+   ]
+  },
+  {
+   "name": "unknown-staff",
+   "steps": [
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "없는사람",
+     "error": "작성자를 선택하세요.",
+     "staffId": "없는사람"
+    },
+    {
+     "op": "preview",
+     "day": "2026-10-26",
+     "staff": "없는사람",
+     "error": "작성자를 선택하세요.",
+     "staffId": "없는사람"
+    }
+   ]
+  },
+  {
+   "name": "exhaust",
+   "steps": [
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "이영희",
+     "result": "NSFF0-20261026-020",
+     "staffId": "c"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "이영희",
+     "result": "NSFF0-20261026-021",
+     "staffId": "c"
+    },
+    {
+     "summary": "979 more issues"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "이영희",
+     "result": "NSFF0-20261026-999",
+     "staffId": "c"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "이영희",
+     "error": "해당 날짜의 견적번호를 모두 사용했습니다.",
+     "staffId": "c"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "이영희",
+     "error": "해당 날짜의 견적번호를 모두 사용했습니다.",
+     "staffId": "c"
+    },
+    {
+     "op": "issue",
+     "day": "2026-10-26",
+     "staff": "홍길동",
+     "result": "NSFF0-20261026-001",
+     "staffId": "a"
+    }
+   ]
+  }
+ ]
+}

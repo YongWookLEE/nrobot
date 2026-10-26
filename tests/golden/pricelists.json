@@ -1,0 +1,919 @@
+{
+ "access": {
+  "entries": [
+   {
+    "id": "기준가격:4",
+    "title": "안면인식단말기",
+    "model": "TEST-FACE01",
+    "category": "출입관리",
+    "name": "안면인식단말기\nTEST-FACE01",
+    "unit": "대",
+    "qty": 1,
+    "price": 1234567,
+    "note": "시험 비고",
+    "costBucket": "material"
+   },
+   {
+    "id": "기준가격:5",
+    "title": "출입통제 DCU",
+    "model": "TEST-DCU10",
+    "category": "출입관리",
+    "name": "출입통제 DCU\nTEST-DCU10",
+    "unit": "대",
+    "qty": 1,
+    "price": 890000,
+    "note": "",
+    "costBucket": "material"
+   },
+   {
+    "id": "기준가격:6",
+    "title": "EM-Lock",
+    "model": "TEST-EM600",
+    "category": "잠금장치",
+    "name": "EM-Lock\nTEST-EM600",
+    "unit": "대",
+    "qty": 1,
+    "price": 150000,
+    "note": "1번 행",
+    "costBucket": "material"
+   },
+   {
+    "id": "기준가격:7",
+    "title": "EM-Lock",
+    "model": "TEST-EM600",
+    "category": "잠금장치",
+    "name": "EM-Lock\nTEST-EM600",
+    "unit": "대",
+    "qty": 1,
+    "price": 160000,
+    "note": "같은 모델 2번 행",
+    "costBucket": "material"
+   },
+   {
+    "id": "기준가격:8",
+    "title": "설치비",
+    "model": "",
+    "category": "공사",
+    "name": "설치비",
+    "unit": "식",
+    "qty": 1,
+    "price": 300000,
+    "note": "",
+    "costBucket": "labor"
+   },
+   {
+    "id": "기준가격:9",
+    "title": "기존 장비 철거",
+    "model": "",
+    "category": "공사",
+    "name": "기존 장비 철거",
+    "unit": "식",
+    "qty": 1,
+    "price": 120001,
+    "note": "",
+    "costBucket": "labor"
+   },
+   {
+    "id": "기준가격:10",
+    "title": "이전설치",
+    "model": "",
+    "category": "공사",
+    "name": "이전설치",
+    "unit": "식",
+    "qty": 1,
+    "price": 250000,
+    "note": "",
+    "costBucket": "labor"
+   },
+   {
+    "id": "기준가격:11",
+    "title": "배관배선",
+    "model": "",
+    "category": "공사",
+    "name": "배관배선",
+    "unit": "식",
+    "qty": 1,
+    "price": 80000,
+    "note": "미터당",
+    "costBucket": "labor"
+   },
+   {
+    "id": "기준가격:12",
+    "title": "퇴실버튼",
+    "model": "TEST-EB30",
+    "category": "기타",
+    "name": "퇴실버튼\nTEST-EB30",
+    "unit": "대",
+    "qty": 1,
+    "price": 0,
+    "note": "",
+    "costBucket": "material"
+   }
+  ],
+  "revision": "9d83cc4d8beeee8590980e367decf5be531c50dcf6c4be4fb09d3ed82a50bffa"
+ },
+ "catalog": {
+  "entries": [
+   {
+    "id": "288a1b67a1083c62495b72d8",
+    "sheet": "시험제품A",
+    "row": 21,
+    "end": 24,
+    "model": "TEST-A100",
+    "code": "TEST-A100",
+    "title": "시험 단말기 세트",
+    "category": "출입관리",
+    "name": "시험 단말기 세트\n모델명 : TEST-A100/ 흰색\n크기 100x200",
+    "unit": "대",
+    "qty": "2",
+    "price": 1500000,
+    "note": "조달 식별 번호, 12345678",
+    "internalNote": "내부 참고 메모",
+    "terms": {
+     "validity": "발행일로부터 60일",
+     "delivery": "발주 후 4주",
+     "payment": "납품 후 현금",
+     "notes": [
+      "1. 시험용 참고사항 하나",
+      "2. 시험용 참고사항 둘"
+     ],
+     "fee": "조달수수료(0.54%) 총계 포함"
+    },
+    "template": {
+     "columns": [
+      32.625,
+      66.75,
+      161.25,
+      0,
+      24.75,
+      35.25,
+      35.25,
+      72.0,
+      72.0,
+      87.75
+     ],
+     "height": 48.0,
+     "lines": [
+      {
+       "text": "시험 단말기 세트",
+       "height": 18.0,
+       "font": "KoPub돋움체 Medium",
+       "size": 12.0,
+       "bold": true,
+       "color": "#c00000",
+       "fill": "#ffff00",
+       "align": "center"
+      },
+      {
+       "text": "모델명 : TEST-A100/ 흰색",
+       "height": 15.0,
+       "font": "KoPub돋움체 Medium",
+       "size": 10.0,
+       "bold": false,
+       "color": "#95b3d7",
+       "fill": "#FFFFFF",
+       "align": "left"
+      },
+      {
+       "text": "크기 100x200",
+       "height": 15.0,
+       "font": "KoPub돋움체 Medium",
+       "size": 10.0,
+       "bold": false,
+       "color": "#95b3d7",
+       "fill": "#FFFFFF",
+       "align": "left"
+      }
+     ],
+     "cells": {
+      "A": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "center"
+      },
+      "B": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "center"
+      },
+      "F": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "center"
+      },
+      "G": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "center"
+      },
+      "H": {
+       "font": "맑은 고딕",
+       "size": 9.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#d6d4cb",
+       "align": "right"
+      },
+      "I": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "left"
+      },
+      "J": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "center"
+      }
+     },
+     "header": {
+      "font": "KoPub돋움체 Medium",
+      "size": 12.0,
+      "bold": true,
+      "color": "#c00000",
+      "fill": "#ffff00",
+      "align": "center"
+     },
+     "headerHeight": 22.5,
+     "imageSizes": [
+      [
+       47.2441,
+       47.2441
+      ],
+      [
+       70.8661,
+       55.1181
+      ]
+     ]
+    },
+    "imageCount": 2
+   },
+   {
+    "id": "ba9a98995b8de69e9a7967d6",
+    "sheet": "시험제품A",
+    "row": 24,
+    "end": 26,
+    "model": "TEST-B200",
+    "code": "TEST-B200",
+    "title": "시험 컨트롤러",
+    "category": "출입관리",
+    "name": "시험 컨트롤러\nTEST-B200 / 4도어",
+    "unit": "식",
+    "qty": "1",
+    "price": null,
+    "note": "수식 단가",
+    "internalNote": "",
+    "terms": {
+     "validity": "발행일로부터 60일",
+     "delivery": "발주 후 4주",
+     "payment": "납품 후 현금",
+     "notes": [
+      "1. 시험용 참고사항 하나",
+      "2. 시험용 참고사항 둘"
+     ],
+     "fee": "조달수수료(0.54%) 총계 포함"
+    },
+    "template": {
+     "columns": [
+      32.625,
+      66.75,
+      161.25,
+      0,
+      24.75,
+      35.25,
+      35.25,
+      72.0,
+      72.0,
+      87.75
+     ],
+     "height": 45.0,
+     "lines": [
+      {
+       "text": "시험 컨트롤러",
+       "height": 30.0,
+       "font": "KoPub돋움체 Medium",
+       "size": 12.0,
+       "bold": true,
+       "color": "#c00000",
+       "fill": "#ffff00",
+       "align": "center"
+      },
+      {
+       "text": "TEST-B200 / 4도어",
+       "height": 15.0,
+       "font": "KoPub돋움체 Medium",
+       "size": 10.0,
+       "bold": false,
+       "color": "#95b3d7",
+       "fill": "#FFFFFF",
+       "align": "left"
+      }
+     ],
+     "cells": {
+      "A": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "center"
+      },
+      "B": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "left"
+      },
+      "F": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "center"
+      },
+      "G": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "center"
+      },
+      "H": {
+       "font": "맑은 고딕",
+       "size": 9.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#d6d4cb",
+       "align": "right"
+      },
+      "I": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "left"
+      },
+      "J": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "center"
+      }
+     },
+     "header": {
+      "font": "KoPub돋움체 Medium",
+      "size": 12.0,
+      "bold": true,
+      "color": "#c00000",
+      "fill": "#ffff00",
+      "align": "center"
+     },
+     "headerHeight": 22.5,
+     "imageSizes": []
+    },
+    "imageCount": 0
+   },
+   {
+    "id": "a156977c665f6eac9b2a66a2",
+    "sheet": "시험제품A",
+    "row": 26,
+    "end": 27,
+    "model": "",
+    "code": "",
+    "title": "단가 없는 품목",
+    "category": "출입관리",
+    "name": "단가 없는 품목",
+    "unit": "EA",
+    "qty": "3",
+    "price": null,
+    "note": "",
+    "internalNote": "",
+    "terms": {
+     "validity": "발행일로부터 60일",
+     "delivery": "발주 후 4주",
+     "payment": "납품 후 현금",
+     "notes": [
+      "1. 시험용 참고사항 하나",
+      "2. 시험용 참고사항 둘"
+     ],
+     "fee": "조달수수료(0.54%) 총계 포함"
+    },
+    "template": {
+     "columns": [
+      32.625,
+      66.75,
+      161.25,
+      0,
+      24.75,
+      35.25,
+      35.25,
+      72.0,
+      72.0,
+      87.75
+     ],
+     "height": 15.0,
+     "lines": [
+      {
+       "text": "단가 없는 품목",
+       "height": 15.0,
+       "font": "KoPub돋움체 Medium",
+       "size": 12.0,
+       "bold": true,
+       "color": "#c00000",
+       "fill": "#ffff00",
+       "align": "center"
+      }
+     ],
+     "cells": {
+      "A": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "center"
+      },
+      "B": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "left"
+      },
+      "F": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "center"
+      },
+      "G": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "center"
+      },
+      "H": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "left"
+      },
+      "I": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "left"
+      },
+      "J": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "left"
+      }
+     },
+     "header": {
+      "font": "KoPub돋움체 Medium",
+      "size": 12.0,
+      "bold": true,
+      "color": "#c00000",
+      "fill": "#ffff00",
+      "align": "center"
+     },
+     "headerHeight": 22.5,
+     "imageSizes": []
+    },
+    "imageCount": 0
+   },
+   {
+    "id": "1feddb375821a204ff4d033b",
+    "sheet": "시험제품A",
+    "row": 27,
+    "end": 28,
+    "model": "",
+    "code": "",
+    "title": "단가 이상 품목",
+    "category": "출입관리",
+    "name": "단가 이상 품목",
+    "unit": "EA",
+    "qty": "1",
+    "price": null,
+    "note": "",
+    "internalNote": "",
+    "terms": {
+     "validity": "발행일로부터 60일",
+     "delivery": "발주 후 4주",
+     "payment": "납품 후 현금",
+     "notes": [
+      "1. 시험용 참고사항 하나",
+      "2. 시험용 참고사항 둘"
+     ],
+     "fee": "조달수수료(0.54%) 총계 포함"
+    },
+    "template": {
+     "columns": [
+      32.625,
+      66.75,
+      161.25,
+      0,
+      24.75,
+      35.25,
+      35.25,
+      72.0,
+      72.0,
+      87.75
+     ],
+     "height": 15.0,
+     "lines": [
+      {
+       "text": "단가 이상 품목",
+       "height": 15.0,
+       "font": "KoPub돋움체 Medium",
+       "size": 12.0,
+       "bold": true,
+       "color": "#c00000",
+       "fill": "#ffff00",
+       "align": "center"
+      }
+     ],
+     "cells": {
+      "A": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "center"
+      },
+      "B": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "left"
+      },
+      "F": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "center"
+      },
+      "G": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "center"
+      },
+      "H": {
+       "font": "맑은 고딕",
+       "size": 9.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#d6d4cb",
+       "align": "right"
+      },
+      "I": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "left"
+      },
+      "J": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "left"
+      }
+     },
+     "header": {
+      "font": "KoPub돋움체 Medium",
+      "size": 12.0,
+      "bold": true,
+      "color": "#c00000",
+      "fill": "#ffff00",
+      "align": "center"
+     },
+     "headerHeight": 22.5,
+     "imageSizes": []
+    },
+    "imageCount": 0
+   },
+   {
+    "id": "a1dd5013f9a30d510becd1e5",
+    "sheet": "시험제품B",
+    "row": 21,
+    "end": 23,
+    "model": "TEST-C300",
+    "code": "TEST-C300",
+    "title": "중복 품목",
+    "category": "시험제품B",
+    "name": "중복 품목\nTEST-C300",
+    "unit": "대",
+    "qty": "1",
+    "price": 50000000,
+    "note": "",
+    "internalNote": "",
+    "terms": {
+     "validity": "발행일로부터 60일",
+     "delivery": "발주 후 4주",
+     "payment": "납품 후 현금",
+     "notes": [],
+     "fee": "조달수수료(0.54%) 총계 포함"
+    },
+    "template": {
+     "columns": [
+      32.625,
+      66.75,
+      161.25,
+      0,
+      24.75,
+      35.25,
+      35.25,
+      72.0,
+      72.0,
+      87.75
+     ],
+     "height": 40.0,
+     "lines": [
+      {
+       "text": "중복 품목",
+       "height": 20.0,
+       "font": "KoPub돋움체 Medium",
+       "size": 12.0,
+       "bold": true,
+       "color": "#c00000",
+       "fill": "#ffff00",
+       "align": "center"
+      },
+      {
+       "text": "TEST-C300",
+       "height": 20.0,
+       "font": "KoPub돋움체 Medium",
+       "size": 10.0,
+       "bold": false,
+       "color": "#95b3d7",
+       "fill": "#FFFFFF",
+       "align": "left"
+      }
+     ],
+     "cells": {
+      "A": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "center"
+      },
+      "B": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "left"
+      },
+      "F": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "center"
+      },
+      "G": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "center"
+      },
+      "H": {
+       "font": "맑은 고딕",
+       "size": 9.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#d6d4cb",
+       "align": "right"
+      },
+      "I": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "left"
+      },
+      "J": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "left"
+      }
+     },
+     "header": {
+      "font": "KoPub돋움체 Medium",
+      "size": 12.0,
+      "bold": true,
+      "color": "#c00000",
+      "fill": "#ffff00",
+      "align": "center"
+     },
+     "headerHeight": 15.0,
+     "imageSizes": []
+    },
+    "imageCount": 0
+   },
+   {
+    "id": "a1dd5013f9a30d510becd1e5-23",
+    "sheet": "시험제품B",
+    "row": 23,
+    "end": 25,
+    "model": "TEST-C300",
+    "code": "TEST-C300",
+    "title": "중복 품목",
+    "category": "시험제품B",
+    "name": "중복 품목\nTEST-C300",
+    "unit": "대",
+    "qty": "1",
+    "price": 25,
+    "note": "",
+    "internalNote": "",
+    "terms": {
+     "validity": "발행일로부터 60일",
+     "delivery": "발주 후 4주",
+     "payment": "납품 후 현금",
+     "notes": [],
+     "fee": "조달수수료(0.54%) 총계 포함"
+    },
+    "template": {
+     "columns": [
+      32.625,
+      66.75,
+      161.25,
+      0,
+      24.75,
+      35.25,
+      35.25,
+      72.0,
+      72.0,
+      87.75
+     ],
+     "height": 30.0,
+     "lines": [
+      {
+       "text": "중복 품목",
+       "height": 15.0,
+       "font": "KoPub돋움체 Medium",
+       "size": 12.0,
+       "bold": true,
+       "color": "#c00000",
+       "fill": "#ffff00",
+       "align": "center"
+      },
+      {
+       "text": "TEST-C300",
+       "height": 15.0,
+       "font": "KoPub돋움체 Medium",
+       "size": 10.0,
+       "bold": false,
+       "color": "#95b3d7",
+       "fill": "#FFFFFF",
+       "align": "left"
+      }
+     ],
+     "cells": {
+      "A": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "center"
+      },
+      "B": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "left"
+      },
+      "F": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "center"
+      },
+      "G": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "center"
+      },
+      "H": {
+       "font": "맑은 고딕",
+       "size": 9.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#d6d4cb",
+       "align": "right"
+      },
+      "I": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "left"
+      },
+      "J": {
+       "font": "맑은 고딕",
+       "size": 11.0,
+       "bold": false,
+       "color": "#000000",
+       "fill": "#FFFFFF",
+       "align": "left"
+      }
+     },
+     "header": {
+      "font": "KoPub돋움체 Medium",
+      "size": 12.0,
+      "bold": true,
+      "color": "#c00000",
+      "fill": "#ffff00",
+      "align": "center"
+     },
+     "headerHeight": 15.0,
+     "imageSizes": []
+    },
+    "imageCount": 0
+   }
+  ],
+  "sheets": [
+   {
+    "name": "시험제품A",
+    "count": 4
+   },
+   {
+    "name": "시험제품B",
+    "count": 2
+   }
+  ],
+  "warnings": [
+   "시험제품A!H24: 수식 단가는 최신 계산 여부를 확인할 수 없어 직접 입력이 필요합니다.",
+   "시험제품A!H27: 단가 확인 필요"
+  ],
+  "imageCount": 2
+ }
+}

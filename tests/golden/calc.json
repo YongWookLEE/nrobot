@@ -1,0 +1,8357 @@
+{
+ "cases": [
+  {
+   "id": "vat-n1",
+   "quoteType": "vat",
+   "items": [
+    {
+     "qty": 2,
+     "priceRate": 12.5,
+     "price": 99
+    }
+   ],
+   "lines": [
+    25
+   ],
+   "expected": {
+    "subtotal": 25,
+    "tax": 3,
+    "total": 28
+   }
+  },
+  {
+   "id": "vat-n2",
+   "quoteType": "vat",
+   "items": [
+    {
+     "qty": 3,
+     "priceRate": 12.5,
+     "price": 99999999
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 99.99,
+     "price": 1
+    }
+   ],
+   "lines": [
+    37500000,
+    7
+   ],
+   "expected": {
+    "subtotal": 37500007,
+    "tax": 3750001,
+    "total": 41250008
+   }
+  },
+  {
+   "id": "vat-n3",
+   "quoteType": "vat",
+   "items": [
+    {
+     "qty": 1,
+     "priceRate": 12.5,
+     "price": 33333333
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 90,
+     "price": 1000000
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 50,
+     "price": 128000
+    }
+   ],
+   "lines": [
+    4166667,
+    900,
+    72000
+   ],
+   "expected": {
+    "subtotal": 4239567,
+    "tax": 423957,
+    "total": 4663524
+   }
+  },
+  {
+   "id": "vat-n4",
+   "quoteType": "vat",
+   "items": [
+    {
+     "qty": 10,
+     "priceRate": 90,
+     "price": 1000000
+    },
+    {
+     "qty": 1,
+     "priceRate": 77,
+     "price": 1000000
+    },
+    {
+     "qty": 10,
+     "priceRate": 99.99,
+     "price": 99
+    },
+    {
+     "qty": 10,
+     "priceRate": 77,
+     "price": 33333333
+    }
+   ],
+   "lines": [
+    9000000,
+    770000,
+    990,
+    256666664
+   ],
+   "expected": {
+    "subtotal": 266437654,
+    "tax": 26643765,
+    "total": 293081419
+   }
+  },
+  {
+   "id": "vat-n5",
+   "quoteType": "vat",
+   "items": [
+    {
+     "qty": 7.333,
+     "priceRate": 12.5,
+     "price": 128000
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 12.5,
+     "price": 33333333
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 90,
+     "price": 128000
+    },
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "price": 1000000
+    },
+    {
+     "qty": 3,
+     "priceRate": 0,
+     "price": 1000000
+    }
+   ],
+   "lines": [
+    117328,
+    4687500,
+    844762,
+    1800000,
+    0
+   ],
+   "expected": {
+    "subtotal": 7449590,
+    "tax": 744959,
+    "total": 8194549
+   }
+  },
+  {
+   "id": "vat-n8",
+   "quoteType": "vat",
+   "items": [
+    {
+     "qty": 0.5,
+     "priceRate": 99.99,
+     "price": 99999999
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 0,
+     "price": 1000000
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 100,
+     "price": 7
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 99.99,
+     "price": 7
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 0,
+     "price": 99
+    },
+    {
+     "qty": 1,
+     "priceRate": 12.5,
+     "price": 33333333
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 100,
+     "price": 33333333
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 50,
+     "price": 0
+    }
+   ],
+   "lines": [
+    49995000,
+    0,
+    8,
+    8,
+    0,
+    4166667,
+    244433331,
+    0
+   ],
+   "expected": {
+    "subtotal": 298595014,
+    "tax": 29859501,
+    "total": 328454515
+   }
+  },
+  {
+   "id": "vat-n9",
+   "quoteType": "vat",
+   "items": [
+    {
+     "qty": 1.125,
+     "priceRate": 100,
+     "price": 99999999
+    },
+    {
+     "qty": 3,
+     "priceRate": 0,
+     "price": 7
+    },
+    {
+     "qty": 1,
+     "priceRate": 90,
+     "price": 128000
+    },
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "price": 1
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 90,
+     "price": 99999999
+    },
+    {
+     "qty": 2,
+     "priceRate": 0,
+     "price": 1
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 100,
+     "price": 128000
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 100,
+     "price": 128000
+    },
+    {
+     "qty": 1,
+     "priceRate": 100,
+     "price": 0
+    }
+   ],
+   "lines": [
+    112499999,
+    0,
+    115200,
+    2,
+    45000000,
+    0,
+    64000,
+    128,
+    0
+   ],
+   "expected": {
+    "subtotal": 157679329,
+    "tax": 15767933,
+    "total": 173447262
+   }
+  },
+  {
+   "id": "vat-n10",
+   "quoteType": "vat",
+   "items": [
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "price": 7
+    },
+    {
+     "qty": 10,
+     "priceRate": 90,
+     "price": 33333333
+    },
+    {
+     "qty": 10,
+     "priceRate": 100,
+     "price": 99
+    },
+    {
+     "qty": 2,
+     "priceRate": 0,
+     "price": 128000
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 12.5,
+     "price": 99999999
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "price": 1000000
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 0,
+     "price": 99999999
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 0,
+     "price": 99999999
+    },
+    {
+     "qty": 2,
+     "priceRate": 77,
+     "price": 1000000
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 100,
+     "price": 0
+    }
+   ],
+   "lines": [
+    13,
+    299999997,
+    990,
+    0,
+    12500,
+    5646410,
+    0,
+    0,
+    1540000,
+    0
+   ],
+   "expected": {
+    "subtotal": 307199910,
+    "tax": 30719991,
+    "total": 337919901
+   }
+  },
+  {
+   "id": "vat-n20",
+   "quoteType": "vat",
+   "items": [
+    {
+     "qty": 10,
+     "priceRate": 12.5,
+     "price": 1000000
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 77,
+     "price": 128000
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 50,
+     "price": 128000
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 77,
+     "price": 1000000
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 50,
+     "price": 33333333
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 0,
+     "price": 99
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 0,
+     "price": 1000000
+    },
+    {
+     "qty": 3,
+     "priceRate": 50,
+     "price": 128000
+    },
+    {
+     "qty": 10,
+     "priceRate": 100,
+     "price": 99
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 99.99,
+     "price": 1000000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "price": 99999999
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 12.5,
+     "price": 99999999
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 77,
+     "price": 33333333
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 77,
+     "price": 7
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 50,
+     "price": 1000000
+    },
+    {
+     "qty": 3,
+     "priceRate": 50,
+     "price": 7
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 0,
+     "price": 99999999
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 0,
+     "price": 1
+    },
+    {
+     "qty": 2,
+     "priceRate": 99.99,
+     "price": 128000
+    },
+    {
+     "qty": 2,
+     "priceRate": 0,
+     "price": 99999999
+    }
+   ],
+   "lines": [
+    1250000,
+    99,
+    32000,
+    385000,
+    16667,
+    0,
+    0,
+    192000,
+    990,
+    7332267,
+    564640994,
+    6250000,
+    25667,
+    6,
+    250000,
+    11,
+    0,
+    0,
+    255974,
+    0
+   ],
+   "expected": {
+    "subtotal": 580631675,
+    "tax": 58063168,
+    "total": 638694843
+   }
+  },
+  {
+   "id": "vat-n40",
+   "quoteType": "vat",
+   "items": [
+    {
+     "qty": 3,
+     "priceRate": 77,
+     "price": 33333333
+    },
+    {
+     "qty": 1,
+     "priceRate": 50,
+     "price": 1
+    },
+    {
+     "qty": 1,
+     "priceRate": 77,
+     "price": 99999999
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 90,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 90,
+     "price": 128000
+    },
+    {
+     "qty": 3,
+     "priceRate": 100,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 99.99,
+     "price": 99
+    },
+    {
+     "qty": 1,
+     "priceRate": 100,
+     "price": 1000000
+    },
+    {
+     "qty": 10,
+     "priceRate": 77,
+     "price": 1
+    },
+    {
+     "qty": 2,
+     "priceRate": 0,
+     "price": 33333333
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 0,
+     "price": 33333333
+    },
+    {
+     "qty": 2,
+     "priceRate": 12.5,
+     "price": 1000000
+    },
+    {
+     "qty": 10,
+     "priceRate": 12.5,
+     "price": 99
+    },
+    {
+     "qty": 10,
+     "priceRate": 50,
+     "price": 33333333
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 50,
+     "price": 99999999
+    },
+    {
+     "qty": 2,
+     "priceRate": 99.99,
+     "price": 7
+    },
+    {
+     "qty": 1,
+     "priceRate": 77,
+     "price": 1
+    },
+    {
+     "qty": 1,
+     "priceRate": 12.5,
+     "price": 1
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 100,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "price": 33333333
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 12.5,
+     "price": 33333333
+    },
+    {
+     "qty": 1,
+     "priceRate": 77,
+     "price": 1000000
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 99.99,
+     "price": 99999999
+    },
+    {
+     "qty": 2,
+     "priceRate": 0,
+     "price": 1000000
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 12.5,
+     "price": 99999999
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 100,
+     "price": 99
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 99.99,
+     "price": 1000000
+    },
+    {
+     "qty": 10,
+     "priceRate": 50,
+     "price": 7
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 50,
+     "price": 99999999
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 77,
+     "price": 1
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 0,
+     "price": 99
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 90,
+     "price": 1
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 50,
+     "price": 33333333
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 90,
+     "price": 99
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "price": 128000
+    },
+    {
+     "qty": 3,
+     "priceRate": 50,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 50,
+     "price": 1000000
+    },
+    {
+     "qty": 10,
+     "priceRate": 100,
+     "price": 7
+    },
+    {
+     "qty": 10,
+     "priceRate": 0,
+     "price": 7
+    },
+    {
+     "qty": 10,
+     "priceRate": 77,
+     "price": 99
+    }
+   ],
+   "lines": [
+    76999999,
+    1,
+    76999999,
+    0,
+    129600,
+    0,
+    111,
+    1000000,
+    8,
+    0,
+    0,
+    250000,
+    124,
+    166666665,
+    366649996,
+    14,
+    1,
+    0,
+    0,
+    99989999,
+    4687500,
+    770000,
+    49995000,
+    0,
+    14062500,
+    50,
+    7332267,
+    35,
+    366649996,
+    1,
+    0,
+    1,
+    16667,
+    0,
+    383962,
+    0,
+    500000,
+    70,
+    0,
+    762
+   ],
+   "expected": {
+    "subtotal": 1233085328,
+    "tax": 123308533,
+    "total": 1356393861
+   }
+  },
+  {
+   "id": "vat-n100",
+   "quoteType": "vat",
+   "items": [
+    {
+     "qty": 1.125,
+     "priceRate": 0,
+     "price": 33333333
+    },
+    {
+     "qty": 2,
+     "priceRate": 12.5,
+     "price": 99999999
+    },
+    {
+     "qty": 1,
+     "priceRate": 90,
+     "price": 99999999
+    },
+    {
+     "qty": 10,
+     "priceRate": 100,
+     "price": 1
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 0,
+     "price": 7
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 90,
+     "price": 7
+    },
+    {
+     "qty": 1,
+     "priceRate": 12.5,
+     "price": 1
+    },
+    {
+     "qty": 1,
+     "priceRate": 0,
+     "price": 1000000
+    },
+    {
+     "qty": 3,
+     "priceRate": 12.5,
+     "price": 128000
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 100,
+     "price": 99999999
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 50,
+     "price": 99999999
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 99.99,
+     "price": 1000000
+    },
+    {
+     "qty": 2,
+     "priceRate": 99.99,
+     "price": 128000
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 99.99,
+     "price": 1000000
+    },
+    {
+     "qty": 1,
+     "priceRate": 90,
+     "price": 99999999
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "price": 7
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "price": 33333333
+    },
+    {
+     "qty": 3,
+     "priceRate": 90,
+     "price": 1
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 90,
+     "price": 1
+    },
+    {
+     "qty": 1,
+     "priceRate": 77,
+     "price": 128000
+    },
+    {
+     "qty": 2,
+     "priceRate": 50,
+     "price": 7
+    },
+    {
+     "qty": 10,
+     "priceRate": 77,
+     "price": 1000000
+    },
+    {
+     "qty": 1,
+     "priceRate": 12.5,
+     "price": 1
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 90,
+     "price": 1
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 50,
+     "price": 99
+    },
+    {
+     "qty": 10,
+     "priceRate": 77,
+     "price": 128000
+    },
+    {
+     "qty": 2,
+     "priceRate": 12.5,
+     "price": 99999999
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 0,
+     "price": 1000000
+    },
+    {
+     "qty": 10,
+     "priceRate": 99.99,
+     "price": 128000
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 90,
+     "price": 128000
+    },
+    {
+     "qty": 3,
+     "priceRate": 100,
+     "price": 99999999
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 50,
+     "price": 33333333
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 100,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 90,
+     "price": 99
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 90,
+     "price": 1000000
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 90,
+     "price": 33333333
+    },
+    {
+     "qty": 1,
+     "priceRate": 0,
+     "price": 7
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 50,
+     "price": 1000000
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 77,
+     "price": 33333333
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 0,
+     "price": 128000
+    },
+    {
+     "qty": 1,
+     "priceRate": 50,
+     "price": 99
+    },
+    {
+     "qty": 1,
+     "priceRate": 0,
+     "price": 99
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 12.5,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 12.5,
+     "price": 1000000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 0,
+     "price": 99
+    },
+    {
+     "qty": 1,
+     "priceRate": 99.99,
+     "price": 1
+    },
+    {
+     "qty": 1,
+     "priceRate": 99.99,
+     "price": 1000000
+    },
+    {
+     "qty": 10,
+     "priceRate": 99.99,
+     "price": 33333333
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 100,
+     "price": 1
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 50,
+     "price": 128000
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 12.5,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 99.99,
+     "price": 99
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 90,
+     "price": 128000
+    },
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "price": 99999999
+    },
+    {
+     "qty": 2,
+     "priceRate": 0,
+     "price": 7
+    },
+    {
+     "qty": 2,
+     "priceRate": 50,
+     "price": 1000000
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 0,
+     "price": 7
+    },
+    {
+     "qty": 2,
+     "priceRate": 0,
+     "price": 1000000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 100,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 90,
+     "price": 128000
+    },
+    {
+     "qty": 3,
+     "priceRate": 0,
+     "price": 128000
+    },
+    {
+     "qty": 10,
+     "priceRate": 0,
+     "price": 1
+    },
+    {
+     "qty": 2,
+     "priceRate": 12.5,
+     "price": 1000000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 99.99,
+     "price": 1
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 100,
+     "price": 1000000
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 50,
+     "price": 99999999
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 77,
+     "price": 128000
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 12.5,
+     "price": 7
+    },
+    {
+     "qty": 1,
+     "priceRate": 12.5,
+     "price": 1000000
+    },
+    {
+     "qty": 10,
+     "priceRate": 100,
+     "price": 1
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 12.5,
+     "price": 128000
+    },
+    {
+     "qty": 3,
+     "priceRate": 100,
+     "price": 1000000
+    },
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "price": 1000000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 50,
+     "price": 7
+    },
+    {
+     "qty": 10,
+     "priceRate": 90,
+     "price": 128000
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "price": 1000000
+    },
+    {
+     "qty": 10,
+     "priceRate": 0,
+     "price": 1
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 12.5,
+     "price": 1000000
+    },
+    {
+     "qty": 3,
+     "priceRate": 100,
+     "price": 1
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 90,
+     "price": 33333333
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 99.99,
+     "price": 99
+    },
+    {
+     "qty": 1,
+     "priceRate": 99.99,
+     "price": 33333333
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 50,
+     "price": 99
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 99.99,
+     "price": 99999999
+    },
+    {
+     "qty": 3,
+     "priceRate": 100,
+     "price": 99
+    },
+    {
+     "qty": 3,
+     "priceRate": 100,
+     "price": 1
+    },
+    {
+     "qty": 10,
+     "priceRate": 50,
+     "price": 33333333
+    },
+    {
+     "qty": 1,
+     "priceRate": 50,
+     "price": 99
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 0,
+     "price": 33333333
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 100,
+     "price": 99
+    },
+    {
+     "qty": 3,
+     "priceRate": 12.5,
+     "price": 1
+    },
+    {
+     "qty": 10,
+     "priceRate": 99.99,
+     "price": 99999999
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 100,
+     "price": 1
+    },
+    {
+     "qty": 2,
+     "priceRate": 50,
+     "price": 128000
+    },
+    {
+     "qty": 3,
+     "priceRate": 100,
+     "price": 7
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 99.99,
+     "price": 33333333
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 12.5,
+     "price": 33333333
+    },
+    {
+     "qty": 10,
+     "priceRate": 77,
+     "price": 1000000
+    },
+    {
+     "qty": 1,
+     "priceRate": 77,
+     "price": 33333333
+    },
+    {
+     "qty": 10,
+     "priceRate": 12.5,
+     "price": 7
+    }
+   ],
+   "lines": [
+    0,
+    25000000,
+    89999999,
+    10,
+    0,
+    46,
+    0,
+    0,
+    48000,
+    112499999,
+    366649996,
+    1124888,
+    255974,
+    1000,
+    89999999,
+    21,
+    99989999,
+    3,
+    0,
+    98560,
+    7,
+    7700000,
+    0,
+    7,
+    0,
+    985600,
+    25000000,
+    0,
+    1279872,
+    129600,
+    299999997,
+    122216665,
+    0,
+    89,
+    900,
+    33750000,
+    0,
+    3666500,
+    28875000,
+    0,
+    50,
+    0,
+    0,
+    125,
+    0,
+    1,
+    999900,
+    333299997,
+    7,
+    64,
+    0,
+    198,
+    129600,
+    179999998,
+    0,
+    1000000,
+    0,
+    0,
+    0,
+    115200,
+    0,
+    0,
+    250000,
+    7,
+    1000,
+    56249999,
+    49280,
+    1,
+    125000,
+    10,
+    8000,
+    3000000,
+    1800000,
+    26,
+    1152000,
+    2999700,
+    0,
+    62500,
+    3,
+    30000,
+    0,
+    33330000,
+    25,
+    49995000,
+    297,
+    3,
+    166666665,
+    50,
+    0,
+    111,
+    0,
+    999899990,
+    1,
+    128000,
+    21,
+    33330,
+    4687500,
+    7700000,
+    25666666,
+    9
+   ],
+   "expected": {
+    "subtotal": 3178653065,
+    "tax": 317865307,
+    "total": 3496518372
+   }
+  },
+  {
+   "id": "total-n1",
+   "quoteType": "total",
+   "items": [
+    {
+     "qty": 3,
+     "priceRate": 12.5,
+     "price": 99999999
+    }
+   ],
+   "lines": [
+    37500000
+   ],
+   "expected": {
+    "subtotal": 37500000,
+    "tax": 0,
+    "total": 37500000
+   }
+  },
+  {
+   "id": "total-n2",
+   "quoteType": "total",
+   "items": [
+    {
+     "qty": 3,
+     "priceRate": 90,
+     "price": 33333333
+    },
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "price": 128000
+    }
+   ],
+   "lines": [
+    89999999,
+    230400
+   ],
+   "expected": {
+    "subtotal": 90230399,
+    "tax": 0,
+    "total": 90230399
+   }
+  },
+  {
+   "id": "total-n3",
+   "quoteType": "total",
+   "items": [
+    {
+     "qty": 0.5,
+     "priceRate": 50,
+     "price": 1
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 90,
+     "price": 99
+    },
+    {
+     "qty": 10,
+     "priceRate": 90,
+     "price": 1
+    }
+   ],
+   "lines": [
+    0,
+    653,
+    9
+   ],
+   "expected": {
+    "subtotal": 662,
+    "tax": 0,
+    "total": 662
+   }
+  },
+  {
+   "id": "total-n4",
+   "quoteType": "total",
+   "items": [
+    {
+     "qty": 0.001,
+     "priceRate": 0,
+     "price": 128000
+    },
+    {
+     "qty": 3,
+     "priceRate": 50,
+     "price": 7
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 0,
+     "price": 7
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 12.5,
+     "price": 0
+    }
+   ],
+   "lines": [
+    0,
+    11,
+    0,
+    0
+   ],
+   "expected": {
+    "subtotal": 11,
+    "tax": 0,
+    "total": 11
+   }
+  },
+  {
+   "id": "total-n5",
+   "quoteType": "total",
+   "items": [
+    {
+     "qty": 0.001,
+     "priceRate": 0,
+     "price": 99
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 12.5,
+     "price": 128000
+    },
+    {
+     "qty": 1,
+     "priceRate": 90,
+     "price": 128000
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 100,
+     "price": 1000000
+    },
+    {
+     "qty": 1,
+     "priceRate": 0,
+     "price": 128000
+    }
+   ],
+   "lines": [
+    0,
+    8000,
+    115200,
+    500000,
+    0
+   ],
+   "expected": {
+    "subtotal": 623200,
+    "tax": 0,
+    "total": 623200
+   }
+  },
+  {
+   "id": "total-n8",
+   "quoteType": "total",
+   "items": [
+    {
+     "qty": 1,
+     "priceRate": 100,
+     "price": 33333333
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "price": 1000000
+    },
+    {
+     "qty": 3,
+     "priceRate": 50,
+     "price": 33333333
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "price": 99999999
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 77,
+     "price": 7
+    },
+    {
+     "qty": 3,
+     "priceRate": 77,
+     "price": 1
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "price": 1
+    },
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "price": 128000
+    }
+   ],
+   "lines": [
+    33333333,
+    5646410,
+    50000000,
+    564640994,
+    3,
+    2,
+    3,
+    230400
+   ],
+   "expected": {
+    "subtotal": 653851145,
+    "tax": 0,
+    "total": 653851145
+   }
+  },
+  {
+   "id": "total-n9",
+   "quoteType": "total",
+   "items": [
+    {
+     "qty": 3,
+     "priceRate": 100,
+     "price": 99999999
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 90,
+     "price": 33333333
+    },
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "price": 128000
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 77,
+     "price": 1000000
+    },
+    {
+     "qty": 10,
+     "priceRate": 12.5,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 0,
+     "price": 1000000
+    },
+    {
+     "qty": 2,
+     "priceRate": 99.99,
+     "price": 1000000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "price": 33333333
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 77,
+     "price": 99
+    }
+   ],
+   "lines": [
+    299999997,
+    30000,
+    230400,
+    866250,
+    0,
+    0,
+    1999800,
+    188213665,
+    86
+   ],
+   "expected": {
+    "subtotal": 491340198,
+    "tax": 0,
+    "total": 491340198
+   }
+  },
+  {
+   "id": "total-n10",
+   "quoteType": "total",
+   "items": [
+    {
+     "qty": 7.333,
+     "priceRate": 0,
+     "price": 128000
+    },
+    {
+     "qty": 2,
+     "priceRate": 77,
+     "price": 99
+    },
+    {
+     "qty": 2,
+     "priceRate": 0,
+     "price": 7
+    },
+    {
+     "qty": 3,
+     "priceRate": 77,
+     "price": 7
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 50,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 90,
+     "price": 7
+    },
+    {
+     "qty": 1,
+     "priceRate": 100,
+     "price": 99
+    },
+    {
+     "qty": 2,
+     "priceRate": 77,
+     "price": 33333333
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 50,
+     "price": 128000
+    },
+    {
+     "qty": 2,
+     "priceRate": 50,
+     "price": 1000000
+    }
+   ],
+   "lines": [
+    0,
+    152,
+    0,
+    16,
+    0,
+    63,
+    99,
+    51333333,
+    64,
+    1000000
+   ],
+   "expected": {
+    "subtotal": 52333727,
+    "tax": 0,
+    "total": 52333727
+   }
+  },
+  {
+   "id": "total-n20",
+   "quoteType": "total",
+   "items": [
+    {
+     "qty": 1.125,
+     "priceRate": 99.99,
+     "price": 1
+    },
+    {
+     "qty": 1,
+     "priceRate": 50,
+     "price": 33333333
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 100,
+     "price": 7
+    },
+    {
+     "qty": 3,
+     "priceRate": 77,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 100,
+     "price": 99
+    },
+    {
+     "qty": 3,
+     "priceRate": 100,
+     "price": 99
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 90,
+     "price": 128000
+    },
+    {
+     "qty": 10,
+     "priceRate": 77,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 90,
+     "price": 128000
+    },
+    {
+     "qty": 10,
+     "priceRate": 50,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 100,
+     "price": 99999999
+    },
+    {
+     "qty": 2,
+     "priceRate": 77,
+     "price": 1000000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 50,
+     "price": 33333333
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 100,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 100,
+     "price": 99
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 99.99,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 50,
+     "price": 33333333
+    },
+    {
+     "qty": 1,
+     "priceRate": 99.99,
+     "price": 128000
+    },
+    {
+     "qty": 2,
+     "priceRate": 100,
+     "price": 7
+    },
+    {
+     "qty": 10,
+     "priceRate": 100,
+     "price": 1000000
+    }
+   ],
+   "lines": [
+    1,
+    16666667,
+    4,
+    0,
+    990,
+    297,
+    129600,
+    0,
+    57600,
+    0,
+    50000000,
+    1540000,
+    122216665,
+    0,
+    990,
+    0,
+    50000000,
+    127987,
+    14,
+    10000000
+   ],
+   "expected": {
+    "subtotal": 250740815,
+    "tax": 0,
+    "total": 250740815
+   }
+  },
+  {
+   "id": "total-n40",
+   "quoteType": "total",
+   "items": [
+    {
+     "qty": 2,
+     "priceRate": 77,
+     "price": 99
+    },
+    {
+     "qty": 1,
+     "priceRate": 12.5,
+     "price": 7
+    },
+    {
+     "qty": 1,
+     "priceRate": 77,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 90,
+     "price": 33333333
+    },
+    {
+     "qty": 1,
+     "priceRate": 0,
+     "price": 128000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 50,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 12.5,
+     "price": 1
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 100,
+     "price": 99999999
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 100,
+     "price": 99999999
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 77,
+     "price": 1000000
+    },
+    {
+     "qty": 2,
+     "priceRate": 0,
+     "price": 1
+    },
+    {
+     "qty": 10,
+     "priceRate": 12.5,
+     "price": 7
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 0,
+     "price": 99
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 90,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 50,
+     "price": 128000
+    },
+    {
+     "qty": 10,
+     "priceRate": 99.99,
+     "price": 128000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 12.5,
+     "price": 99
+    },
+    {
+     "qty": 2,
+     "priceRate": 0,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 99.99,
+     "price": 128000
+    },
+    {
+     "qty": 3,
+     "priceRate": 77,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 12.5,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 90,
+     "price": 99999999
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 99.99,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 0,
+     "price": 99
+    },
+    {
+     "qty": 3,
+     "priceRate": 50,
+     "price": 128000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 90,
+     "price": 128000
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 100,
+     "price": 1000000
+    },
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "price": 1
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 0,
+     "price": 128000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 90,
+     "price": 99999999
+    },
+    {
+     "qty": 1,
+     "priceRate": 77,
+     "price": 33333333
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "price": 99999999
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "price": 7
+    },
+    {
+     "qty": 10,
+     "priceRate": 90,
+     "price": 7
+    },
+    {
+     "qty": 1,
+     "priceRate": 100,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 99.99,
+     "price": 99
+    },
+    {
+     "qty": 3,
+     "priceRate": 100,
+     "price": 1
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 0,
+     "price": 99
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 50,
+     "price": 33333333
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 12.5,
+     "price": 0
+    }
+   ],
+   "lines": [
+    152,
+    1,
+    0,
+    299999997,
+    0,
+    0,
+    1,
+    100000,
+    733299993,
+    385000,
+    0,
+    9,
+    0,
+    0,
+    72000,
+    1279872,
+    91,
+    0,
+    63994,
+    0,
+    0,
+    89999999,
+    0,
+    0,
+    192000,
+    844762,
+    1125000,
+    2,
+    0,
+    659969993,
+    25666666,
+    299969997,
+    40,
+    63,
+    0,
+    990,
+    3,
+    0,
+    18750000,
+    0
+   ],
+   "expected": {
+    "subtotal": 2131720625,
+    "tax": 0,
+    "total": 2131720625
+   }
+  },
+  {
+   "id": "total-n100",
+   "quoteType": "total",
+   "items": [
+    {
+     "qty": 0.5,
+     "priceRate": 50,
+     "price": 7
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 99.99,
+     "price": 7
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 90,
+     "price": 1000000
+    },
+    {
+     "qty": 1,
+     "priceRate": 100,
+     "price": 128000
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 50,
+     "price": 99
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 100,
+     "price": 1
+    },
+    {
+     "qty": 10,
+     "priceRate": 12.5,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 77,
+     "price": 99
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 99.99,
+     "price": 1
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 100,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 12.5,
+     "price": 99999999
+    },
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "price": 7
+    },
+    {
+     "qty": 1,
+     "priceRate": 50,
+     "price": 128000
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 12.5,
+     "price": 33333333
+    },
+    {
+     "qty": 1,
+     "priceRate": 77,
+     "price": 7
+    },
+    {
+     "qty": 10,
+     "priceRate": 100,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 0,
+     "price": 7
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 50,
+     "price": 128000
+    },
+    {
+     "qty": 2,
+     "priceRate": 50,
+     "price": 1000000
+    },
+    {
+     "qty": 1,
+     "priceRate": 77,
+     "price": 33333333
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "price": 99999999
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 50,
+     "price": 128000
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 99.99,
+     "price": 7
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 77,
+     "price": 7
+    },
+    {
+     "qty": 3,
+     "priceRate": 0,
+     "price": 99999999
+    },
+    {
+     "qty": 3,
+     "priceRate": 90,
+     "price": 1000000
+    },
+    {
+     "qty": 10,
+     "priceRate": 90,
+     "price": 99
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 0,
+     "price": 33333333
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 90,
+     "price": 7
+    },
+    {
+     "qty": 3,
+     "priceRate": 12.5,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 90,
+     "price": 33333333
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 99.99,
+     "price": 7
+    },
+    {
+     "qty": 2,
+     "priceRate": 0,
+     "price": 99999999
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 100,
+     "price": 99
+    },
+    {
+     "qty": 2,
+     "priceRate": 77,
+     "price": 33333333
+    },
+    {
+     "qty": 2,
+     "priceRate": 77,
+     "price": 33333333
+    },
+    {
+     "qty": 1,
+     "priceRate": 50,
+     "price": 1
+    },
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "price": 99
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 100,
+     "price": 1000000
+    },
+    {
+     "qty": 1,
+     "priceRate": 0,
+     "price": 7
+    },
+    {
+     "qty": 10,
+     "priceRate": 77,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 77,
+     "price": 7
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 0,
+     "price": 1
+    },
+    {
+     "qty": 10,
+     "priceRate": 90,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 50,
+     "price": 1000000
+    },
+    {
+     "qty": 10,
+     "priceRate": 12.5,
+     "price": 99999999
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 90,
+     "price": 99
+    },
+    {
+     "qty": 1,
+     "priceRate": 99.99,
+     "price": 7
+    },
+    {
+     "qty": 3,
+     "priceRate": 0,
+     "price": 99999999
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 100,
+     "price": 99
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 90,
+     "price": 1000000
+    },
+    {
+     "qty": 10,
+     "priceRate": 0,
+     "price": 128000
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 100,
+     "price": 1
+    },
+    {
+     "qty": 10,
+     "priceRate": 12.5,
+     "price": 1000000
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 77,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 77,
+     "price": 1000000
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 12.5,
+     "price": 7
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "price": 128000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "price": 1
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 77,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 0,
+     "price": 128000
+    },
+    {
+     "qty": 1,
+     "priceRate": 0,
+     "price": 128000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 100,
+     "price": 128000
+    },
+    {
+     "qty": 3,
+     "priceRate": 90,
+     "price": 99
+    },
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "price": 1000000
+    },
+    {
+     "qty": 2,
+     "priceRate": 99.99,
+     "price": 33333333
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 77,
+     "price": 1
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 100,
+     "price": 128000
+    },
+    {
+     "qty": 3,
+     "priceRate": 0,
+     "price": 128000
+    },
+    {
+     "qty": 3,
+     "priceRate": 50,
+     "price": 99999999
+    },
+    {
+     "qty": 2,
+     "priceRate": 12.5,
+     "price": 1
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 77,
+     "price": 99
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 12.5,
+     "price": 1
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 100,
+     "price": 1
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "price": 99999999
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 100,
+     "price": 33333333
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "price": 1
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 12.5,
+     "price": 33333333
+    },
+    {
+     "qty": 1,
+     "priceRate": 100,
+     "price": 1000000
+    },
+    {
+     "qty": 1,
+     "priceRate": 90,
+     "price": 1
+    },
+    {
+     "qty": 10,
+     "priceRate": 77,
+     "price": 33333333
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 0,
+     "price": 128000
+    },
+    {
+     "qty": 2,
+     "priceRate": 12.5,
+     "price": 33333333
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 0,
+     "price": 33333333
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 0,
+     "price": 99
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 0,
+     "price": 128000
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 99.99,
+     "price": 99
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 90,
+     "price": 128000
+    },
+    {
+     "qty": 1,
+     "priceRate": 50,
+     "price": 1000000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "price": 33333333
+    },
+    {
+     "qty": 1,
+     "priceRate": 99.99,
+     "price": 1000000
+    },
+    {
+     "qty": 10,
+     "priceRate": 99.99,
+     "price": 1000000
+    },
+    {
+     "qty": 10,
+     "priceRate": 12.5,
+     "price": 1000000
+    },
+    {
+     "qty": 10,
+     "priceRate": 90,
+     "price": 99999999
+    },
+    {
+     "qty": 2,
+     "priceRate": 0,
+     "price": 7
+    },
+    {
+     "qty": 1,
+     "priceRate": 99.99,
+     "price": 99999999
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 12.5,
+     "price": 128000
+    },
+    {
+     "qty": 2,
+     "priceRate": 100,
+     "price": 1
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 90,
+     "price": 1000000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 50,
+     "price": 1000000
+    }
+   ],
+   "lines": [
+    2,
+    8,
+    6599700,
+    128000,
+    25,
+    1,
+    0,
+    0,
+    1,
+    0,
+    25000000,
+    13,
+    64000,
+    2083333,
+    5,
+    0,
+    0,
+    72000,
+    1000000,
+    25666666,
+    299969997,
+    469312,
+    3,
+    0,
+    0,
+    2700000,
+    891,
+    0,
+    46,
+    0,
+    33750000,
+    0,
+    0,
+    50,
+    51333333,
+    51333333,
+    1,
+    178,
+    500000,
+    0,
+    0,
+    11,
+    0,
+    0,
+    1500000,
+    124999999,
+    100,
+    7,
+    0,
+    50,
+    900,
+    0,
+    1,
+    1250000,
+    0,
+    1540000,
+    0,
+    722740,
+    6,
+    0,
+    0,
+    0,
+    938624,
+    267,
+    1800000,
+    66659999,
+    1,
+    938624,
+    0,
+    149999999,
+    0,
+    38,
+    1,
+    7,
+    299969997,
+    16666667,
+    3,
+    30554166,
+    1000000,
+    1,
+    256666664,
+    0,
+    8333333,
+    0,
+    0,
+    0,
+    111,
+    129600,
+    500000,
+    188213665,
+    999900,
+    9999000,
+    1250000,
+    899999991,
+    0,
+    99989999,
+    18000,
+    2,
+    900,
+    3666500
+   ],
+   "expected": {
+    "subtotal": 2668980771,
+    "tax": 0,
+    "total": 2668980771
+   }
+  },
+  {
+   "id": "cost-n1",
+   "quoteType": "cost",
+   "items": [
+    {
+     "qty": 1.125,
+     "priceRate": 90,
+     "material": 99,
+     "labor": 278,
+     "expense": 7,
+     "price": 0
+    }
+   ],
+   "lines": [
+    389
+   ],
+   "expected": {
+    "subtotal": 389,
+    "tax": 39,
+    "total": 428
+   }
+  },
+  {
+   "id": "cost-n2",
+   "quoteType": "cost",
+   "items": [
+    {
+     "qty": 3,
+     "priceRate": 0,
+     "material": 1000000,
+     "labor": 33333333,
+     "expense": 1000000,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 100,
+     "material": 1,
+     "labor": 3,
+     "expense": 0,
+     "price": 0
+    }
+   ],
+   "lines": [
+    0,
+    12
+   ],
+   "expected": {
+    "subtotal": 12,
+    "tax": 1,
+    "total": 13
+   }
+  },
+  {
+   "id": "cost-n3",
+   "quoteType": "cost",
+   "items": [
+    {
+     "qty": 0.5,
+     "priceRate": 100,
+     "material": 0,
+     "labor": 1000000,
+     "expense": 30000,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 0,
+     "material": 33333333,
+     "labor": 93749999,
+     "expense": 33333333,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 50,
+     "material": 1,
+     "labor": 3,
+     "expense": 99999999,
+     "price": 0
+    }
+   ],
+   "lines": [
+    515000,
+    0,
+    366650011
+   ],
+   "expected": {
+    "subtotal": 367165011,
+    "tax": 36716501,
+    "total": 403881512
+   }
+  },
+  {
+   "id": "cost-n4",
+   "quoteType": "cost",
+   "items": [
+    {
+     "qty": 1,
+     "priceRate": 50,
+     "material": 7,
+     "labor": 20,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 77,
+     "material": 99,
+     "labor": 1000000,
+     "expense": 30000,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 90,
+     "material": 0,
+     "labor": 0,
+     "expense": 128000,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 12.5,
+     "material": 128000,
+     "labor": 99,
+     "expense": 3,
+     "price": 0
+    }
+   ],
+   "lines": [
+    14,
+    396588,
+    57600,
+    16013
+   ],
+   "expected": {
+    "subtotal": 470215,
+    "tax": 47022,
+    "total": 517237
+   }
+  },
+  {
+   "id": "cost-n5",
+   "quoteType": "cost",
+   "items": [
+    {
+     "qty": 1.125,
+     "priceRate": 77,
+     "material": 1,
+     "labor": 3,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 12.5,
+     "material": 128000,
+     "labor": 360000,
+     "expense": 10800,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 90,
+     "material": 0,
+     "labor": 128000,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 12.5,
+     "material": 128000,
+     "labor": 360000,
+     "expense": 10800,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 77,
+     "material": 1,
+     "labor": 3,
+     "expense": 0,
+     "price": 0
+    }
+   ],
+   "lines": [
+    3,
+    70144,
+    844762,
+    62350,
+    2
+   ],
+   "expected": {
+    "subtotal": 977261,
+    "tax": 97726,
+    "total": 1074987
+   }
+  },
+  {
+   "id": "cost-n8",
+   "quoteType": "cost",
+   "items": [
+    {
+     "qty": 1.125,
+     "priceRate": 12.5,
+     "material": 1,
+     "labor": 3,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 50,
+     "material": 7,
+     "labor": 33333333,
+     "expense": 1000000,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 100,
+     "material": 0,
+     "labor": 0,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 99.99,
+     "material": 7,
+     "labor": 20,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 90,
+     "material": 1,
+     "labor": 1,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 0,
+     "material": 99999999,
+     "labor": 128000,
+     "expense": 3840,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 12.5,
+     "material": 33333333,
+     "labor": 93749999,
+     "expense": 7,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 99.99,
+     "material": 128000,
+     "labor": 99999999,
+     "expense": 0,
+     "price": 0
+    }
+   ],
+   "lines": [
+    1,
+    51500010,
+    0,
+    0,
+    0,
+    0,
+    31770835,
+    200235972
+   ],
+   "expected": {
+    "subtotal": 283506818,
+    "tax": 28350682,
+    "total": 311857500
+   }
+  },
+  {
+   "id": "cost-n9",
+   "quoteType": "cost",
+   "items": [
+    {
+     "qty": 7.333,
+     "priceRate": 99.99,
+     "material": 33333333,
+     "labor": 1,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 100,
+     "material": 0,
+     "labor": 0,
+     "expense": 128000,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 99.99,
+     "material": 99,
+     "labor": 278,
+     "expense": 7,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 12.5,
+     "material": 99999999,
+     "labor": 281249997,
+     "expense": 8437500,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "material": 128000,
+     "labor": 360000,
+     "expense": 1000000,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 99.99,
+     "material": 1,
+     "labor": 3,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 100,
+     "material": 1000000,
+     "labor": 2812500,
+     "expense": 1000000,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 90,
+     "material": 33333333,
+     "labor": 93749999,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 77,
+     "material": 99999999,
+     "labor": 7,
+     "expense": 0,
+     "price": 0
+    }
+   ],
+   "lines": [
+    244408895,
+    64000,
+    3840,
+    24355469,
+    2678400,
+    0,
+    35290063,
+    114375,
+    77000
+   ],
+   "expected": {
+    "subtotal": 306992042,
+    "tax": 30699204,
+    "total": 337691246
+   }
+  },
+  {
+   "id": "cost-n10",
+   "quoteType": "cost",
+   "items": [
+    {
+     "qty": 7.333,
+     "priceRate": 12.5,
+     "material": 128000,
+     "labor": 360000,
+     "expense": 1000000,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 0,
+     "material": 33333333,
+     "labor": 128000,
+     "expense": 3840,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 50,
+     "material": 1000000,
+     "labor": 1,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 100,
+     "material": 99999999,
+     "labor": 281249997,
+     "expense": 128000,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 0,
+     "material": 33333333,
+     "labor": 93749999,
+     "expense": 33333333,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 100,
+     "material": 99999999,
+     "labor": 281249997,
+     "expense": 8437500,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 99.99,
+     "material": 7,
+     "labor": 20,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 90,
+     "material": 7,
+     "labor": 7,
+     "expense": 1000000,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 50,
+     "material": 1000000,
+     "labor": 2812500,
+     "expense": 84375,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 50,
+     "material": 33333333,
+     "labor": 93749999,
+     "expense": 2812500,
+     "price": 0
+    }
+   ],
+   "lines": [
+    1363938,
+    0,
+    500,
+    762755992,
+    0,
+    3896874960,
+    31,
+    900,
+    2191992,
+    129895832
+   ],
+   "expected": {
+    "subtotal": 4793084145,
+    "tax": 479308415,
+    "total": 5272392560
+   }
+  },
+  {
+   "id": "cost-n20",
+   "quoteType": "cost",
+   "items": [
+    {
+     "qty": 0.5,
+     "priceRate": 0,
+     "material": 128000,
+     "labor": 360000,
+     "expense": 10800,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 77,
+     "material": 33333333,
+     "labor": 1,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 77,
+     "material": 99999999,
+     "labor": 281249997,
+     "expense": 8437500,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 77,
+     "material": 1000000,
+     "labor": 2812500,
+     "expense": 99,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 12.5,
+     "material": 7,
+     "labor": 20,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 99.99,
+     "material": 99,
+     "labor": 7,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 100,
+     "material": 128000,
+     "labor": 360000,
+     "expense": 10800,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 100,
+     "material": 99999999,
+     "labor": 281249997,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 90,
+     "material": 1000000,
+     "labor": 2812500,
+     "expense": 84375,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 77,
+     "material": 1000000,
+     "labor": 2812500,
+     "expense": 84375,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 99.99,
+     "material": 128000,
+     "labor": 99,
+     "expense": 3,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 0,
+     "material": 99999999,
+     "labor": 281249997,
+     "expense": 128000,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 12.5,
+     "material": 1000000,
+     "labor": 2812500,
+     "expense": 84375,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 0,
+     "material": 99999999,
+     "labor": 1000000,
+     "expense": 128000,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 77,
+     "material": 1000000,
+     "labor": 1000000,
+     "expense": 30000,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 77,
+     "material": 99,
+     "labor": 278,
+     "expense": 8,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 0,
+     "material": 7,
+     "labor": 20,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 99.99,
+     "material": 1,
+     "labor": 3,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 0,
+     "material": 7,
+     "labor": 20,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 50,
+     "material": 33333333,
+     "labor": 93749999,
+     "expense": 2812500,
+     "price": 0
+    }
+   ],
+   "lines": [
+    0,
+    28875001,
+    3000593719,
+    3302664,
+    2,
+    53,
+    4988000,
+    428906247,
+    10521563,
+    3001,
+    128,
+    0,
+    1461328,
+    0,
+    1563100,
+    334,
+    0,
+    29,
+    0,
+    73066406
+   ],
+   "expected": {
+    "subtotal": 3553281575,
+    "tax": 355328158,
+    "total": 3908609733
+   }
+  },
+  {
+   "id": "cost-n40",
+   "quoteType": "cost",
+   "items": [
+    {
+     "qty": 1.125,
+     "priceRate": 12.5,
+     "material": 128000,
+     "labor": 1000000,
+     "expense": 7,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 100,
+     "material": 1000000,
+     "labor": 2812500,
+     "expense": 84375,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 50,
+     "material": 33333333,
+     "labor": 93749999,
+     "expense": 2812500,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 99.99,
+     "material": 7,
+     "labor": 20,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 99.99,
+     "material": 7,
+     "labor": 20,
+     "expense": 99999999,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 100,
+     "material": 1,
+     "labor": 99999999,
+     "expense": 3000000,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 0,
+     "material": 128000,
+     "labor": 360000,
+     "expense": 33333333,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 100,
+     "material": 33333333,
+     "labor": 0,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 100,
+     "material": 99999999,
+     "labor": 281249997,
+     "expense": 99999999,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 50,
+     "material": 33333333,
+     "labor": 93749999,
+     "expense": 33333333,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "material": 99,
+     "labor": 33333333,
+     "expense": 1000000,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 99.99,
+     "material": 7,
+     "labor": 20,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "material": 99,
+     "labor": 99999999,
+     "expense": 3000000,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "material": 128000,
+     "labor": 360000,
+     "expense": 10800,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 90,
+     "material": 33333333,
+     "labor": 93749999,
+     "expense": 2812500,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 77,
+     "material": 99,
+     "labor": 278,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 0,
+     "material": 1,
+     "labor": 3,
+     "expense": 99,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 90,
+     "material": 7,
+     "labor": 20,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 100,
+     "material": 1,
+     "labor": 7,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 90,
+     "material": 1,
+     "labor": 128000,
+     "expense": 3840,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 90,
+     "material": 128000,
+     "labor": 1,
+     "expense": 99999999,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 50,
+     "material": 0,
+     "labor": 0,
+     "expense": 7,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 100,
+     "material": 99,
+     "labor": 278,
+     "expense": 8,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 50,
+     "material": 0,
+     "labor": 0,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 50,
+     "material": 1,
+     "labor": 3,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 50,
+     "material": 128000,
+     "labor": 360000,
+     "expense": 10800,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 77,
+     "material": 1,
+     "labor": 1000000,
+     "expense": 30000,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 50,
+     "material": 99999999,
+     "labor": 281249997,
+     "expense": 8437500,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 12.5,
+     "material": 1000000,
+     "labor": 2812500,
+     "expense": 84375,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 50,
+     "material": 99999999,
+     "labor": 281249997,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 100,
+     "material": 99999999,
+     "labor": 99,
+     "expense": 3,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 0,
+     "material": 7,
+     "labor": 20,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "material": 7,
+     "labor": 20,
+     "expense": 1000000,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 0,
+     "material": 33333333,
+     "labor": 93749999,
+     "expense": 7,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 90,
+     "material": 1,
+     "labor": 99,
+     "expense": 3,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 99.99,
+     "material": 99,
+     "labor": 278,
+     "expense": 33333333,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 90,
+     "material": 0,
+     "labor": 1000000,
+     "expense": 30000,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "material": 99999999,
+     "labor": 281249997,
+     "expense": 8437500,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 90,
+     "material": 128000,
+     "labor": 360000,
+     "expense": 10800,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 77,
+     "material": 99999999,
+     "labor": 281249997,
+     "expense": 8437500,
+     "price": 0
+    }
+   ],
+   "lines": [
+    158626,
+    38968750,
+    32473958,
+    205,
+    49995013,
+    103000,
+    0,
+    66666666,
+    240624998,
+    80208333,
+    193860634,
+    0,
+    185400176,
+    1496250,
+    350718746,
+    291,
+    0,
+    25,
+    24,
+    119,
+    45057600,
+    4,
+    3850,
+    1,
+    1,
+    249,
+    7931008,
+    389687496,
+    487109,
+    571874996,
+    100000101,
+    0,
+    5646562,
+    0,
+    278,
+    244411652,
+    927000,
+    701437493,
+    448920,
+    3000593719
+   ],
+   "expected": {
+    "subtotal": 6309183853,
+    "tax": 630918385,
+    "total": 6940102238
+   }
+  },
+  {
+   "id": "cost-n100",
+   "quoteType": "cost",
+   "items": [
+    {
+     "qty": 7.333,
+     "priceRate": 100,
+     "material": 1000000,
+     "labor": 7,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 50,
+     "material": 128000,
+     "labor": 360000,
+     "expense": 128000,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 90,
+     "material": 33333333,
+     "labor": 93749999,
+     "expense": 99999999,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 0,
+     "material": 99,
+     "labor": 278,
+     "expense": 8,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 0,
+     "material": 1000000,
+     "labor": 2812500,
+     "expense": 84375,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 100,
+     "material": 7,
+     "labor": 20,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 100,
+     "material": 99,
+     "labor": 278,
+     "expense": 1000000,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 50,
+     "material": 99,
+     "labor": 128000,
+     "expense": 3840,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 99.99,
+     "material": 99999999,
+     "labor": 33333333,
+     "expense": 1000000,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 99.99,
+     "material": 99,
+     "labor": 278,
+     "expense": 8,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 100,
+     "material": 33333333,
+     "labor": 1,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 100,
+     "material": 1000000,
+     "labor": 2812500,
+     "expense": 7,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 50,
+     "material": 128000,
+     "labor": 0,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 100,
+     "material": 99999999,
+     "labor": 128000,
+     "expense": 3840,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 77,
+     "material": 128000,
+     "labor": 360000,
+     "expense": 10800,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "material": 33333333,
+     "labor": 99999999,
+     "expense": 7,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "material": 99,
+     "labor": 278,
+     "expense": 8,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 12.5,
+     "material": 7,
+     "labor": 20,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 100,
+     "material": 7,
+     "labor": 1,
+     "expense": 99999999,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 12.5,
+     "material": 0,
+     "labor": 1000000,
+     "expense": 128000,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 0,
+     "material": 0,
+     "labor": 0,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 99.99,
+     "material": 0,
+     "labor": 128000,
+     "expense": 99999999,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 99.99,
+     "material": 1,
+     "labor": 1,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 12.5,
+     "material": 33333333,
+     "labor": 93749999,
+     "expense": 2812500,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 0,
+     "material": 33333333,
+     "labor": 99,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 100,
+     "material": 0,
+     "labor": 0,
+     "expense": 128000,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 77,
+     "material": 99,
+     "labor": 278,
+     "expense": 8,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 90,
+     "material": 128000,
+     "labor": 360000,
+     "expense": 10800,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 99.99,
+     "material": 33333333,
+     "labor": 93749999,
+     "expense": 2812500,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 100,
+     "material": 1000000,
+     "labor": 2812500,
+     "expense": 84375,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 12.5,
+     "material": 0,
+     "labor": 0,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 99.99,
+     "material": 1000000,
+     "labor": 2812500,
+     "expense": 99999999,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 90,
+     "material": 0,
+     "labor": 33333333,
+     "expense": 128000,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 0,
+     "material": 99,
+     "labor": 278,
+     "expense": 8,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 90,
+     "material": 33333333,
+     "labor": 93749999,
+     "expense": 2812500,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 90,
+     "material": 128000,
+     "labor": 0,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 100,
+     "material": 0,
+     "labor": 0,
+     "expense": 7,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 12.5,
+     "material": 0,
+     "labor": 0,
+     "expense": 99,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 0,
+     "material": 0,
+     "labor": 0,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 100,
+     "material": 99999999,
+     "labor": 281249997,
+     "expense": 8437500,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 12.5,
+     "material": 1,
+     "labor": 3,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 100,
+     "material": 1,
+     "labor": 3,
+     "expense": 33333333,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 100,
+     "material": 128000,
+     "labor": 99999999,
+     "expense": 1000000,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "material": 99999999,
+     "labor": 281249997,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "material": 1000000,
+     "labor": 7,
+     "expense": 1000000,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 0,
+     "material": 1,
+     "labor": 3,
+     "expense": 99,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 90,
+     "material": 0,
+     "labor": 1,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 90,
+     "material": 7,
+     "labor": 20,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 90,
+     "material": 1000000,
+     "labor": 128000,
+     "expense": 128000,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 0,
+     "material": 1000000,
+     "labor": 1,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 77,
+     "material": 33333333,
+     "labor": 93749999,
+     "expense": 2812500,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 100,
+     "material": 1,
+     "labor": 3,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 99.99,
+     "material": 128000,
+     "labor": 360000,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 50,
+     "material": 7,
+     "labor": 99,
+     "expense": 33333333,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 50,
+     "material": 99,
+     "labor": 278,
+     "expense": 8,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 100,
+     "material": 1000000,
+     "labor": 33333333,
+     "expense": 99,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 50,
+     "material": 7,
+     "labor": 20,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "material": 1,
+     "labor": 3,
+     "expense": 33333333,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 50,
+     "material": 128000,
+     "labor": 360000,
+     "expense": 33333333,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 90,
+     "material": 128000,
+     "labor": 1,
+     "expense": 99999999,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "material": 33333333,
+     "labor": 1,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 50,
+     "material": 128000,
+     "labor": 360000,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 77,
+     "material": 1000000,
+     "labor": 128000,
+     "expense": 3840,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 50,
+     "material": 1,
+     "labor": 7,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 50,
+     "material": 1,
+     "labor": 1000000,
+     "expense": 99,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "material": 99,
+     "labor": 99,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 100,
+     "material": 99,
+     "labor": 278,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "material": 128000,
+     "labor": 360000,
+     "expense": 7,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 99.99,
+     "material": 1000000,
+     "labor": 1,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 0,
+     "material": 1000000,
+     "labor": 7,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 50,
+     "material": 0,
+     "labor": 0,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 100,
+     "material": 128000,
+     "labor": 0,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 0,
+     "material": 128000,
+     "labor": 128000,
+     "expense": 3840,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 50,
+     "material": 33333333,
+     "labor": 1,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 99.99,
+     "material": 99,
+     "labor": 99,
+     "expense": 33333333,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 12.5,
+     "material": 99,
+     "labor": 278,
+     "expense": 8,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 0,
+     "material": 99,
+     "labor": 278,
+     "expense": 7,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 77,
+     "material": 1000000,
+     "labor": 99999999,
+     "expense": 3000000,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "material": 128000,
+     "labor": 99999999,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 90,
+     "material": 128000,
+     "labor": 7,
+     "expense": 99999999,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 12.5,
+     "material": 99999999,
+     "labor": 281249997,
+     "expense": 33333333,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 0,
+     "material": 99999999,
+     "labor": 281249997,
+     "expense": 8437500,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 50,
+     "material": 99999999,
+     "labor": 33333333,
+     "expense": 1000000,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 50,
+     "material": 99999999,
+     "labor": 281249997,
+     "expense": 8437500,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 90,
+     "material": 7,
+     "labor": 33333333,
+     "expense": 1000000,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 12.5,
+     "material": 99999999,
+     "labor": 281249997,
+     "expense": 1000000,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 50,
+     "material": 99,
+     "labor": 99,
+     "expense": 3,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 100,
+     "material": 0,
+     "labor": 0,
+     "expense": 0,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 77,
+     "material": 0,
+     "labor": 99,
+     "expense": 128000,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 0,
+     "material": 128000,
+     "labor": 1000000,
+     "expense": 30000,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 50,
+     "material": 7,
+     "labor": 20,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 90,
+     "material": 128000,
+     "labor": 360000,
+     "expense": 10800,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 12.5,
+     "material": 33333333,
+     "labor": 93749999,
+     "expense": 128000,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 50,
+     "material": 1,
+     "labor": 3,
+     "expense": 7,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 90,
+     "material": 0,
+     "labor": 128000,
+     "expense": 1,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 12.5,
+     "material": 0,
+     "labor": 1000000,
+     "expense": 30000,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 0,
+     "material": 1000000,
+     "labor": 33333333,
+     "expense": 99999999,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 50,
+     "material": 33333333,
+     "labor": 93749999,
+     "expense": 2812500,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 50,
+     "material": 1,
+     "labor": 33333333,
+     "expense": 1000000,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 0,
+     "material": 99,
+     "labor": 278,
+     "expense": 1000000,
+     "price": 0
+    }
+   ],
+   "lines": [
+    7333051,
+    154000,
+    229921873,
+    0,
+    0,
+    32,
+    1125424,
+    66,
+    134320,
+    2823,
+    33333,
+    27957114,
+    128000,
+    100131839,
+    192038,
+    399960017,
+    693,
+    4,
+    1000000070,
+    423000,
+    0,
+    100118,
+    0,
+    32473958,
+    0,
+    144000,
+    148,
+    449,
+    1298828424,
+    7793750,
+    0,
+    1038021178,
+    90345599,
+    0,
+    116906,
+    1152000,
+    7,
+    12,
+    0,
+    389687496,
+    4,
+    244433360,
+    741571617,
+    2152693790,
+    11292860,
+    0,
+    1,
+    252,
+    3391200,
+    0,
+    300059372,
+    5,
+    488,
+    18750059,
+    96,
+    34333432,
+    103,
+    60000007,
+    33821333,
+    270345600,
+    60000001,
+    2440000,
+    2614550,
+    0,
+    5000500,
+    594,
+    189,
+    878413,
+    499950,
+    0,
+    1,
+    128001,
+    0,
+    16666667,
+    333301976,
+    481,
+    0,
+    240239998,
+    180230400,
+    90115,
+    103645832,
+    0,
+    671666660,
+    1428789204,
+    15450003,
+    143343749,
+    0,
+    0,
+    99,
+    0,
+    14,
+    4489200,
+    47704250,
+    55,
+    115201,
+    1287500,
+    0,
+    476263068,
+    171666670,
+    0
+   ],
+   "expected": {
+    "subtotal": 12403368662,
+    "tax": 1240336866,
+    "total": 13643705528
+   }
+  },
+  {
+   "id": "catalog-n1",
+   "quoteType": "catalog",
+   "items": [
+    {
+     "qty": 1,
+     "priceRate": 12.5,
+     "price": 99
+    }
+   ],
+   "lines": [
+    12
+   ],
+   "expected": {
+    "subtotal": 12,
+    "tax": 0,
+    "total": 12
+   },
+   "catalogTotals": {
+    "discounted": 12,
+    "fee": 0,
+    "withFee": 12
+   }
+  },
+  {
+   "id": "catalog-n2",
+   "quoteType": "catalog",
+   "items": [
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 77,
+     "price": 99
+    }
+   ],
+   "lines": [
+    0,
+    76
+   ],
+   "expected": {
+    "subtotal": 76,
+    "tax": 0,
+    "total": 76
+   },
+   "catalogTotals": {
+    "discounted": 76,
+    "fee": 0,
+    "withFee": 76
+   }
+  },
+  {
+   "id": "catalog-n3",
+   "quoteType": "catalog",
+   "items": [
+    {
+     "qty": 1,
+     "priceRate": 99.99,
+     "price": 1
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 100,
+     "price": 99
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 0,
+     "price": 33333333
+    }
+   ],
+   "lines": [
+    1,
+    0,
+    0
+   ],
+   "expected": {
+    "subtotal": 1,
+    "tax": 0,
+    "total": 1
+   },
+   "catalogTotals": {
+    "discounted": 1,
+    "fee": 0,
+    "withFee": 1
+   }
+  },
+  {
+   "id": "catalog-n4",
+   "quoteType": "catalog",
+   "items": [
+    {
+     "qty": 1.125,
+     "priceRate": 99.99,
+     "price": 7
+    },
+    {
+     "qty": 10,
+     "priceRate": 0,
+     "price": 7
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 77,
+     "price": 1
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 90,
+     "price": 33333333
+    }
+   ],
+   "lines": [
+    8,
+    0,
+    1,
+    15000000
+   ],
+   "expected": {
+    "subtotal": 15000009,
+    "tax": 0,
+    "total": 15000009
+   },
+   "catalogTotals": {
+    "discounted": 15000009,
+    "fee": 81000,
+    "withFee": 15081009
+   }
+  },
+  {
+   "id": "catalog-n5",
+   "quoteType": "catalog",
+   "items": [
+    {
+     "qty": 10,
+     "priceRate": 12.5,
+     "price": 7
+    },
+    {
+     "qty": 2,
+     "priceRate": 50,
+     "price": 1000000
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 50,
+     "price": 33333333
+    },
+    {
+     "qty": 10,
+     "priceRate": 99.99,
+     "price": 7
+    },
+    {
+     "qty": 3,
+     "priceRate": 100,
+     "price": 1
+    }
+   ],
+   "lines": [
+    9,
+    1000000,
+    8333333,
+    70,
+    3
+   ],
+   "expected": {
+    "subtotal": 9333415,
+    "tax": 0,
+    "total": 9333415
+   },
+   "catalogTotals": {
+    "discounted": 9333415,
+    "fee": 50400,
+    "withFee": 9383815
+   }
+  },
+  {
+   "id": "catalog-n8",
+   "quoteType": "catalog",
+   "items": [
+    {
+     "qty": 7.333,
+     "priceRate": 100,
+     "price": 1000000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 50,
+     "price": 7
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 77,
+     "price": 99
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 50,
+     "price": 1
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 12.5,
+     "price": 99
+    },
+    {
+     "qty": 10,
+     "priceRate": 12.5,
+     "price": 33333333
+    },
+    {
+     "qty": 2,
+     "priceRate": 0,
+     "price": 128000
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 100,
+     "price": 128000
+    }
+   ],
+   "lines": [
+    7333000,
+    26,
+    0,
+    0,
+    6,
+    41666666,
+    0,
+    64000
+   ],
+   "expected": {
+    "subtotal": 49063698,
+    "tax": 0,
+    "total": 49063698
+   },
+   "catalogTotals": {
+    "discounted": 49063698,
+    "fee": 264944,
+    "withFee": 49328642
+   }
+  },
+  {
+   "id": "catalog-n9",
+   "quoteType": "catalog",
+   "items": [
+    {
+     "qty": 3,
+     "priceRate": 77,
+     "price": 128000
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 99.99,
+     "price": 99999999
+    },
+    {
+     "qty": 3,
+     "priceRate": 100,
+     "price": 99999999
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 90,
+     "price": 99
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 12.5,
+     "price": 1000000
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 99.99,
+     "price": 7
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 50,
+     "price": 1
+    },
+    {
+     "qty": 1,
+     "priceRate": 90,
+     "price": 99999999
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 50,
+     "price": 128000
+    }
+   ],
+   "lines": [
+    295680,
+    49995000,
+    299999997,
+    100,
+    916625,
+    8,
+    1,
+    89999999,
+    32000
+   ],
+   "expected": {
+    "subtotal": 441239410,
+    "tax": 0,
+    "total": 432414622
+   },
+   "catalogTotals": {
+    "discounted": 432414622,
+    "fee": 2335039,
+    "withFee": 434749661
+   }
+  },
+  {
+   "id": "catalog-n10",
+   "quoteType": "catalog",
+   "items": [
+    {
+     "qty": 1,
+     "priceRate": 50,
+     "price": 128000
+    },
+    {
+     "qty": 3,
+     "priceRate": 50,
+     "price": 99999999
+    },
+    {
+     "qty": 1,
+     "priceRate": 12.5,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 100,
+     "price": 99999999
+    },
+    {
+     "qty": 10,
+     "priceRate": 90,
+     "price": 128000
+    },
+    {
+     "qty": 3,
+     "priceRate": 0,
+     "price": 99
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 77,
+     "price": 128000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 99.99,
+     "price": 128000
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 99.99,
+     "price": 1000000
+    },
+    {
+     "qty": 1,
+     "priceRate": 99.99,
+     "price": 99999999
+    }
+   ],
+   "lines": [
+    64000,
+    149999999,
+    0,
+    199999998,
+    1152000,
+    0,
+    110880,
+    938530,
+    1124888,
+    99989999
+   ],
+   "expected": {
+    "subtotal": 453380294,
+    "tax": 0,
+    "total": 444312688
+   },
+   "catalogTotals": {
+    "discounted": 444312688,
+    "fee": 2399289,
+    "withFee": 446711977
+   }
+  },
+  {
+   "id": "catalog-n20",
+   "quoteType": "catalog",
+   "items": [
+    {
+     "qty": 10,
+     "priceRate": 77,
+     "price": 7
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 0,
+     "price": 99999999
+    },
+    {
+     "qty": 3,
+     "priceRate": 100,
+     "price": 99999999
+    },
+    {
+     "qty": 1,
+     "priceRate": 99.99,
+     "price": 99
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 12.5,
+     "price": 33333333
+    },
+    {
+     "qty": 3,
+     "priceRate": 77,
+     "price": 128000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 0,
+     "price": 99
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 0,
+     "price": 1
+    },
+    {
+     "qty": 2,
+     "priceRate": 0,
+     "price": 99
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 50,
+     "price": 1
+    },
+    {
+     "qty": 1,
+     "priceRate": 0,
+     "price": 99
+    },
+    {
+     "qty": 10,
+     "priceRate": 50,
+     "price": 99999999
+    },
+    {
+     "qty": 2,
+     "priceRate": 100,
+     "price": 128000
+    },
+    {
+     "qty": 1,
+     "priceRate": 77,
+     "price": 1
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 99.99,
+     "price": 99
+    },
+    {
+     "qty": 1,
+     "priceRate": 100,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 90,
+     "price": 99999999
+    },
+    {
+     "qty": 2,
+     "priceRate": 50,
+     "price": 7
+    },
+    {
+     "qty": 3,
+     "priceRate": 0,
+     "price": 1000000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "price": 7
+    }
+   ],
+   "lines": [
+    54,
+    0,
+    299999997,
+    99,
+    4167,
+    295680,
+    0,
+    0,
+    0,
+    4,
+    0,
+    499999995,
+    256000,
+    1,
+    0,
+    0,
+    101249999,
+    7,
+    0,
+    40
+   ],
+   "expected": {
+    "subtotal": 901806043,
+    "tax": 0,
+    "total": 883769922
+   },
+   "catalogTotals": {
+    "discounted": 883769922,
+    "fee": 4772358,
+    "withFee": 888542280
+   }
+  },
+  {
+   "id": "catalog-n40",
+   "quoteType": "catalog",
+   "items": [
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "price": 1000000
+    },
+    {
+     "qty": 1,
+     "priceRate": 99.99,
+     "price": 7
+    },
+    {
+     "qty": 10,
+     "priceRate": 99.99,
+     "price": 128000
+    },
+    {
+     "qty": 2,
+     "priceRate": 77,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 0,
+     "price": 7
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 90,
+     "price": 1000000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "price": 1000000
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 99.99,
+     "price": 1000000
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 77,
+     "price": 1000000
+    },
+    {
+     "qty": 3,
+     "priceRate": 90,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 50,
+     "price": 99999999
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 12.5,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "price": 1
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 0,
+     "price": 33333333
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 90,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 12.5,
+     "price": 7
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "price": 33333333
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 77,
+     "price": 1000000
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 50,
+     "price": 1
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 90,
+     "price": 1
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 12.5,
+     "price": 7
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 100,
+     "price": 99
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "price": 99
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 100,
+     "price": 7
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 90,
+     "price": 1
+    },
+    {
+     "qty": 10,
+     "priceRate": 50,
+     "price": 7
+    },
+    {
+     "qty": 3,
+     "priceRate": 90,
+     "price": 99999999
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 50,
+     "price": 1
+    },
+    {
+     "qty": 3,
+     "priceRate": 90,
+     "price": 1000000
+    },
+    {
+     "qty": 3,
+     "priceRate": 12.5,
+     "price": 7
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 99.99,
+     "price": 33333333
+    },
+    {
+     "qty": 2,
+     "priceRate": 12.5,
+     "price": 99999999
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 0,
+     "price": 1000000
+    },
+    {
+     "qty": 1,
+     "priceRate": 50,
+     "price": 1000000
+    },
+    {
+     "qty": 1,
+     "priceRate": 0,
+     "price": 99
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 90,
+     "price": 1000000
+    },
+    {
+     "qty": 1,
+     "priceRate": 90,
+     "price": 1
+    },
+    {
+     "qty": 1,
+     "priceRate": 99.99,
+     "price": 33333333
+    },
+    {
+     "qty": 10,
+     "priceRate": 50,
+     "price": 99
+    },
+    {
+     "qty": 3,
+     "priceRate": 0,
+     "price": 33333333
+    }
+   ],
+   "lines": [
+    1800000,
+    7,
+    1279872,
+    0,
+    0,
+    900,
+    5646410,
+    1000,
+    385000,
+    0,
+    50000000,
+    0,
+    6,
+    0,
+    0,
+    6,
+    188213665,
+    385000,
+    0,
+    0,
+    1,
+    111,
+    297,
+    51,
+    0,
+    35,
+    269999997,
+    0,
+    2700000,
+    3,
+    33330,
+    25000000,
+    0,
+    500000,
+    0,
+    450000,
+    1,
+    33330000,
+    495,
+    0
+   ],
+   "expected": {
+    "subtotal": 579726187,
+    "tax": 0,
+    "total": 568131663
+   },
+   "catalogTotals": {
+    "discounted": 568131663,
+    "fee": 3067911,
+    "withFee": 571199574
+   }
+  },
+  {
+   "id": "catalog-n100",
+   "quoteType": "catalog",
+   "items": [
+    {
+     "qty": 1,
+     "priceRate": 50,
+     "price": 33333333
+    },
+    {
+     "qty": 10,
+     "priceRate": 99.99,
+     "price": 99999999
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 77,
+     "price": 99999999
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 0,
+     "price": 7
+    },
+    {
+     "qty": 1,
+     "priceRate": 77,
+     "price": 99999999
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 77,
+     "price": 7
+    },
+    {
+     "qty": 3,
+     "priceRate": 12.5,
+     "price": 7
+    },
+    {
+     "qty": 10,
+     "priceRate": 0,
+     "price": 1000000
+    },
+    {
+     "qty": 2,
+     "priceRate": 99.99,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 100,
+     "price": 33333333
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 77,
+     "price": 99999999
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 90,
+     "price": 1000000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 0,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 90,
+     "price": 1000000
+    },
+    {
+     "qty": 2,
+     "priceRate": 99.99,
+     "price": 1
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 100,
+     "price": 7
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 77,
+     "price": 7
+    },
+    {
+     "qty": 2,
+     "priceRate": 100,
+     "price": 128000
+    },
+    {
+     "qty": 1,
+     "priceRate": 77,
+     "price": 7
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 0,
+     "price": 99999999
+    },
+    {
+     "qty": 1,
+     "priceRate": 12.5,
+     "price": 128000
+    },
+    {
+     "qty": 1,
+     "priceRate": 77,
+     "price": 99
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 100,
+     "price": 7
+    },
+    {
+     "qty": 3,
+     "priceRate": 0,
+     "price": 7
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 50,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 50,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 50,
+     "price": 99
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 77,
+     "price": 1000000
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 99.99,
+     "price": 99
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 90,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 77,
+     "price": 1
+    },
+    {
+     "qty": 2,
+     "priceRate": 0,
+     "price": 1000000
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 77,
+     "price": 7
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 77,
+     "price": 1000000
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 90,
+     "price": 128000
+    },
+    {
+     "qty": 10,
+     "priceRate": 0,
+     "price": 1
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 100,
+     "price": 128000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 99.99,
+     "price": 33333333
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 12.5,
+     "price": 128000
+    },
+    {
+     "qty": 10,
+     "priceRate": 12.5,
+     "price": 7
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 0,
+     "price": 1
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "price": 7
+    },
+    {
+     "qty": 10,
+     "priceRate": 90,
+     "price": 1
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "price": 33333333
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 100,
+     "price": 128000
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 0,
+     "price": 1
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 0,
+     "price": 1
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 0,
+     "price": 1000000
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 12.5,
+     "price": 99
+    },
+    {
+     "qty": 10,
+     "priceRate": 77,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "price": 7
+    },
+    {
+     "qty": 2,
+     "priceRate": 99.99,
+     "price": 1
+    },
+    {
+     "qty": 3,
+     "priceRate": 12.5,
+     "price": 128000
+    },
+    {
+     "qty": 2,
+     "priceRate": 77,
+     "price": 128000
+    },
+    {
+     "qty": 2,
+     "priceRate": 100,
+     "price": 99
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 99.99,
+     "price": 1
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 100,
+     "price": 128000
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 100,
+     "price": 99999999
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 12.5,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 100,
+     "price": 33333333
+    },
+    {
+     "qty": 1,
+     "priceRate": 90,
+     "price": 33333333
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 77,
+     "price": 99
+    },
+    {
+     "qty": 1,
+     "priceRate": 99.99,
+     "price": 33333333
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "price": 1000000
+    },
+    {
+     "qty": 2,
+     "priceRate": 12.5,
+     "price": 1
+    },
+    {
+     "qty": 2,
+     "priceRate": 12.5,
+     "price": 99999999
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 50,
+     "price": 1
+    },
+    {
+     "qty": 10,
+     "priceRate": 77,
+     "price": 7
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 12.5,
+     "price": 1
+    },
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "price": 1000000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 100,
+     "price": 99
+    },
+    {
+     "qty": 10,
+     "priceRate": 77,
+     "price": 99
+    },
+    {
+     "qty": 3,
+     "priceRate": 0,
+     "price": 7
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 90,
+     "price": 99
+    },
+    {
+     "qty": 1,
+     "priceRate": 50,
+     "price": 128000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 0,
+     "price": 99
+    },
+    {
+     "qty": 3,
+     "priceRate": 90,
+     "price": 7
+    },
+    {
+     "qty": 1,
+     "priceRate": 99.99,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 0,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 99.99,
+     "price": 1000000
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "price": 1
+    },
+    {
+     "qty": 2,
+     "priceRate": 0,
+     "price": 128000
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 12.5,
+     "price": 99
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 0,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 90,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 50,
+     "price": 1000000
+    },
+    {
+     "qty": 3,
+     "priceRate": 77,
+     "price": 7
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 0,
+     "price": 1000000
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 100,
+     "price": 33333333
+    },
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 0,
+     "price": 1000000
+    },
+    {
+     "qty": 10,
+     "priceRate": 99.99,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 77,
+     "price": 1
+    },
+    {
+     "qty": 1,
+     "priceRate": 77,
+     "price": 1000000
+    },
+    {
+     "qty": 2,
+     "priceRate": 100,
+     "price": 99999999
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 99.99,
+     "price": 7
+    },
+    {
+     "qty": 10,
+     "priceRate": 99.99,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 0,
+     "price": 1
+    },
+    {
+     "qty": 1,
+     "priceRate": 12.5,
+     "price": 99
+    }
+   ],
+   "lines": [
+    16666667,
+    999899990,
+    77000,
+    0,
+    76999999,
+    0,
+    3,
+    0,
+    0,
+    33333,
+    38500000,
+    1012500,
+    0,
+    6599700,
+    2,
+    0,
+    0,
+    256000,
+    5,
+    0,
+    16000,
+    76,
+    4,
+    0,
+    0,
+    0,
+    50,
+    866250,
+    0,
+    0,
+    0,
+    0,
+    6,
+    866250,
+    129600,
+    0,
+    144000,
+    244408888,
+    18000,
+    9,
+    0,
+    40,
+    9,
+    188213665,
+    128,
+    0,
+    0,
+    0,
+    6,
+    0,
+    21,
+    2,
+    48000,
+    197120,
+    198,
+    0,
+    0,
+    64000,
+    50000000,
+    0,
+    99999999,
+    30000000,
+    86,
+    33330000,
+    5646410,
+    0,
+    25000000,
+    1,
+    54,
+    0,
+    1800000,
+    726,
+    762,
+    0,
+    0,
+    64000,
+    0,
+    19,
+    0,
+    0,
+    1999800,
+    3,
+    0,
+    6,
+    0,
+    0,
+    500,
+    16,
+    0,
+    33333,
+    0,
+    0,
+    0,
+    0,
+    770000,
+    199999998,
+    0,
+    0,
+    0,
+    12
+   ],
+   "expected": {
+    "subtotal": 2023663246,
+    "tax": 0,
+    "total": 1983189981
+   },
+   "catalogTotals": {
+    "discounted": 1983189981,
+    "fee": 10709226,
+    "withFee": 1993899207
+   }
+  },
+  {
+   "id": "catalog2-n1",
+   "quoteType": "catalog2",
+   "items": [
+    {
+     "qty": 7.333,
+     "priceRate": 90,
+     "price": 33333333
+    }
+   ],
+   "lines": [
+    219989998
+   ],
+   "expected": {
+    "subtotal": 219989998,
+    "tax": 0,
+    "total": 215590198
+   },
+   "catalogTotals": {
+    "discounted": 215590198,
+    "fee": 1164187,
+    "withFee": 216754385
+   }
+  },
+  {
+   "id": "catalog2-n2",
+   "quoteType": "catalog2",
+   "items": [
+    {
+     "qty": 3,
+     "priceRate": 12.5,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 0,
+     "price": 7
+    }
+   ],
+   "lines": [
+    0,
+    0
+   ],
+   "expected": {
+    "subtotal": 0,
+    "tax": 0,
+    "total": 0
+   },
+   "catalogTotals": {
+    "discounted": 0,
+    "fee": 0,
+    "withFee": 0
+   }
+  },
+  {
+   "id": "catalog2-n3",
+   "quoteType": "catalog2",
+   "items": [
+    {
+     "qty": 1,
+     "priceRate": 12.5,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 100,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "price": 0
+    }
+   ],
+   "lines": [
+    0,
+    0,
+    0
+   ],
+   "expected": {
+    "subtotal": 0,
+    "tax": 0,
+    "total": 0
+   },
+   "catalogTotals": {
+    "discounted": 0,
+    "fee": 0,
+    "withFee": 0
+   }
+  },
+  {
+   "id": "catalog2-n4",
+   "quoteType": "catalog2",
+   "items": [
+    {
+     "qty": 0.5,
+     "priceRate": 50,
+     "price": 1000000
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 77,
+     "price": 99
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 100,
+     "price": 0
+    }
+   ],
+   "lines": [
+    250000,
+    0,
+    0,
+    0
+   ],
+   "expected": {
+    "subtotal": 250000,
+    "tax": 0,
+    "total": 250000
+   },
+   "catalogTotals": {
+    "discounted": 250000,
+    "fee": 1350,
+    "withFee": 251350
+   }
+  },
+  {
+   "id": "catalog2-n5",
+   "quoteType": "catalog2",
+   "items": [
+    {
+     "qty": 0.001,
+     "priceRate": 90,
+     "price": 128000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 0,
+     "price": 128000
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 77,
+     "price": 99999999
+    },
+    {
+     "qty": 1,
+     "priceRate": 99.99,
+     "price": 128000
+    },
+    {
+     "qty": 3,
+     "priceRate": 100,
+     "price": 1
+    }
+   ],
+   "lines": [
+    115,
+    0,
+    77000,
+    127987,
+    3
+   ],
+   "expected": {
+    "subtotal": 205105,
+    "tax": 0,
+    "total": 205105
+   },
+   "catalogTotals": {
+    "discounted": 205105,
+    "fee": 1108,
+    "withFee": 206213
+   }
+  },
+  {
+   "id": "catalog2-n8",
+   "quoteType": "catalog2",
+   "items": [
+    {
+     "qty": 0.001,
+     "priceRate": 0,
+     "price": 128000
+    },
+    {
+     "qty": 1,
+     "priceRate": 77,
+     "price": 99
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 0,
+     "price": 128000
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 100,
+     "price": 99
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "price": 33333333
+    },
+    {
+     "qty": 3,
+     "priceRate": 12.5,
+     "price": 99
+    },
+    {
+     "qty": 10,
+     "priceRate": 77,
+     "price": 99
+    },
+    {
+     "qty": 10,
+     "priceRate": 0,
+     "price": 99
+    }
+   ],
+   "lines": [
+    0,
+    76,
+    0,
+    0,
+    188213665,
+    37,
+    762,
+    0
+   ],
+   "expected": {
+    "subtotal": 188214540,
+    "tax": 0,
+    "total": 184450249
+   },
+   "catalogTotals": {
+    "discounted": 184450249,
+    "fee": 996031,
+    "withFee": 185446280
+   }
+  },
+  {
+   "id": "catalog2-n9",
+   "quoteType": "catalog2",
+   "items": [
+    {
+     "qty": 1,
+     "priceRate": 100,
+     "price": 128000
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 77,
+     "price": 1
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 100,
+     "price": 7
+    },
+    {
+     "qty": 2,
+     "priceRate": 77,
+     "price": 7
+    },
+    {
+     "qty": 10,
+     "priceRate": 50,
+     "price": 1
+    },
+    {
+     "qty": 1,
+     "priceRate": 90,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 12.5,
+     "price": 33333333
+    },
+    {
+     "qty": 2,
+     "priceRate": 77,
+     "price": 1
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 100,
+     "price": 7
+    }
+   ],
+   "lines": [
+    128000,
+    1,
+    8,
+    11,
+    5,
+    0,
+    8333333,
+    2,
+    0
+   ],
+   "expected": {
+    "subtotal": 8461360,
+    "tax": 0,
+    "total": 8461360
+   },
+   "catalogTotals": {
+    "discounted": 8461360,
+    "fee": 45691,
+    "withFee": 8507051
+   }
+  },
+  {
+   "id": "catalog2-n10",
+   "quoteType": "catalog2",
+   "items": [
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "price": 33333333
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "price": 128000
+    },
+    {
+     "qty": 2,
+     "priceRate": 100,
+     "price": 99999999
+    },
+    {
+     "qty": 10,
+     "priceRate": 90,
+     "price": 99999999
+    },
+    {
+     "qty": 3,
+     "priceRate": 77,
+     "price": 1
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 50,
+     "price": 33333333
+    },
+    {
+     "qty": 10,
+     "priceRate": 77,
+     "price": 7
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 0,
+     "price": 33333333
+    },
+    {
+     "qty": 3,
+     "priceRate": 12.5,
+     "price": 33333333
+    },
+    {
+     "qty": 10,
+     "priceRate": 90,
+     "price": 99999999
+    }
+   ],
+   "lines": [
+    188213665,
+    383962,
+    199999998,
+    899999991,
+    2,
+    8333333,
+    54,
+    0,
+    12500000,
+    899999991
+   ],
+   "expected": {
+    "subtotal": 2209430996,
+    "tax": 0,
+    "total": 2165242376
+   },
+   "catalogTotals": {
+    "discounted": 2165242376,
+    "fee": 11692309,
+    "withFee": 2176934685
+   }
+  },
+  {
+   "id": "catalog2-n20",
+   "quoteType": "catalog2",
+   "items": [
+    {
+     "qty": 3,
+     "priceRate": 90,
+     "price": 0
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "price": 99
+    },
+    {
+     "qty": 2,
+     "priceRate": 0,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 100,
+     "price": 7
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 100,
+     "price": 1
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "price": 1000000
+    },
+    {
+     "qty": 2,
+     "priceRate": 99.99,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 50,
+     "price": 128000
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 50,
+     "price": 99999999
+    },
+    {
+     "qty": 3,
+     "priceRate": 90,
+     "price": 99
+    },
+    {
+     "qty": 10,
+     "priceRate": 90,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 77,
+     "price": 33333333
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "price": 128000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 0,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 99.99,
+     "price": 33333333
+    },
+    {
+     "qty": 1,
+     "priceRate": 90,
+     "price": 1
+    },
+    {
+     "qty": 10,
+     "priceRate": 0,
+     "price": 33333333
+    },
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "price": 99
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 99.99,
+     "price": 1000000
+    }
+   ],
+   "lines": [
+    0,
+    559,
+    0,
+    21,
+    1,
+    5646410,
+    0,
+    64,
+    0,
+    25000000,
+    267,
+    0,
+    25666666,
+    383962,
+    0,
+    37496250,
+    1,
+    0,
+    178,
+    1124888
+   ],
+   "expected": {
+    "subtotal": 95319267,
+    "tax": 0,
+    "total": 93412882
+   },
+   "catalogTotals": {
+    "discounted": 93412882,
+    "fee": 504430,
+    "withFee": 93917312
+   }
+  },
+  {
+   "id": "catalog2-n40",
+   "quoteType": "catalog2",
+   "items": [
+    {
+     "qty": 10,
+     "priceRate": 77,
+     "price": 7
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 99.99,
+     "price": 1
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 99.99,
+     "price": 1
+    },
+    {
+     "qty": 10,
+     "priceRate": 50,
+     "price": 99999999
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 100,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 50,
+     "price": 33333333
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 12.5,
+     "price": 1
+    },
+    {
+     "qty": 2,
+     "priceRate": 0,
+     "price": 1000000
+    },
+    {
+     "qty": 3,
+     "priceRate": 12.5,
+     "price": 0
+    },
+    {
+     "qty": 3,
+     "priceRate": 90,
+     "price": 7
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "price": 1
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 50,
+     "price": 99
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 90,
+     "price": 128000
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 0,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 77,
+     "price": 128000
+    },
+    {
+     "qty": 2,
+     "priceRate": 99.99,
+     "price": 128000
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 99.99,
+     "price": 128000
+    },
+    {
+     "qty": 3,
+     "priceRate": 0,
+     "price": 33333333
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 77,
+     "price": 1
+    },
+    {
+     "qty": 2,
+     "priceRate": 100,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 0,
+     "price": 128000
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 90,
+     "price": 99
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 90,
+     "price": 33333333
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 90,
+     "price": 7
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 0,
+     "price": 128000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 12.5,
+     "price": 1
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 100,
+     "price": 128000
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 99.99,
+     "price": 33333333
+    },
+    {
+     "qty": 3,
+     "priceRate": 12.5,
+     "price": 1
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "price": 1
+    },
+    {
+     "qty": 2,
+     "priceRate": 50,
+     "price": 99
+    },
+    {
+     "qty": 1,
+     "priceRate": 99.99,
+     "price": 1000000
+    },
+    {
+     "qty": 3,
+     "priceRate": 0,
+     "price": 128000
+    },
+    {
+     "qty": 1,
+     "priceRate": 12.5,
+     "price": 7
+    },
+    {
+     "qty": 1,
+     "priceRate": 100,
+     "price": 99999999
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 90,
+     "price": 128000
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 50,
+     "price": 1000000
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 50,
+     "price": 128000
+    },
+    {
+     "qty": 10,
+     "priceRate": 50,
+     "price": 99999999
+    },
+    {
+     "qty": 1,
+     "priceRate": 12.5,
+     "price": 0
+    }
+   ],
+   "lines": [
+    54,
+    1,
+    0,
+    499999995,
+    0,
+    50000000,
+    0,
+    0,
+    0,
+    19,
+    3,
+    25,
+    844762,
+    0,
+    49280,
+    255974,
+    63994,
+    0,
+    0,
+    0,
+    0,
+    45,
+    30000,
+    7,
+    0,
+    1,
+    64000,
+    37496250,
+    0,
+    3,
+    99,
+    999900,
+    0,
+    1,
+    99999999,
+    57600,
+    500,
+    32000,
+    499999995,
+    0
+   ],
+   "expected": {
+    "subtotal": 1189894507,
+    "tax": 0,
+    "total": 1166096617
+   },
+   "catalogTotals": {
+    "discounted": 1166096617,
+    "fee": 6296922,
+    "withFee": 1172393539
+   }
+  },
+  {
+   "id": "catalog2-n100",
+   "quoteType": "catalog2",
+   "items": [
+    {
+     "qty": 1.125,
+     "priceRate": 90,
+     "price": 7
+    },
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "price": 1000000
+    },
+    {
+     "qty": 1,
+     "priceRate": 12.5,
+     "price": 128000
+    },
+    {
+     "qty": 3,
+     "priceRate": 100,
+     "price": 99
+    },
+    {
+     "qty": 10,
+     "priceRate": 77,
+     "price": 1
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 90,
+     "price": 99
+    },
+    {
+     "qty": 1,
+     "priceRate": 12.5,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 77,
+     "price": 33333333
+    },
+    {
+     "qty": 3,
+     "priceRate": 0,
+     "price": 1000000
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 0,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 50,
+     "price": 33333333
+    },
+    {
+     "qty": 3,
+     "priceRate": 12.5,
+     "price": 1
+    },
+    {
+     "qty": 10,
+     "priceRate": 99.99,
+     "price": 128000
+    },
+    {
+     "qty": 10,
+     "priceRate": 50,
+     "price": 99
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 77,
+     "price": 99999999
+    },
+    {
+     "qty": 10,
+     "priceRate": 77,
+     "price": 1
+    },
+    {
+     "qty": 3,
+     "priceRate": 12.5,
+     "price": 1000000
+    },
+    {
+     "qty": 10,
+     "priceRate": 99.99,
+     "price": 1000000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 99.99,
+     "price": 99999999
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 77,
+     "price": 1000000
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 12.5,
+     "price": 99999999
+    },
+    {
+     "qty": 3,
+     "priceRate": 90,
+     "price": 99
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 100,
+     "price": 33333333
+    },
+    {
+     "qty": 1,
+     "priceRate": 50,
+     "price": 99
+    },
+    {
+     "qty": 3,
+     "priceRate": 100,
+     "price": 1
+    },
+    {
+     "qty": 2,
+     "priceRate": 12.5,
+     "price": 0
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 90,
+     "price": 33333333
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 0,
+     "price": 128000
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 90,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 99.99,
+     "price": 128000
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 99.99,
+     "price": 0
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 99.99,
+     "price": 0
+    },
+    {
+     "qty": 1,
+     "priceRate": 0,
+     "price": 99999999
+    },
+    {
+     "qty": 10,
+     "priceRate": 100,
+     "price": 128000
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 50,
+     "price": 1000000
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 12.5,
+     "price": 33333333
+    },
+    {
+     "qty": 10,
+     "priceRate": 12.5,
+     "price": 99
+    },
+    {
+     "qty": 10,
+     "priceRate": 0,
+     "price": 33333333
+    },
+    {
+     "qty": 2,
+     "priceRate": 50,
+     "price": 33333333
+    },
+    {
+     "qty": 1,
+     "priceRate": 50,
+     "price": 1000000
+    },
+    {
+     "qty": 2,
+     "priceRate": 77,
+     "price": 1
+    },
+    {
+     "qty": 2,
+     "priceRate": 50,
+     "price": 1000000
+    },
+    {
+     "qty": 3,
+     "priceRate": 90,
+     "price": 33333333
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 0,
+     "price": 1
+    },
+    {
+     "qty": 10,
+     "priceRate": 0,
+     "price": 99
+    },
+    {
+     "qty": 10,
+     "priceRate": 99.99,
+     "price": 1
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 99.99,
+     "price": 99999999
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 100,
+     "price": 33333333
+    },
+    {
+     "qty": 10,
+     "priceRate": 12.5,
+     "price": 1
+    },
+    {
+     "qty": 3,
+     "priceRate": 0,
+     "price": 33333333
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 50,
+     "price": 7
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 90,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 100,
+     "price": 128000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 77,
+     "price": 99
+    },
+    {
+     "qty": 2,
+     "priceRate": 50,
+     "price": 7
+    },
+    {
+     "qty": 1,
+     "priceRate": 50,
+     "price": 33333333
+    },
+    {
+     "qty": 2,
+     "priceRate": 90,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 12.5,
+     "price": 99999999
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 100,
+     "price": 99999999
+    },
+    {
+     "qty": 1,
+     "priceRate": 0,
+     "price": 1000000
+    },
+    {
+     "qty": 1,
+     "priceRate": 90,
+     "price": 7
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 90,
+     "price": 99999999
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 0,
+     "price": 128000
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 50,
+     "price": 7
+    },
+    {
+     "qty": 10,
+     "priceRate": 99.99,
+     "price": 128000
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 12.5,
+     "price": 7
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 50,
+     "price": 1000000
+    },
+    {
+     "qty": 3,
+     "priceRate": 100,
+     "price": 7
+    },
+    {
+     "qty": 1,
+     "priceRate": 99.99,
+     "price": 33333333
+    },
+    {
+     "qty": 1,
+     "priceRate": 0,
+     "price": 7
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "price": 128000
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 99.99,
+     "price": 7
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 90,
+     "price": 7
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 99.99,
+     "price": 0
+    },
+    {
+     "qty": 0.5,
+     "priceRate": 99.99,
+     "price": 33333333
+    },
+    {
+     "qty": 10,
+     "priceRate": 77,
+     "price": 33333333
+    },
+    {
+     "qty": 2,
+     "priceRate": 100,
+     "price": 99999999
+    },
+    {
+     "qty": 1,
+     "priceRate": 12.5,
+     "price": 33333333
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 90,
+     "price": 99
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 99.99,
+     "price": 128000
+    },
+    {
+     "qty": 10,
+     "priceRate": 90,
+     "price": 1
+    },
+    {
+     "qty": 2,
+     "priceRate": 50,
+     "price": 0
+    },
+    {
+     "qty": 2,
+     "priceRate": 77,
+     "price": 99999999
+    },
+    {
+     "qty": 10,
+     "priceRate": 77,
+     "price": 1000000
+    },
+    {
+     "qty": 10,
+     "priceRate": 90,
+     "price": 1
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 0,
+     "price": 128000
+    },
+    {
+     "qty": 3,
+     "priceRate": 12.5,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 77,
+     "price": 1
+    },
+    {
+     "qty": 3,
+     "priceRate": 99.99,
+     "price": 99999999
+    },
+    {
+     "qty": 2,
+     "priceRate": 77,
+     "price": 128000
+    },
+    {
+     "qty": 1.125,
+     "priceRate": 0,
+     "price": 0
+    },
+    {
+     "qty": 10,
+     "priceRate": 12.5,
+     "price": 33333333
+    },
+    {
+     "qty": 2,
+     "priceRate": 50,
+     "price": 99999999
+    },
+    {
+     "qty": 2,
+     "priceRate": 0,
+     "price": 99
+    },
+    {
+     "qty": 2,
+     "priceRate": 100,
+     "price": 99999999
+    },
+    {
+     "qty": 0.001,
+     "priceRate": 12.5,
+     "price": 99999999
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 12.5,
+     "price": 99999999
+    },
+    {
+     "qty": 7.333,
+     "priceRate": 0,
+     "price": 1
+    }
+   ],
+   "lines": [
+    7,
+    1800000,
+    16000,
+    297,
+    8,
+    0,
+    0,
+    25667,
+    0,
+    0,
+    8333333,
+    0,
+    1279872,
+    495,
+    77000,
+    8,
+    375000,
+    9999000,
+    733226663,
+    770,
+    0,
+    14062500,
+    267,
+    244433331,
+    50,
+    3,
+    0,
+    30000,
+    0,
+    0,
+    1279872,
+    0,
+    0,
+    0,
+    1280000,
+    562500,
+    2083333,
+    124,
+    0,
+    33333333,
+    500000,
+    2,
+    1000000,
+    89999999,
+    0,
+    0,
+    10,
+    99990,
+    37500000,
+    1,
+    0,
+    2,
+    0,
+    1280000,
+    559,
+    7,
+    16666667,
+    0,
+    6250000,
+    733299993,
+    0,
+    6,
+    90000,
+    0,
+    26,
+    1279872,
+    0,
+    3666500,
+    21,
+    33330000,
+    0,
+    383962,
+    0,
+    3,
+    0,
+    16665000,
+    256666664,
+    199999998,
+    4166667,
+    653,
+    0,
+    255974,
+    9,
+    0,
+    153999998,
+    7700000,
+    9,
+    0,
+    0,
+    8,
+    299969997,
+    197120,
+    0,
+    41666666,
+    99999999,
+    0,
+    199999998,
+    12500,
+    91662499,
+    0
+   ],
+   "expected": {
+    "subtotal": 3350510812,
+    "tax": 0,
+    "total": 3283500596
+   },
+   "catalogTotals": {
+    "discounted": 3283500596,
+    "fee": 17730903,
+    "withFee": 3301231499
+   }
+  },
+  {
+   "id": "catalog-boundary-49999999",
+   "quoteType": "catalog",
+   "items": [
+    {
+     "qty": 1,
+     "price": 49999999,
+     "priceRate": 100
+    }
+   ],
+   "lines": [
+    49999999
+   ],
+   "expected": {
+    "subtotal": 49999999,
+    "tax": 0,
+    "total": 49999999
+   },
+   "catalogTotals": {
+    "discounted": 49999999,
+    "fee": 270000,
+    "withFee": 50269999
+   }
+  },
+  {
+   "id": "catalog-boundary-50000000",
+   "quoteType": "catalog",
+   "items": [
+    {
+     "qty": 1,
+     "price": 50000000,
+     "priceRate": 100
+    }
+   ],
+   "lines": [
+    50000000
+   ],
+   "expected": {
+    "subtotal": 50000000,
+    "tax": 0,
+    "total": 49000000
+   },
+   "catalogTotals": {
+    "discounted": 49000000,
+    "fee": 264600,
+    "withFee": 49264600
+   }
+  },
+  {
+   "id": "catalog-boundary-50000001",
+   "quoteType": "catalog",
+   "items": [
+    {
+     "qty": 1,
+     "price": 50000001,
+     "priceRate": 100
+    }
+   ],
+   "lines": [
+    50000001
+   ],
+   "expected": {
+    "subtotal": 50000001,
+    "tax": 0,
+    "total": 49000001
+   },
+   "catalogTotals": {
+    "discounted": 49000001,
+    "fee": 264600,
+    "withFee": 49264601
+   }
+  },
+  {
+   "id": "catalog-boundary-50000025",
+   "quoteType": "catalog",
+   "items": [
+    {
+     "qty": 1,
+     "price": 50000025,
+     "priceRate": 100
+    }
+   ],
+   "lines": [
+    50000025
+   ],
+   "expected": {
+    "subtotal": 50000025,
+    "tax": 0,
+    "total": 49000025
+   },
+   "catalogTotals": {
+    "discounted": 49000025,
+    "fee": 264600,
+    "withFee": 49264625
+   }
+  },
+  {
+   "id": "catalog-boundary-50000075",
+   "quoteType": "catalog",
+   "items": [
+    {
+     "qty": 1,
+     "price": 50000075,
+     "priceRate": 100
+    }
+   ],
+   "lines": [
+    50000075
+   ],
+   "expected": {
+    "subtotal": 50000075,
+    "tax": 0,
+    "total": 49000074
+   },
+   "catalogTotals": {
+    "discounted": 49000074,
+    "fee": 264600,
+    "withFee": 49264674
+   }
+  },
+  {
+   "id": "catalog-boundary-100000000000",
+   "quoteType": "catalog",
+   "items": [
+    {
+     "qty": 1,
+     "price": 100000000000,
+     "priceRate": 100
+    }
+   ],
+   "lines": [
+    100000000000
+   ],
+   "expected": {
+    "subtotal": 100000000000,
+    "tax": 0,
+    "total": 98000000000
+   },
+   "catalogTotals": {
+    "discounted": 98000000000,
+    "fee": 529200000,
+    "withFee": 98529200000
+   }
+  },
+  {
+   "id": "catalog-rate-boundary",
+   "quoteType": "catalog",
+   "items": [
+    {
+     "qty": 1,
+     "price": 100000000,
+     "priceRate": 50
+    }
+   ],
+   "lines": [
+    50000000
+   ],
+   "expected": {
+    "subtotal": 50000000,
+    "tax": 0,
+    "total": 49000000
+   },
+   "catalogTotals": {
+    "discounted": 49000000,
+    "fee": 264600,
+    "withFee": 49264600
+   }
+  },
+  {
+   "id": "catalog-rate-just-below",
+   "quoteType": "catalog",
+   "items": [
+    {
+     "qty": 1,
+     "price": 100000000,
+     "priceRate": 49.99
+    }
+   ],
+   "lines": [
+    49990000
+   ],
+   "expected": {
+    "subtotal": 49990000,
+    "tax": 0,
+    "total": 49990000
+   },
+   "catalogTotals": {
+    "discounted": 49990000,
+    "fee": 269946,
+    "withFee": 50259946
+   }
+  },
+  {
+   "id": "catalog2-boundary-49999999",
+   "quoteType": "catalog2",
+   "items": [
+    {
+     "qty": 1,
+     "price": 49999999,
+     "priceRate": 100
+    }
+   ],
+   "lines": [
+    49999999
+   ],
+   "expected": {
+    "subtotal": 49999999,
+    "tax": 0,
+    "total": 49999999
+   },
+   "catalogTotals": {
+    "discounted": 49999999,
+    "fee": 270000,
+    "withFee": 50269999
+   }
+  },
+  {
+   "id": "catalog2-boundary-50000000",
+   "quoteType": "catalog2",
+   "items": [
+    {
+     "qty": 1,
+     "price": 50000000,
+     "priceRate": 100
+    }
+   ],
+   "lines": [
+    50000000
+   ],
+   "expected": {
+    "subtotal": 50000000,
+    "tax": 0,
+    "total": 49000000
+   },
+   "catalogTotals": {
+    "discounted": 49000000,
+    "fee": 264600,
+    "withFee": 49264600
+   }
+  },
+  {
+   "id": "catalog2-boundary-50000001",
+   "quoteType": "catalog2",
+   "items": [
+    {
+     "qty": 1,
+     "price": 50000001,
+     "priceRate": 100
+    }
+   ],
+   "lines": [
+    50000001
+   ],
+   "expected": {
+    "subtotal": 50000001,
+    "tax": 0,
+    "total": 49000001
+   },
+   "catalogTotals": {
+    "discounted": 49000001,
+    "fee": 264600,
+    "withFee": 49264601
+   }
+  },
+  {
+   "id": "catalog2-boundary-50000025",
+   "quoteType": "catalog2",
+   "items": [
+    {
+     "qty": 1,
+     "price": 50000025,
+     "priceRate": 100
+    }
+   ],
+   "lines": [
+    50000025
+   ],
+   "expected": {
+    "subtotal": 50000025,
+    "tax": 0,
+    "total": 49000025
+   },
+   "catalogTotals": {
+    "discounted": 49000025,
+    "fee": 264600,
+    "withFee": 49264625
+   }
+  },
+  {
+   "id": "catalog2-boundary-50000075",
+   "quoteType": "catalog2",
+   "items": [
+    {
+     "qty": 1,
+     "price": 50000075,
+     "priceRate": 100
+    }
+   ],
+   "lines": [
+    50000075
+   ],
+   "expected": {
+    "subtotal": 50000075,
+    "tax": 0,
+    "total": 49000074
+   },
+   "catalogTotals": {
+    "discounted": 49000074,
+    "fee": 264600,
+    "withFee": 49264674
+   }
+  },
+  {
+   "id": "catalog2-boundary-100000000000",
+   "quoteType": "catalog2",
+   "items": [
+    {
+     "qty": 1,
+     "price": 100000000000,
+     "priceRate": 100
+    }
+   ],
+   "lines": [
+    100000000000
+   ],
+   "expected": {
+    "subtotal": 100000000000,
+    "tax": 0,
+    "total": 98000000000
+   },
+   "catalogTotals": {
+    "discounted": 98000000000,
+    "fee": 529200000,
+    "withFee": 98529200000
+   }
+  },
+  {
+   "id": "catalog2-rate-boundary",
+   "quoteType": "catalog2",
+   "items": [
+    {
+     "qty": 1,
+     "price": 100000000,
+     "priceRate": 50
+    }
+   ],
+   "lines": [
+    50000000
+   ],
+   "expected": {
+    "subtotal": 50000000,
+    "tax": 0,
+    "total": 49000000
+   },
+   "catalogTotals": {
+    "discounted": 49000000,
+    "fee": 264600,
+    "withFee": 49264600
+   }
+  },
+  {
+   "id": "catalog2-rate-just-below",
+   "quoteType": "catalog2",
+   "items": [
+    {
+     "qty": 1,
+     "price": 100000000,
+     "priceRate": 49.99
+    }
+   ],
+   "lines": [
+    49990000
+   ],
+   "expected": {
+    "subtotal": 49990000,
+    "tax": 0,
+    "total": 49990000
+   },
+   "catalogTotals": {
+    "discounted": 49990000,
+    "fee": 269946,
+    "withFee": 50259946
+   }
+  },
+  {
+   "id": "vat-half-line",
+   "quoteType": "vat",
+   "items": [
+    {
+     "qty": 0.5,
+     "price": 1,
+     "priceRate": 100,
+     "material": 1,
+     "labor": 0,
+     "expense": 0
+    }
+   ],
+   "lines": [
+    1
+   ],
+   "expected": {
+    "subtotal": 1,
+    "tax": 0,
+    "total": 1
+   }
+  },
+  {
+   "id": "vat-half-rate",
+   "quoteType": "vat",
+   "items": [
+    {
+     "qty": 1,
+     "price": 1,
+     "priceRate": 50,
+     "material": 1,
+     "labor": 0,
+     "expense": 0
+    }
+   ],
+   "lines": [
+    1
+   ],
+   "expected": {
+    "subtotal": 1,
+    "tax": 0,
+    "total": 1
+   }
+  },
+  {
+   "id": "vat-vat-half",
+   "quoteType": "vat",
+   "items": [
+    {
+     "qty": 1,
+     "price": 5,
+     "priceRate": 100,
+     "material": 5,
+     "labor": 0,
+     "expense": 0
+    }
+   ],
+   "lines": [
+    5
+   ],
+   "expected": {
+    "subtotal": 5,
+    "tax": 1,
+    "total": 6
+   }
+  },
+  {
+   "id": "vat-zero",
+   "quoteType": "vat",
+   "items": [
+    {
+     "qty": 1,
+     "price": 0,
+     "priceRate": 100,
+     "material": 0,
+     "labor": 0,
+     "expense": 0
+    }
+   ],
+   "lines": [
+    0
+   ],
+   "expected": {
+    "subtotal": 0,
+    "tax": 0,
+    "total": 0
+   }
+  },
+  {
+   "id": "vat-max",
+   "quoteType": "vat",
+   "items": [
+    {
+     "qty": 1000000,
+     "price": 100000000000,
+     "priceRate": 100,
+     "material": 100000000000,
+     "labor": 100000000000,
+     "expense": 100000000000
+    }
+   ],
+   "lines": [
+    100000000000000000
+   ],
+   "error": "견적 합계가 지원 범위를 초과합니다."
+  },
+  {
+   "id": "vat-near-max",
+   "quoteType": "vat",
+   "items": [
+    {
+     "qty": 9,
+     "price": 100000000000,
+     "priceRate": 100,
+     "material": 100000000000,
+     "labor": 0,
+     "expense": 0
+    }
+   ],
+   "lines": [
+    900000000000
+   ],
+   "expected": {
+    "subtotal": 900000000000,
+    "tax": 90000000000,
+    "total": 990000000000
+   }
+  },
+  {
+   "id": "cost-half-line",
+   "quoteType": "cost",
+   "items": [
+    {
+     "qty": 0.5,
+     "price": 1,
+     "priceRate": 100,
+     "material": 1,
+     "labor": 0,
+     "expense": 0
+    }
+   ],
+   "lines": [
+    1
+   ],
+   "expected": {
+    "subtotal": 1,
+    "tax": 0,
+    "total": 1
+   }
+  },
+  {
+   "id": "cost-half-rate",
+   "quoteType": "cost",
+   "items": [
+    {
+     "qty": 1,
+     "price": 1,
+     "priceRate": 50,
+     "material": 1,
+     "labor": 0,
+     "expense": 0
+    }
+   ],
+   "lines": [
+    1
+   ],
+   "expected": {
+    "subtotal": 1,
+    "tax": 0,
+    "total": 1
+   }
+  },
+  {
+   "id": "cost-vat-half",
+   "quoteType": "cost",
+   "items": [
+    {
+     "qty": 1,
+     "price": 5,
+     "priceRate": 100,
+     "material": 5,
+     "labor": 0,
+     "expense": 0
+    }
+   ],
+   "lines": [
+    5
+   ],
+   "expected": {
+    "subtotal": 5,
+    "tax": 1,
+    "total": 6
+   }
+  },
+  {
+   "id": "cost-zero",
+   "quoteType": "cost",
+   "items": [
+    {
+     "qty": 1,
+     "price": 0,
+     "priceRate": 100,
+     "material": 0,
+     "labor": 0,
+     "expense": 0
+    }
+   ],
+   "lines": [
+    0
+   ],
+   "expected": {
+    "subtotal": 0,
+    "tax": 0,
+    "total": 0
+   }
+  },
+  {
+   "id": "cost-max",
+   "quoteType": "cost",
+   "items": [
+    {
+     "qty": 1000000,
+     "price": 100000000000,
+     "priceRate": 100,
+     "material": 100000000000,
+     "labor": 100000000000,
+     "expense": 100000000000
+    }
+   ],
+   "lines": [
+    300000000000000000
+   ],
+   "error": "견적 합계가 지원 범위를 초과합니다."
+  },
+  {
+   "id": "cost-near-max",
+   "quoteType": "cost",
+   "items": [
+    {
+     "qty": 9,
+     "price": 100000000000,
+     "priceRate": 100,
+     "material": 100000000000,
+     "labor": 0,
+     "expense": 0
+    }
+   ],
+   "lines": [
+    900000000000
+   ],
+   "expected": {
+    "subtotal": 900000000000,
+    "tax": 90000000000,
+    "total": 990000000000
+   }
+  },
+  {
+   "id": "total-half-line",
+   "quoteType": "total",
+   "items": [
+    {
+     "qty": 0.5,
+     "price": 1,
+     "priceRate": 100,
+     "material": 1,
+     "labor": 0,
+     "expense": 0
+    }
+   ],
+   "lines": [
+    1
+   ],
+   "expected": {
+    "subtotal": 1,
+    "tax": 0,
+    "total": 1
+   }
+  },
+  {
+   "id": "total-half-rate",
+   "quoteType": "total",
+   "items": [
+    {
+     "qty": 1,
+     "price": 1,
+     "priceRate": 50,
+     "material": 1,
+     "labor": 0,
+     "expense": 0
+    }
+   ],
+   "lines": [
+    1
+   ],
+   "expected": {
+    "subtotal": 1,
+    "tax": 0,
+    "total": 1
+   }
+  },
+  {
+   "id": "total-vat-half",
+   "quoteType": "total",
+   "items": [
+    {
+     "qty": 1,
+     "price": 5,
+     "priceRate": 100,
+     "material": 5,
+     "labor": 0,
+     "expense": 0
+    }
+   ],
+   "lines": [
+    5
+   ],
+   "expected": {
+    "subtotal": 5,
+    "tax": 0,
+    "total": 5
+   }
+  },
+  {
+   "id": "total-zero",
+   "quoteType": "total",
+   "items": [
+    {
+     "qty": 1,
+     "price": 0,
+     "priceRate": 100,
+     "material": 0,
+     "labor": 0,
+     "expense": 0
+    }
+   ],
+   "lines": [
+    0
+   ],
+   "expected": {
+    "subtotal": 0,
+    "tax": 0,
+    "total": 0
+   }
+  },
+  {
+   "id": "total-max",
+   "quoteType": "total",
+   "items": [
+    {
+     "qty": 1000000,
+     "price": 100000000000,
+     "priceRate": 100,
+     "material": 100000000000,
+     "labor": 100000000000,
+     "expense": 100000000000
+    }
+   ],
+   "lines": [
+    100000000000000000
+   ],
+   "error": "견적 합계가 지원 범위를 초과합니다."
+  },
+  {
+   "id": "total-near-max",
+   "quoteType": "total",
+   "items": [
+    {
+     "qty": 9,
+     "price": 100000000000,
+     "priceRate": 100,
+     "material": 100000000000,
+     "labor": 0,
+     "expense": 0
+    }
+   ],
+   "lines": [
+    900000000000
+   ],
+   "expected": {
+    "subtotal": 900000000000,
+    "tax": 0,
+    "total": 900000000000
+   }
+  }
+ ],
+ "auto": [
+  {
+   "material": 0,
+   "autoLabor": 0,
+   "autoExpenseFromLabor": 0
+  },
+  {
+   "material": 1,
+   "autoLabor": 3,
+   "autoExpenseFromLabor": 0
+  },
+  {
+   "material": 2,
+   "autoLabor": 6,
+   "autoExpenseFromLabor": 0
+  },
+  {
+   "material": 3,
+   "autoLabor": 8,
+   "autoExpenseFromLabor": 0
+  },
+  {
+   "material": 7,
+   "autoLabor": 20,
+   "autoExpenseFromLabor": 1
+  },
+  {
+   "material": 8,
+   "autoLabor": 23,
+   "autoExpenseFromLabor": 1
+  },
+  {
+   "material": 16,
+   "autoLabor": 45,
+   "autoExpenseFromLabor": 1
+  },
+  {
+   "material": 99,
+   "autoLabor": 278,
+   "autoExpenseFromLabor": 8
+  },
+  {
+   "material": 128000,
+   "autoLabor": 360000,
+   "autoExpenseFromLabor": 10800
+  },
+  {
+   "material": 1000001,
+   "autoLabor": 2812503,
+   "autoExpenseFromLabor": 84375
+  },
+  {
+   "material": 3333333,
+   "autoLabor": 9374999,
+   "autoExpenseFromLabor": 281250
+  },
+  {
+   "material": 100000000000,
+   "autoLabor": 281250000000,
+   "autoExpenseFromLabor": 8437500000
+  },
+  {
+   "labor": 0,
+   "autoExpense": 0
+  },
+  {
+   "labor": 16,
+   "autoExpense": 0
+  },
+  {
+   "labor": 17,
+   "autoExpense": 1
+  },
+  {
+   "labor": 50,
+   "autoExpense": 2
+  },
+  {
+   "labor": 83,
+   "autoExpense": 2
+  },
+  {
+   "labor": 84,
+   "autoExpense": 3
+  },
+  {
+   "labor": 16666,
+   "autoExpense": 500
+  },
+  {
+   "labor": 16667,
+   "autoExpense": 500
+  }
+ ]
+}

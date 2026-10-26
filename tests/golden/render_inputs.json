@@ -1,0 +1,1562 @@
+[
+ {
+  "name": "vat-3",
+  "legacyInput": {
+   "quoteType": "vat",
+   "outputFormat": "both",
+   "customer": "시험 거래처(주)",
+   "contact": "담당 과장",
+   "phone": "02-000-0000",
+   "email": "test@example.com",
+   "title": "시험 견적 vat-3",
+   "number": "NSFF0-20261026-001",
+   "numberManual": true,
+   "date": "2026-10-26",
+   "staff": "홍길동",
+   "staffPhone": "010-0000-0001",
+   "validity": "발행일로부터 30일",
+   "delivery": "협의",
+   "payment": "고객사와 협의",
+   "notes": [
+    "1. 해당 건에 대한 견적가격입니다.",
+    ""
+   ],
+   "showFee": true,
+   "mergeCategories": true,
+   "blankRows": true,
+   "items": [
+    {
+     "category": "장비",
+     "name": "시험 품목 1\n상세 규격 설명 줄",
+     "unit": "식",
+     "qty": "1",
+     "price": "1500000",
+     "priceRate": "100",
+     "material": "1000",
+     "labor": "2813",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "장비",
+     "name": "시험 품목 2",
+     "unit": "식",
+     "qty": "2",
+     "price": "128000",
+     "priceRate": "90",
+     "material": "2000",
+     "labor": "5625",
+     "expense": "84",
+     "note": "조달식별번호 12345678"
+    },
+    {
+     "category": "설치",
+     "name": "시험 품목 3",
+     "unit": "식",
+     "qty": "1.125",
+     "price": "1500000",
+     "priceRate": "77",
+     "material": "3000",
+     "labor": "8438",
+     "expense": "84",
+     "note": ""
+    }
+   ]
+  },
+  "input": {
+   "quoteType": "vat",
+   "customer": "시험 거래처(주)",
+   "contact": "담당 과장",
+   "phone": "02-000-0000",
+   "email": "test@example.com",
+   "title": "시험 견적 vat-3",
+   "number": "NSFF0-20261026-001",
+   "date": "2026-10-26",
+   "staffPhone": "010-0000-0001",
+   "validity": "발행일로부터 30일",
+   "delivery": "협의",
+   "payment": "고객사와 협의",
+   "showFee": true,
+   "mergeCategories": true,
+   "blankRows": true,
+   "items": [
+    {
+     "category": "장비",
+     "name": "시험 품목 1\n상세 규격 설명 줄",
+     "unit": "식",
+     "qty": "1",
+     "price": "1500000",
+     "priceRate": "100",
+     "material": "1000",
+     "labor": "2813",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "장비",
+     "name": "시험 품목 2",
+     "unit": "식",
+     "qty": "2",
+     "price": "128000",
+     "priceRate": "90",
+     "material": "2000",
+     "labor": "5625",
+     "expense": "84",
+     "note": "조달식별번호 12345678"
+    },
+    {
+     "category": "설치",
+     "name": "시험 품목 3",
+     "unit": "식",
+     "qty": "1.125",
+     "price": "1500000",
+     "priceRate": "77",
+     "material": "3000",
+     "labor": "8438",
+     "expense": "84",
+     "note": ""
+    }
+   ],
+   "staffId": "a",
+   "notes": "1. 해당 건에 대한 견적가격입니다.",
+   "format": "pdf"
+  }
+ },
+ {
+  "name": "total-3",
+  "legacyInput": {
+   "quoteType": "total",
+   "outputFormat": "both",
+   "customer": "시험 거래처(주)",
+   "contact": "담당 과장",
+   "phone": "02-000-0000",
+   "email": "test@example.com",
+   "title": "시험 견적 total-3",
+   "number": "NSFF0-20261026-002",
+   "numberManual": true,
+   "date": "2026-10-26",
+   "staff": "홍길동",
+   "staffPhone": "010-0000-0001",
+   "validity": "발행일로부터 30일",
+   "delivery": "협의",
+   "payment": "고객사와 협의",
+   "notes": [
+    "1. 해당 건에 대한 견적가격입니다.",
+    ""
+   ],
+   "showFee": true,
+   "mergeCategories": true,
+   "blankRows": true,
+   "items": [
+    {
+     "category": "장비",
+     "name": "시험 품목 1\n상세 규격 설명 줄",
+     "unit": "식",
+     "qty": "1",
+     "price": "33000",
+     "priceRate": "100",
+     "material": "1000",
+     "labor": "2813",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "장비",
+     "name": "시험 품목 2",
+     "unit": "식",
+     "qty": "2",
+     "price": "128000",
+     "priceRate": "90",
+     "material": "2000",
+     "labor": "5625",
+     "expense": "84",
+     "note": "조달식별번호 12345678"
+    },
+    {
+     "category": "설치",
+     "name": "시험 품목 3",
+     "unit": "식",
+     "qty": "1.125",
+     "price": "128000",
+     "priceRate": "77",
+     "material": "3000",
+     "labor": "8438",
+     "expense": "84",
+     "note": ""
+    }
+   ]
+  },
+  "input": {
+   "quoteType": "total",
+   "customer": "시험 거래처(주)",
+   "contact": "담당 과장",
+   "phone": "02-000-0000",
+   "email": "test@example.com",
+   "title": "시험 견적 total-3",
+   "number": "NSFF0-20261026-002",
+   "date": "2026-10-26",
+   "staffPhone": "010-0000-0001",
+   "validity": "발행일로부터 30일",
+   "delivery": "협의",
+   "payment": "고객사와 협의",
+   "showFee": true,
+   "mergeCategories": true,
+   "blankRows": true,
+   "items": [
+    {
+     "category": "장비",
+     "name": "시험 품목 1\n상세 규격 설명 줄",
+     "unit": "식",
+     "qty": "1",
+     "price": "33000",
+     "priceRate": "100",
+     "material": "1000",
+     "labor": "2813",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "장비",
+     "name": "시험 품목 2",
+     "unit": "식",
+     "qty": "2",
+     "price": "128000",
+     "priceRate": "90",
+     "material": "2000",
+     "labor": "5625",
+     "expense": "84",
+     "note": "조달식별번호 12345678"
+    },
+    {
+     "category": "설치",
+     "name": "시험 품목 3",
+     "unit": "식",
+     "qty": "1.125",
+     "price": "128000",
+     "priceRate": "77",
+     "material": "3000",
+     "labor": "8438",
+     "expense": "84",
+     "note": ""
+    }
+   ],
+   "staffId": "a",
+   "notes": "1. 해당 건에 대한 견적가격입니다.",
+   "format": "pdf"
+  }
+ },
+ {
+  "name": "cost-3",
+  "legacyInput": {
+   "quoteType": "cost",
+   "outputFormat": "both",
+   "customer": "시험 거래처(주)",
+   "contact": "담당 과장",
+   "phone": "02-000-0000",
+   "email": "test@example.com",
+   "title": "시험 견적 cost-3",
+   "number": "NSFF0-20261026-003",
+   "numberManual": true,
+   "date": "2026-10-26",
+   "staff": "홍길동",
+   "staffPhone": "010-0000-0001",
+   "validity": "발행일로부터 30일",
+   "delivery": "협의",
+   "payment": "고객사와 협의",
+   "notes": [
+    "1. 해당 건에 대한 견적가격입니다.",
+    ""
+   ],
+   "showFee": true,
+   "mergeCategories": true,
+   "blankRows": true,
+   "items": [
+    {
+     "category": "장비",
+     "name": "시험 품목 1\n상세 규격 설명 줄",
+     "unit": "식",
+     "qty": "1",
+     "price": "33000",
+     "priceRate": "100",
+     "material": "1000",
+     "labor": "2813",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "장비",
+     "name": "시험 품목 2",
+     "unit": "식",
+     "qty": "2",
+     "price": "128000",
+     "priceRate": "90",
+     "material": "2000",
+     "labor": "5625",
+     "expense": "84",
+     "note": "조달식별번호 12345678"
+    },
+    {
+     "category": "설치",
+     "name": "시험 품목 3",
+     "unit": "식",
+     "qty": "1.125",
+     "price": "1500000",
+     "priceRate": "77",
+     "material": "3000",
+     "labor": "8438",
+     "expense": "84",
+     "note": ""
+    }
+   ]
+  },
+  "input": {
+   "quoteType": "cost",
+   "customer": "시험 거래처(주)",
+   "contact": "담당 과장",
+   "phone": "02-000-0000",
+   "email": "test@example.com",
+   "title": "시험 견적 cost-3",
+   "number": "NSFF0-20261026-003",
+   "date": "2026-10-26",
+   "staffPhone": "010-0000-0001",
+   "validity": "발행일로부터 30일",
+   "delivery": "협의",
+   "payment": "고객사와 협의",
+   "showFee": true,
+   "mergeCategories": true,
+   "blankRows": true,
+   "items": [
+    {
+     "category": "장비",
+     "name": "시험 품목 1\n상세 규격 설명 줄",
+     "unit": "식",
+     "qty": "1",
+     "price": "33000",
+     "priceRate": "100",
+     "material": "1000",
+     "labor": "2813",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "장비",
+     "name": "시험 품목 2",
+     "unit": "식",
+     "qty": "2",
+     "price": "128000",
+     "priceRate": "90",
+     "material": "2000",
+     "labor": "5625",
+     "expense": "84",
+     "note": "조달식별번호 12345678"
+    },
+    {
+     "category": "설치",
+     "name": "시험 품목 3",
+     "unit": "식",
+     "qty": "1.125",
+     "price": "1500000",
+     "priceRate": "77",
+     "material": "3000",
+     "labor": "8438",
+     "expense": "84",
+     "note": ""
+    }
+   ],
+   "staffId": "a",
+   "notes": "1. 해당 건에 대한 견적가격입니다.",
+   "format": "pdf"
+  }
+ },
+ {
+  "name": "vat-20",
+  "legacyInput": {
+   "quoteType": "vat",
+   "outputFormat": "both",
+   "customer": "시험 거래처(주)",
+   "contact": "담당 과장",
+   "phone": "02-000-0000",
+   "email": "test@example.com",
+   "title": "시험 견적 vat-20",
+   "number": "NSFF0-20261026-004",
+   "numberManual": true,
+   "date": "2026-10-26",
+   "staff": "홍길동",
+   "staffPhone": "010-0000-0001",
+   "validity": "발행일로부터 30일",
+   "delivery": "협의",
+   "payment": "고객사와 협의",
+   "notes": [
+    "1. 해당 건에 대한 견적가격입니다.",
+    ""
+   ],
+   "showFee": true,
+   "mergeCategories": true,
+   "blankRows": true,
+   "items": [
+    {
+     "category": "장비",
+     "name": "시험 품목 1\n상세 규격 설명 줄",
+     "unit": "식",
+     "qty": "1",
+     "price": "33000",
+     "priceRate": "100",
+     "material": "1000",
+     "labor": "2813",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "장비",
+     "name": "시험 품목 2",
+     "unit": "식",
+     "qty": "2",
+     "price": "128000",
+     "priceRate": "90",
+     "material": "2000",
+     "labor": "5625",
+     "expense": "84",
+     "note": "조달식별번호 12345678"
+    },
+    {
+     "category": "설치",
+     "name": "시험 품목 3",
+     "unit": "식",
+     "qty": "1.125",
+     "price": "33000",
+     "priceRate": "77",
+     "material": "3000",
+     "labor": "8438",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "개발",
+     "name": "시험 품목 4\n상세 규격 설명 줄",
+     "unit": "식",
+     "qty": "1",
+     "price": "128000",
+     "priceRate": "100",
+     "material": "4000",
+     "labor": "11250",
+     "expense": "84",
+     "note": "현장 적용"
+    },
+    {
+     "category": "",
+     "name": "시험 품목 5",
+     "unit": "식",
+     "qty": "2",
+     "price": "128000",
+     "priceRate": "90",
+     "material": "5000",
+     "labor": "14063",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "장비",
+     "name": "시험 품목 6",
+     "unit": "식",
+     "qty": "1.125",
+     "price": "128000",
+     "priceRate": "77",
+     "material": "6000",
+     "labor": "16875",
+     "expense": "84",
+     "note": "현장 적용"
+    },
+    {
+     "category": "장비",
+     "name": "시험 품목 7\n상세 규격 설명 줄",
+     "unit": "식",
+     "qty": "1",
+     "price": "1500000",
+     "priceRate": "100",
+     "material": "7000",
+     "labor": "19688",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "설치",
+     "name": "시험 품목 8",
+     "unit": "식",
+     "qty": "2",
+     "price": "1500000",
+     "priceRate": "90",
+     "material": "8000",
+     "labor": "22500",
+     "expense": "84",
+     "note": "현장 적용"
+    },
+    {
+     "category": "개발",
+     "name": "시험 품목 9",
+     "unit": "식",
+     "qty": "1.125",
+     "price": "128000",
+     "priceRate": "77",
+     "material": "9000",
+     "labor": "25313",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "",
+     "name": "시험 품목 10\n상세 규격 설명 줄",
+     "unit": "식",
+     "qty": "1",
+     "price": "128000",
+     "priceRate": "100",
+     "material": "10000",
+     "labor": "28125",
+     "expense": "84",
+     "note": "현장 적용"
+    },
+    {
+     "category": "장비",
+     "name": "시험 품목 11",
+     "unit": "식",
+     "qty": "2",
+     "price": "128000",
+     "priceRate": "90",
+     "material": "11000",
+     "labor": "30938",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "장비",
+     "name": "시험 품목 12",
+     "unit": "식",
+     "qty": "1.125",
+     "price": "33000",
+     "priceRate": "77",
+     "material": "12000",
+     "labor": "33750",
+     "expense": "84",
+     "note": "현장 적용"
+    },
+    {
+     "category": "설치",
+     "name": "시험 품목 13\n상세 규격 설명 줄",
+     "unit": "식",
+     "qty": "1",
+     "price": "1500000",
+     "priceRate": "100",
+     "material": "13000",
+     "labor": "36563",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "개발",
+     "name": "시험 품목 14",
+     "unit": "식",
+     "qty": "2",
+     "price": "128000",
+     "priceRate": "90",
+     "material": "14000",
+     "labor": "39375",
+     "expense": "84",
+     "note": "현장 적용"
+    },
+    {
+     "category": "",
+     "name": "시험 품목 15",
+     "unit": "식",
+     "qty": "1.125",
+     "price": "33000",
+     "priceRate": "77",
+     "material": "15000",
+     "labor": "42188",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "장비",
+     "name": "시험 품목 16\n상세 규격 설명 줄",
+     "unit": "식",
+     "qty": "1",
+     "price": "128000",
+     "priceRate": "100",
+     "material": "16000",
+     "labor": "45000",
+     "expense": "84",
+     "note": "현장 적용"
+    },
+    {
+     "category": "장비",
+     "name": "시험 품목 17",
+     "unit": "식",
+     "qty": "2",
+     "price": "128000",
+     "priceRate": "90",
+     "material": "17000",
+     "labor": "47813",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "설치",
+     "name": "시험 품목 18",
+     "unit": "식",
+     "qty": "1.125",
+     "price": "33000",
+     "priceRate": "77",
+     "material": "18000",
+     "labor": "50625",
+     "expense": "84",
+     "note": "현장 적용"
+    },
+    {
+     "category": "개발",
+     "name": "시험 품목 19\n상세 규격 설명 줄",
+     "unit": "식",
+     "qty": "1",
+     "price": "33000",
+     "priceRate": "100",
+     "material": "19000",
+     "labor": "53438",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "",
+     "name": "시험 품목 20",
+     "unit": "식",
+     "qty": "2",
+     "price": "33000",
+     "priceRate": "90",
+     "material": "20000",
+     "labor": "56250",
+     "expense": "84",
+     "note": "현장 적용"
+    }
+   ]
+  },
+  "input": {
+   "quoteType": "vat",
+   "customer": "시험 거래처(주)",
+   "contact": "담당 과장",
+   "phone": "02-000-0000",
+   "email": "test@example.com",
+   "title": "시험 견적 vat-20",
+   "number": "NSFF0-20261026-004",
+   "date": "2026-10-26",
+   "staffPhone": "010-0000-0001",
+   "validity": "발행일로부터 30일",
+   "delivery": "협의",
+   "payment": "고객사와 협의",
+   "showFee": true,
+   "mergeCategories": true,
+   "blankRows": true,
+   "items": [
+    {
+     "category": "장비",
+     "name": "시험 품목 1\n상세 규격 설명 줄",
+     "unit": "식",
+     "qty": "1",
+     "price": "33000",
+     "priceRate": "100",
+     "material": "1000",
+     "labor": "2813",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "장비",
+     "name": "시험 품목 2",
+     "unit": "식",
+     "qty": "2",
+     "price": "128000",
+     "priceRate": "90",
+     "material": "2000",
+     "labor": "5625",
+     "expense": "84",
+     "note": "조달식별번호 12345678"
+    },
+    {
+     "category": "설치",
+     "name": "시험 품목 3",
+     "unit": "식",
+     "qty": "1.125",
+     "price": "33000",
+     "priceRate": "77",
+     "material": "3000",
+     "labor": "8438",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "개발",
+     "name": "시험 품목 4\n상세 규격 설명 줄",
+     "unit": "식",
+     "qty": "1",
+     "price": "128000",
+     "priceRate": "100",
+     "material": "4000",
+     "labor": "11250",
+     "expense": "84",
+     "note": "현장 적용"
+    },
+    {
+     "category": "",
+     "name": "시험 품목 5",
+     "unit": "식",
+     "qty": "2",
+     "price": "128000",
+     "priceRate": "90",
+     "material": "5000",
+     "labor": "14063",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "장비",
+     "name": "시험 품목 6",
+     "unit": "식",
+     "qty": "1.125",
+     "price": "128000",
+     "priceRate": "77",
+     "material": "6000",
+     "labor": "16875",
+     "expense": "84",
+     "note": "현장 적용"
+    },
+    {
+     "category": "장비",
+     "name": "시험 품목 7\n상세 규격 설명 줄",
+     "unit": "식",
+     "qty": "1",
+     "price": "1500000",
+     "priceRate": "100",
+     "material": "7000",
+     "labor": "19688",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "설치",
+     "name": "시험 품목 8",
+     "unit": "식",
+     "qty": "2",
+     "price": "1500000",
+     "priceRate": "90",
+     "material": "8000",
+     "labor": "22500",
+     "expense": "84",
+     "note": "현장 적용"
+    },
+    {
+     "category": "개발",
+     "name": "시험 품목 9",
+     "unit": "식",
+     "qty": "1.125",
+     "price": "128000",
+     "priceRate": "77",
+     "material": "9000",
+     "labor": "25313",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "",
+     "name": "시험 품목 10\n상세 규격 설명 줄",
+     "unit": "식",
+     "qty": "1",
+     "price": "128000",
+     "priceRate": "100",
+     "material": "10000",
+     "labor": "28125",
+     "expense": "84",
+     "note": "현장 적용"
+    },
+    {
+     "category": "장비",
+     "name": "시험 품목 11",
+     "unit": "식",
+     "qty": "2",
+     "price": "128000",
+     "priceRate": "90",
+     "material": "11000",
+     "labor": "30938",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "장비",
+     "name": "시험 품목 12",
+     "unit": "식",
+     "qty": "1.125",
+     "price": "33000",
+     "priceRate": "77",
+     "material": "12000",
+     "labor": "33750",
+     "expense": "84",
+     "note": "현장 적용"
+    },
+    {
+     "category": "설치",
+     "name": "시험 품목 13\n상세 규격 설명 줄",
+     "unit": "식",
+     "qty": "1",
+     "price": "1500000",
+     "priceRate": "100",
+     "material": "13000",
+     "labor": "36563",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "개발",
+     "name": "시험 품목 14",
+     "unit": "식",
+     "qty": "2",
+     "price": "128000",
+     "priceRate": "90",
+     "material": "14000",
+     "labor": "39375",
+     "expense": "84",
+     "note": "현장 적용"
+    },
+    {
+     "category": "",
+     "name": "시험 품목 15",
+     "unit": "식",
+     "qty": "1.125",
+     "price": "33000",
+     "priceRate": "77",
+     "material": "15000",
+     "labor": "42188",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "장비",
+     "name": "시험 품목 16\n상세 규격 설명 줄",
+     "unit": "식",
+     "qty": "1",
+     "price": "128000",
+     "priceRate": "100",
+     "material": "16000",
+     "labor": "45000",
+     "expense": "84",
+     "note": "현장 적용"
+    },
+    {
+     "category": "장비",
+     "name": "시험 품목 17",
+     "unit": "식",
+     "qty": "2",
+     "price": "128000",
+     "priceRate": "90",
+     "material": "17000",
+     "labor": "47813",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "설치",
+     "name": "시험 품목 18",
+     "unit": "식",
+     "qty": "1.125",
+     "price": "33000",
+     "priceRate": "77",
+     "material": "18000",
+     "labor": "50625",
+     "expense": "84",
+     "note": "현장 적용"
+    },
+    {
+     "category": "개발",
+     "name": "시험 품목 19\n상세 규격 설명 줄",
+     "unit": "식",
+     "qty": "1",
+     "price": "33000",
+     "priceRate": "100",
+     "material": "19000",
+     "labor": "53438",
+     "expense": "84",
+     "note": ""
+    },
+    {
+     "category": "",
+     "name": "시험 품목 20",
+     "unit": "식",
+     "qty": "2",
+     "price": "33000",
+     "priceRate": "90",
+     "material": "20000",
+     "labor": "56250",
+     "expense": "84",
+     "note": "현장 적용"
+    }
+   ],
+   "staffId": "a",
+   "notes": "1. 해당 건에 대한 견적가격입니다.",
+   "format": "pdf"
+  }
+ },
+ {
+  "name": "catalog-1",
+  "legacyInput": {
+   "quoteType": "catalog",
+   "outputFormat": "both",
+   "customer": "시험 거래처(주)",
+   "contact": "담당 과장",
+   "phone": "02-000-0000",
+   "email": "test@example.com",
+   "title": "시험 견적 catalog-1",
+   "number": "NSFF0-20261026-005",
+   "numberManual": true,
+   "date": "2026-10-26",
+   "staff": "홍길동",
+   "staffPhone": "010-0000-0001",
+   "validity": "발행일로부터 30일",
+   "delivery": "협의",
+   "payment": "고객사와 협의",
+   "notes": [
+    "1. 해당 건에 대한 견적가격입니다.\n2. 조달수수료(0.54%) 합계 포함",
+    ""
+   ],
+   "showFee": true,
+   "mergeCategories": true,
+   "blankRows": true,
+   "items": [
+    {
+     "catalogId": "288a1b67a1083c62495b72d8",
+     "name": "시험 단말기 세트\n모델명 : TEST-A100/ 흰색\n크기 100x200",
+     "category": "출입관리",
+     "unit": "대",
+     "note": "조달 식별 번호, 12345678",
+     "qty": "1",
+     "price": "1500000",
+     "priceRate": "100",
+     "imageIds": [
+      "9f3108edc01f793a098b49ed45c81bde7dac2dec953203285f80e18dcfbb2d80",
+      "52a71f861e860b48e27741b13745081eac938d0180d7c2fee47443b1a5fbc8dc"
+     ]
+    }
+   ],
+   "catalogRevision": "3b104e7d714761054484defffbac7c9adf74843383b5c0206a9bd360c159d0f7"
+  },
+  "input": {
+   "quoteType": "catalog",
+   "customer": "시험 거래처(주)",
+   "contact": "담당 과장",
+   "phone": "02-000-0000",
+   "email": "test@example.com",
+   "title": "시험 견적 catalog-1",
+   "number": "NSFF0-20261026-005",
+   "date": "2026-10-26",
+   "staffPhone": "010-0000-0001",
+   "validity": "발행일로부터 30일",
+   "delivery": "협의",
+   "payment": "고객사와 협의",
+   "showFee": true,
+   "mergeCategories": true,
+   "blankRows": true,
+   "items": [
+    {
+     "catalogId": "288a1b67a1083c62495b72d8",
+     "name": "시험 단말기 세트\n모델명 : TEST-A100/ 흰색\n크기 100x200",
+     "category": "출입관리",
+     "unit": "대",
+     "note": "조달 식별 번호, 12345678",
+     "qty": "1",
+     "price": "1500000",
+     "priceRate": "100",
+     "imageIds": [
+      "9f3108edc01f793a098b49ed45c81bde7dac2dec953203285f80e18dcfbb2d80",
+      "52a71f861e860b48e27741b13745081eac938d0180d7c2fee47443b1a5fbc8dc"
+     ]
+    }
+   ],
+   "catalogRevision": "3b104e7d714761054484defffbac7c9adf74843383b5c0206a9bd360c159d0f7",
+   "staffId": "a",
+   "notes": "1. 해당 건에 대한 견적가격입니다.\n2. 조달수수료(0.54%) 합계 포함",
+   "format": "pdf"
+  }
+ },
+ {
+  "name": "catalog-4",
+  "legacyInput": {
+   "quoteType": "catalog",
+   "outputFormat": "both",
+   "customer": "시험 거래처(주)",
+   "contact": "담당 과장",
+   "phone": "02-000-0000",
+   "email": "test@example.com",
+   "title": "시험 견적 catalog-4",
+   "number": "NSFF0-20261026-006",
+   "numberManual": true,
+   "date": "2026-10-26",
+   "staff": "홍길동",
+   "staffPhone": "010-0000-0001",
+   "validity": "발행일로부터 30일",
+   "delivery": "협의",
+   "payment": "고객사와 협의",
+   "notes": [
+    "1. 해당 건에 대한 견적가격입니다.\n2. 조달수수료(0.54%) 합계 포함",
+    ""
+   ],
+   "showFee": true,
+   "mergeCategories": true,
+   "blankRows": true,
+   "items": [
+    {
+     "catalogId": "288a1b67a1083c62495b72d8",
+     "name": "시험 단말기 세트\n모델명 : TEST-A100/ 흰색\n크기 100x200",
+     "category": "출입관리",
+     "unit": "대",
+     "note": "조달 식별 번호, 12345678",
+     "qty": "1",
+     "price": "1500000",
+     "priceRate": "100",
+     "imageIds": [
+      "9f3108edc01f793a098b49ed45c81bde7dac2dec953203285f80e18dcfbb2d80",
+      "52a71f861e860b48e27741b13745081eac938d0180d7c2fee47443b1a5fbc8dc"
+     ]
+    },
+    {
+     "catalogId": "ba9a98995b8de69e9a7967d6",
+     "name": "시험 컨트롤러\nTEST-B200 / 4도어",
+     "category": "출입관리",
+     "unit": "식",
+     "note": "수식 단가",
+     "qty": "1",
+     "price": "777000",
+     "priceRate": "100",
+     "imageIds": []
+    },
+    {
+     "catalogId": "a156977c665f6eac9b2a66a2",
+     "name": "단가 없는 품목",
+     "category": "출입관리",
+     "unit": "EA",
+     "note": "",
+     "qty": "1",
+     "price": "777000",
+     "priceRate": "100",
+     "imageIds": []
+    },
+    {
+     "catalogId": "1feddb375821a204ff4d033b",
+     "name": "단가 이상 품목",
+     "category": "출입관리",
+     "unit": "EA",
+     "note": "",
+     "qty": "1",
+     "price": "777000",
+     "priceRate": "100",
+     "imageIds": []
+    }
+   ],
+   "catalogRevision": "3b104e7d714761054484defffbac7c9adf74843383b5c0206a9bd360c159d0f7"
+  },
+  "input": {
+   "quoteType": "catalog",
+   "customer": "시험 거래처(주)",
+   "contact": "담당 과장",
+   "phone": "02-000-0000",
+   "email": "test@example.com",
+   "title": "시험 견적 catalog-4",
+   "number": "NSFF0-20261026-006",
+   "date": "2026-10-26",
+   "staffPhone": "010-0000-0001",
+   "validity": "발행일로부터 30일",
+   "delivery": "협의",
+   "payment": "고객사와 협의",
+   "showFee": true,
+   "mergeCategories": true,
+   "blankRows": true,
+   "items": [
+    {
+     "catalogId": "288a1b67a1083c62495b72d8",
+     "name": "시험 단말기 세트\n모델명 : TEST-A100/ 흰색\n크기 100x200",
+     "category": "출입관리",
+     "unit": "대",
+     "note": "조달 식별 번호, 12345678",
+     "qty": "1",
+     "price": "1500000",
+     "priceRate": "100",
+     "imageIds": [
+      "9f3108edc01f793a098b49ed45c81bde7dac2dec953203285f80e18dcfbb2d80",
+      "52a71f861e860b48e27741b13745081eac938d0180d7c2fee47443b1a5fbc8dc"
+     ]
+    },
+    {
+     "catalogId": "ba9a98995b8de69e9a7967d6",
+     "name": "시험 컨트롤러\nTEST-B200 / 4도어",
+     "category": "출입관리",
+     "unit": "식",
+     "note": "수식 단가",
+     "qty": "1",
+     "price": "777000",
+     "priceRate": "100",
+     "imageIds": []
+    },
+    {
+     "catalogId": "a156977c665f6eac9b2a66a2",
+     "name": "단가 없는 품목",
+     "category": "출입관리",
+     "unit": "EA",
+     "note": "",
+     "qty": "1",
+     "price": "777000",
+     "priceRate": "100",
+     "imageIds": []
+    },
+    {
+     "catalogId": "1feddb375821a204ff4d033b",
+     "name": "단가 이상 품목",
+     "category": "출입관리",
+     "unit": "EA",
+     "note": "",
+     "qty": "1",
+     "price": "777000",
+     "priceRate": "100",
+     "imageIds": []
+    }
+   ],
+   "catalogRevision": "3b104e7d714761054484defffbac7c9adf74843383b5c0206a9bd360c159d0f7",
+   "staffId": "a",
+   "notes": "1. 해당 건에 대한 견적가격입니다.\n2. 조달수수료(0.54%) 합계 포함",
+   "format": "pdf"
+  }
+ },
+ {
+  "name": "catalog-5",
+  "legacyInput": {
+   "quoteType": "catalog",
+   "outputFormat": "both",
+   "customer": "시험 거래처(주)",
+   "contact": "담당 과장",
+   "phone": "02-000-0000",
+   "email": "test@example.com",
+   "title": "시험 견적 catalog-5",
+   "number": "NSFF0-20261026-007",
+   "numberManual": true,
+   "date": "2026-10-26",
+   "staff": "홍길동",
+   "staffPhone": "010-0000-0001",
+   "validity": "발행일로부터 30일",
+   "delivery": "협의",
+   "payment": "고객사와 협의",
+   "notes": [
+    "1. 해당 건에 대한 견적가격입니다.\n2. 조달수수료(0.54%) 합계 포함",
+    ""
+   ],
+   "showFee": true,
+   "mergeCategories": true,
+   "blankRows": true,
+   "items": [
+    {
+     "catalogId": "288a1b67a1083c62495b72d8",
+     "name": "시험 단말기 세트\n모델명 : TEST-A100/ 흰색\n크기 100x200",
+     "category": "출입관리",
+     "unit": "대",
+     "note": "조달 식별 번호, 12345678",
+     "qty": "1",
+     "price": "1500000",
+     "priceRate": "100",
+     "imageIds": [
+      "9f3108edc01f793a098b49ed45c81bde7dac2dec953203285f80e18dcfbb2d80",
+      "52a71f861e860b48e27741b13745081eac938d0180d7c2fee47443b1a5fbc8dc"
+     ]
+    },
+    {
+     "catalogId": "ba9a98995b8de69e9a7967d6",
+     "name": "시험 컨트롤러\nTEST-B200 / 4도어",
+     "category": "출입관리",
+     "unit": "식",
+     "note": "수식 단가",
+     "qty": "1",
+     "price": "777000",
+     "priceRate": "100",
+     "imageIds": []
+    },
+    {
+     "catalogId": "a156977c665f6eac9b2a66a2",
+     "name": "단가 없는 품목",
+     "category": "출입관리",
+     "unit": "EA",
+     "note": "",
+     "qty": "1",
+     "price": "777000",
+     "priceRate": "100",
+     "imageIds": []
+    },
+    {
+     "catalogId": "1feddb375821a204ff4d033b",
+     "name": "단가 이상 품목",
+     "category": "출입관리",
+     "unit": "EA",
+     "note": "",
+     "qty": "1",
+     "price": "777000",
+     "priceRate": "100",
+     "imageIds": []
+    },
+    {
+     "catalogId": "a1dd5013f9a30d510becd1e5",
+     "name": "중복 품목\nTEST-C300",
+     "category": "시험제품B",
+     "unit": "대",
+     "note": "",
+     "qty": "1",
+     "price": "50000000",
+     "priceRate": "100",
+     "imageIds": []
+    }
+   ],
+   "catalogRevision": "3b104e7d714761054484defffbac7c9adf74843383b5c0206a9bd360c159d0f7"
+  },
+  "input": {
+   "quoteType": "catalog",
+   "customer": "시험 거래처(주)",
+   "contact": "담당 과장",
+   "phone": "02-000-0000",
+   "email": "test@example.com",
+   "title": "시험 견적 catalog-5",
+   "number": "NSFF0-20261026-007",
+   "date": "2026-10-26",
+   "staffPhone": "010-0000-0001",
+   "validity": "발행일로부터 30일",
+   "delivery": "협의",
+   "payment": "고객사와 협의",
+   "showFee": true,
+   "mergeCategories": true,
+   "blankRows": true,
+   "items": [
+    {
+     "catalogId": "288a1b67a1083c62495b72d8",
+     "name": "시험 단말기 세트\n모델명 : TEST-A100/ 흰색\n크기 100x200",
+     "category": "출입관리",
+     "unit": "대",
+     "note": "조달 식별 번호, 12345678",
+     "qty": "1",
+     "price": "1500000",
+     "priceRate": "100",
+     "imageIds": [
+      "9f3108edc01f793a098b49ed45c81bde7dac2dec953203285f80e18dcfbb2d80",
+      "52a71f861e860b48e27741b13745081eac938d0180d7c2fee47443b1a5fbc8dc"
+     ]
+    },
+    {
+     "catalogId": "ba9a98995b8de69e9a7967d6",
+     "name": "시험 컨트롤러\nTEST-B200 / 4도어",
+     "category": "출입관리",
+     "unit": "식",
+     "note": "수식 단가",
+     "qty": "1",
+     "price": "777000",
+     "priceRate": "100",
+     "imageIds": []
+    },
+    {
+     "catalogId": "a156977c665f6eac9b2a66a2",
+     "name": "단가 없는 품목",
+     "category": "출입관리",
+     "unit": "EA",
+     "note": "",
+     "qty": "1",
+     "price": "777000",
+     "priceRate": "100",
+     "imageIds": []
+    },
+    {
+     "catalogId": "1feddb375821a204ff4d033b",
+     "name": "단가 이상 품목",
+     "category": "출입관리",
+     "unit": "EA",
+     "note": "",
+     "qty": "1",
+     "price": "777000",
+     "priceRate": "100",
+     "imageIds": []
+    },
+    {
+     "catalogId": "a1dd5013f9a30d510becd1e5",
+     "name": "중복 품목\nTEST-C300",
+     "category": "시험제품B",
+     "unit": "대",
+     "note": "",
+     "qty": "1",
+     "price": "50000000",
+     "priceRate": "100",
+     "imageIds": []
+    }
+   ],
+   "catalogRevision": "3b104e7d714761054484defffbac7c9adf74843383b5c0206a9bd360c159d0f7",
+   "staffId": "a",
+   "notes": "1. 해당 건에 대한 견적가격입니다.\n2. 조달수수료(0.54%) 합계 포함",
+   "format": "pdf"
+  }
+ },
+ {
+  "name": "catalog2-9",
+  "legacyInput": {
+   "quoteType": "catalog2",
+   "outputFormat": "both",
+   "customer": "시험 거래처(주)",
+   "contact": "담당 과장",
+   "phone": "02-000-0000",
+   "email": "test@example.com",
+   "title": "시험 견적 catalog2-9",
+   "number": "NSFF0-20261026-008",
+   "numberManual": true,
+   "date": "2026-10-26",
+   "staff": "홍길동",
+   "staffPhone": "010-0000-0001",
+   "validity": "발행일로부터 30일",
+   "delivery": "협의",
+   "payment": "고객사와 협의",
+   "notes": [
+    "1. 해당 건에 대한 견적가격입니다.\n2. 조달수수료(0.54%) 합계 포함",
+    ""
+   ],
+   "showFee": true,
+   "mergeCategories": true,
+   "blankRows": true,
+   "items": [
+    {
+     "catalogId": "288a1b67a1083c62495b72d8",
+     "name": "시험 단말기 세트\n모델명 : TEST-A100/ 흰색\n크기 100x200",
+     "category": "출입관리",
+     "unit": "대",
+     "note": "조달 식별 번호, 12345678",
+     "qty": "1",
+     "price": "1500000",
+     "priceRate": "100",
+     "imageIds": [
+      "9f3108edc01f793a098b49ed45c81bde7dac2dec953203285f80e18dcfbb2d80",
+      "52a71f861e860b48e27741b13745081eac938d0180d7c2fee47443b1a5fbc8dc"
+     ]
+    },
+    {
+     "catalogId": "ba9a98995b8de69e9a7967d6",
+     "name": "시험 컨트롤러\nTEST-B200 / 4도어",
+     "category": "출입관리",
+     "unit": "식",
+     "note": "수식 단가",
+     "qty": "1",
+     "price": "777000",
+     "priceRate": "100",
+     "imageIds": []
+    },
+    {
+     "catalogId": "a156977c665f6eac9b2a66a2",
+     "name": "단가 없는 품목",
+     "category": "출입관리",
+     "unit": "EA",
+     "note": "",
+     "qty": "1",
+     "price": "777000",
+     "priceRate": "100",
+     "imageIds": []
+    },
+    {
+     "catalogId": "1feddb375821a204ff4d033b",
+     "name": "단가 이상 품목",
+     "category": "출입관리",
+     "unit": "EA",
+     "note": "",
+     "qty": "1",
+     "price": "777000",
+     "priceRate": "100",
+     "imageIds": []
+    },
+    {
+     "catalogId": "a1dd5013f9a30d510becd1e5",
+     "name": "중복 품목\nTEST-C300",
+     "category": "시험제품B",
+     "unit": "대",
+     "note": "",
+     "qty": "1",
+     "price": "50000000",
+     "priceRate": "100",
+     "imageIds": []
+    },
+    {
+     "catalogId": "a1dd5013f9a30d510becd1e5-23",
+     "name": "중복 품목\nTEST-C300",
+     "category": "시험제품B",
+     "unit": "대",
+     "note": "",
+     "qty": "1",
+     "price": "25",
+     "priceRate": "100",
+     "imageIds": []
+    },
+    {
+     "catalogId": "288a1b67a1083c62495b72d8",
+     "name": "시험 단말기 세트\n모델명 : TEST-A100/ 흰색\n크기 100x200",
+     "category": "출입관리",
+     "unit": "대",
+     "note": "조달 식별 번호, 12345678",
+     "qty": "1",
+     "price": "1500000",
+     "priceRate": "100",
+     "imageIds": [
+      "9f3108edc01f793a098b49ed45c81bde7dac2dec953203285f80e18dcfbb2d80",
+      "52a71f861e860b48e27741b13745081eac938d0180d7c2fee47443b1a5fbc8dc"
+     ]
+    },
+    {
+     "catalogId": "ba9a98995b8de69e9a7967d6",
+     "name": "시험 컨트롤러\nTEST-B200 / 4도어",
+     "category": "출입관리",
+     "unit": "식",
+     "note": "수식 단가",
+     "qty": "1",
+     "price": "777000",
+     "priceRate": "100",
+     "imageIds": []
+    },
+    {
+     "catalogId": "a156977c665f6eac9b2a66a2",
+     "name": "단가 없는 품목",
+     "category": "출입관리",
+     "unit": "EA",
+     "note": "",
+     "qty": "1",
+     "price": "777000",
+     "priceRate": "100",
+     "imageIds": []
+    }
+   ],
+   "catalogRevision": "3b104e7d714761054484defffbac7c9adf74843383b5c0206a9bd360c159d0f7"
+  },
+  "input": {
+   "quoteType": "catalog2",
+   "customer": "시험 거래처(주)",
+   "contact": "담당 과장",
+   "phone": "02-000-0000",
+   "email": "test@example.com",
+   "title": "시험 견적 catalog2-9",
+   "number": "NSFF0-20261026-008",
+   "date": "2026-10-26",
+   "staffPhone": "010-0000-0001",
+   "validity": "발행일로부터 30일",
+   "delivery": "협의",
+   "payment": "고객사와 협의",
+   "showFee": true,
+   "mergeCategories": true,
+   "blankRows": true,
+   "items": [
+    {
+     "catalogId": "288a1b67a1083c62495b72d8",
+     "name": "시험 단말기 세트\n모델명 : TEST-A100/ 흰색\n크기 100x200",
+     "category": "출입관리",
+     "unit": "대",
+     "note": "조달 식별 번호, 12345678",
+     "qty": "1",
+     "price": "1500000",
+     "priceRate": "100",
+     "imageIds": [
+      "9f3108edc01f793a098b49ed45c81bde7dac2dec953203285f80e18dcfbb2d80",
+      "52a71f861e860b48e27741b13745081eac938d0180d7c2fee47443b1a5fbc8dc"
+     ]
+    },
+    {
+     "catalogId": "ba9a98995b8de69e9a7967d6",
+     "name": "시험 컨트롤러\nTEST-B200 / 4도어",
+     "category": "출입관리",
+     "unit": "식",
+     "note": "수식 단가",
+     "qty": "1",
+     "price": "777000",
+     "priceRate": "100",
+     "imageIds": []
+    },
+    {
+     "catalogId": "a156977c665f6eac9b2a66a2",
+     "name": "단가 없는 품목",
+     "category": "출입관리",
+     "unit": "EA",
+     "note": "",
+     "qty": "1",
+     "price": "777000",
+     "priceRate": "100",
+     "imageIds": []
+    },
+    {
+     "catalogId": "1feddb375821a204ff4d033b",
+     "name": "단가 이상 품목",
+     "category": "출입관리",
+     "unit": "EA",
+     "note": "",
+     "qty": "1",
+     "price": "777000",
+     "priceRate": "100",
+     "imageIds": []
+    },
+    {
+     "catalogId": "a1dd5013f9a30d510becd1e5",
+     "name": "중복 품목\nTEST-C300",
+     "category": "시험제품B",
+     "unit": "대",
+     "note": "",
+     "qty": "1",
+     "price": "50000000",
+     "priceRate": "100",
+     "imageIds": []
+    },
+    {
+     "catalogId": "a1dd5013f9a30d510becd1e5-23",
+     "name": "중복 품목\nTEST-C300",
+     "category": "시험제품B",
+     "unit": "대",
+     "note": "",
+     "qty": "1",
+     "price": "25",
+     "priceRate": "100",
+     "imageIds": []
+    },
+    {
+     "catalogId": "288a1b67a1083c62495b72d8",
+     "name": "시험 단말기 세트\n모델명 : TEST-A100/ 흰색\n크기 100x200",
+     "category": "출입관리",
+     "unit": "대",
+     "note": "조달 식별 번호, 12345678",
+     "qty": "1",
+     "price": "1500000",
+     "priceRate": "100",
+     "imageIds": [
+      "9f3108edc01f793a098b49ed45c81bde7dac2dec953203285f80e18dcfbb2d80",
+      "52a71f861e860b48e27741b13745081eac938d0180d7c2fee47443b1a5fbc8dc"
+     ]
+    },
+    {
+     "catalogId": "ba9a98995b8de69e9a7967d6",
+     "name": "시험 컨트롤러\nTEST-B200 / 4도어",
+     "category": "출입관리",
+     "unit": "식",
+     "note": "수식 단가",
+     "qty": "1",
+     "price": "777000",
+     "priceRate": "100",
+     "imageIds": []
+    },
+    {
+     "catalogId": "a156977c665f6eac9b2a66a2",
+     "name": "단가 없는 품목",
+     "category": "출입관리",
+     "unit": "EA",
+     "note": "",
+     "qty": "1",
+     "price": "777000",
+     "priceRate": "100",
+     "imageIds": []
+    }
+   ],
+   "catalogRevision": "3b104e7d714761054484defffbac7c9adf74843383b5c0206a9bd360c159d0f7",
+   "staffId": "a",
+   "notes": "1. 해당 건에 대한 견적가격입니다.\n2. 조달수수료(0.54%) 합계 포함",
+   "format": "pdf"
+  }
+ }
+]

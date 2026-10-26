@@ -1,0 +1,3822 @@
+{
+ "catalogRevision": "3b104e7d714761054484defffbac7c9adf74843383b5c0206a9bd360c159d0f7",
+ "cases": [
+  {
+   "id": "ok-vat",
+   "legacyInput": {
+    "quoteType": "vat",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "vat",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "expected": {
+    "quoteType": "vat",
+    "customer": "시험 거래처",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "validity": "견적 유효기간 : 발행일로부터 30일",
+    "delivery": "납품 : 협의",
+    "payment": "결제 : 고객사와 협의",
+    "staffPhone": "010-0000-0001",
+    "staffDisplay": "홍길동 차장",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "staffId": "a",
+    "items": [
+     {
+      "name": "시험 품목",
+      "category": "장비",
+      "unit": "식",
+      "note": "",
+      "qty": 1.0,
+      "price": 1000,
+      "priceRate": 100.0
+     }
+    ]
+   }
+  },
+  {
+   "id": "ok-total",
+   "legacyInput": {
+    "quoteType": "total",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "total",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "expected": {
+    "quoteType": "total",
+    "customer": "시험 거래처",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "validity": "견적 유효기간 : 발행일로부터 30일",
+    "delivery": "납품 : 협의",
+    "payment": "결제 : 고객사와 협의",
+    "staffPhone": "010-0000-0001",
+    "staffDisplay": "홍길동 차장",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "staffId": "a",
+    "items": [
+     {
+      "name": "시험 품목",
+      "category": "장비",
+      "unit": "식",
+      "note": "",
+      "qty": 1.0,
+      "price": 1000,
+      "priceRate": 100.0
+     }
+    ]
+   }
+  },
+  {
+   "id": "ok-cost",
+   "legacyInput": {
+    "quoteType": "cost",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "설치",
+      "name": "비용",
+      "unit": "식",
+      "qty": "1.125",
+      "material": "1000",
+      "labor": "2813",
+      "expense": "84",
+      "priceRate": "90"
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "cost",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "설치",
+      "name": "비용",
+      "unit": "식",
+      "qty": "1.125",
+      "material": "1000",
+      "labor": "2813",
+      "expense": "84",
+      "priceRate": "90"
+     }
+    ],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "expected": {
+    "quoteType": "cost",
+    "customer": "시험 거래처",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "validity": "견적 유효기간 : 발행일로부터 30일",
+    "delivery": "납품 : 협의",
+    "payment": "결제 : 고객사와 협의",
+    "staffPhone": "010-0000-0001",
+    "staffDisplay": "홍길동 차장",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "staffId": "a",
+    "items": [
+     {
+      "name": "비용",
+      "category": "설치",
+      "unit": "식",
+      "note": "",
+      "qty": 1.125,
+      "price": 0,
+      "priceRate": 90.0,
+      "material": 1000,
+      "labor": 2813,
+      "expense": 84,
+      "autoLabor": false,
+      "autoExpense": false
+     }
+    ]
+   }
+  },
+  {
+   "id": "ok-notes-two",
+   "legacyInput": {
+    "quoteType": "vat",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "첫째 줄",
+     "둘째 줄"
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "vat",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ],
+    "staffId": "a",
+    "notes": "첫째 줄\n둘째 줄",
+    "format": "pdf"
+   },
+   "expected": {
+    "quoteType": "vat",
+    "customer": "시험 거래처",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "validity": "견적 유효기간 : 발행일로부터 30일",
+    "delivery": "납품 : 협의",
+    "payment": "결제 : 고객사와 협의",
+    "staffPhone": "010-0000-0001",
+    "staffDisplay": "홍길동 차장",
+    "notes": "첫째 줄\n둘째 줄",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "staffId": "a",
+    "items": [
+     {
+      "name": "시험 품목",
+      "category": "장비",
+      "unit": "식",
+      "note": "",
+      "qty": 1.0,
+      "price": 1000,
+      "priceRate": 100.0
+     }
+    ]
+   }
+  },
+  {
+   "id": "ok-options-off",
+   "legacyInput": {
+    "quoteType": "vat",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": false,
+    "mergeCategories": false,
+    "blankRows": false,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "vat",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": false,
+    "mergeCategories": false,
+    "blankRows": false,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "expected": {
+    "quoteType": "vat",
+    "customer": "시험 거래처",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "validity": "견적 유효기간 : 발행일로부터 30일",
+    "delivery": "납품 : 협의",
+    "payment": "결제 : 고객사와 협의",
+    "staffPhone": "010-0000-0001",
+    "staffDisplay": "홍길동 차장",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "showFee": false,
+    "mergeCategories": false,
+    "blankRows": false,
+    "staffId": "a",
+    "items": [
+     {
+      "name": "시험 품목",
+      "category": "장비",
+      "unit": "식",
+      "note": "",
+      "qty": 1.0,
+      "price": 1000,
+      "priceRate": 100.0
+     }
+    ]
+   }
+  },
+  {
+   "id": "ok-other-staff",
+   "legacyInput": {
+    "quoteType": "vat",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "이영희",
+    "staffPhone": " 010-1111-2222 ",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "vat",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": " 010-1111-2222 ",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ],
+    "staffId": "c",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "expected": {
+    "quoteType": "vat",
+    "customer": "시험 거래처",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "validity": "견적 유효기간 : 발행일로부터 30일",
+    "delivery": "납품 : 협의",
+    "payment": "결제 : 고객사와 협의",
+    "staffPhone": "010-1111-2222",
+    "staffDisplay": "이영희 대리",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "staffId": "c",
+    "items": [
+     {
+      "name": "시험 품목",
+      "category": "장비",
+      "unit": "식",
+      "note": "",
+      "qty": 1.0,
+      "price": 1000,
+      "priceRate": 100.0
+     }
+    ]
+   }
+  },
+  {
+   "id": "ok-catalog-linked",
+   "legacyInput": {
+    "quoteType": "catalog",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "catalogId": "288a1b67a1083c62495b72d8",
+      "name": "덮어써질 이름",
+      "category": "x",
+      "unit": "x",
+      "note": "x",
+      "qty": "2",
+      "price": "1",
+      "priceRate": "100",
+      "imageIds": []
+     }
+    ],
+    "catalogRevision": "3b104e7d714761054484defffbac7c9adf74843383b5c0206a9bd360c159d0f7"
+   },
+   "input": {
+    "quoteType": "catalog",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "catalogId": "288a1b67a1083c62495b72d8",
+      "name": "덮어써질 이름",
+      "category": "x",
+      "unit": "x",
+      "note": "x",
+      "qty": "2",
+      "price": "1",
+      "priceRate": "100",
+      "imageIds": []
+     }
+    ],
+    "catalogRevision": "3b104e7d714761054484defffbac7c9adf74843383b5c0206a9bd360c159d0f7",
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "expected": {
+    "quoteType": "catalog",
+    "customer": "시험 거래처",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "validity": "견적 유효기간 : 발행일로부터 30일",
+    "delivery": "납품 : 협의",
+    "payment": "결제 : 고객사와 협의",
+    "staffPhone": "010-0000-0001",
+    "staffDisplay": "홍길동 차장",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "staffId": "a",
+    "items": [
+     {
+      "catalogId": "288a1b67a1083c62495b72d8",
+      "imageIds": [
+       "9f3108edc01f793a098b49ed45c81bde7dac2dec953203285f80e18dcfbb2d80",
+       "52a71f861e860b48e27741b13745081eac938d0180d7c2fee47443b1a5fbc8dc"
+      ],
+      "model": "TEST-A100",
+      "name": "시험 단말기 세트\n모델명 : TEST-A100/ 흰색\n크기 100x200",
+      "category": "출입관리",
+      "unit": "대",
+      "note": "조달 식별 번호, 12345678",
+      "qty": 2.0,
+      "price": 1500000,
+      "priceRate": 100.0
+     }
+    ]
+   }
+  },
+  {
+   "id": "ok-catalog-unlinked-images",
+   "legacyInput": {
+    "quoteType": "catalog2",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "직접 입력",
+      "unit": "대",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": "100",
+      "imageIds": [
+       "없는사진",
+       "9f3108edc01f793a098b49ed45c81bde7dac2dec953203285f80e18dcfbb2d80"
+      ]
+     }
+    ],
+    "catalogRevision": "3b104e7d714761054484defffbac7c9adf74843383b5c0206a9bd360c159d0f7"
+   },
+   "input": {
+    "quoteType": "catalog2",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "직접 입력",
+      "unit": "대",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": "100",
+      "imageIds": [
+       "없는사진",
+       "9f3108edc01f793a098b49ed45c81bde7dac2dec953203285f80e18dcfbb2d80"
+      ]
+     }
+    ],
+    "catalogRevision": "3b104e7d714761054484defffbac7c9adf74843383b5c0206a9bd360c159d0f7",
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "expected": {
+    "quoteType": "catalog2",
+    "customer": "시험 거래처",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "validity": "견적 유효기간 : 발행일로부터 30일",
+    "delivery": "납품 : 협의",
+    "payment": "결제 : 고객사와 협의",
+    "staffPhone": "010-0000-0001",
+    "staffDisplay": "홍길동 차장",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "staffId": "a",
+    "items": [
+     {
+      "imageIds": [
+       "9f3108edc01f793a098b49ed45c81bde7dac2dec953203285f80e18dcfbb2d80"
+      ],
+      "name": "직접 입력",
+      "category": "",
+      "unit": "대",
+      "note": "",
+      "qty": 1.0,
+      "price": 1000,
+      "priceRate": 100.0
+     }
+    ]
+   }
+  },
+  {
+   "id": "err-type",
+   "legacyInput": {
+    "quoteType": "other",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "other",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "error": "견적서 종류를 선택하세요."
+  },
+  {
+   "id": "err-format",
+   "legacyInput": {
+    "quoteType": "vat",
+    "outputFormat": "doc",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "vat",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "error": "저장 형식을 선택하세요."
+  },
+  {
+   "id": "err-customer",
+   "legacyInput": {
+    "quoteType": "vat",
+    "outputFormat": "pdf",
+    "customer": "  ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "vat",
+    "customer": "  ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "error": "거래처와 견적 제목을 입력하세요."
+  },
+  {
+   "id": "err-title",
+   "legacyInput": {
+    "quoteType": "vat",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "vat",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "error": "거래처와 견적 제목을 입력하세요."
+  },
+  {
+   "id": "err-long",
+   "legacyInput": {
+    "quoteType": "vat",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "ㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱ",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "vat",
+    "customer": " 시험 거래처 ",
+    "contact": "ㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱ",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "error": "입력 문구가 너무 길거나 올바르지 않습니다."
+  },
+  {
+   "id": "err-staff",
+   "legacyInput": {
+    "quoteType": "vat",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "없는사람",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "vat",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ],
+    "staffId": "없는사람",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "error": "작성자를 선택하세요."
+  },
+  {
+   "id": "err-phone",
+   "legacyInput": {
+    "quoteType": "vat",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "0000000000000000000000000000000",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "vat",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "0000000000000000000000000000000",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "error": "담당자 휴대폰번호는 30자 이내로 입력하세요."
+  },
+  {
+   "id": "err-manual-number",
+   "legacyInput": {
+    "quoteType": "vat",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "vat",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "error": "견적번호는 1~100자로 입력하세요."
+  },
+  {
+   "id": "err-items-empty",
+   "legacyInput": {
+    "quoteType": "vat",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": []
+   },
+   "input": {
+    "quoteType": "vat",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "error": "품목은 1~100개로 입력하세요."
+  },
+  {
+   "id": "err-items-101",
+   "legacyInput": {
+    "quoteType": "vat",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "vat",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     },
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     }
+    ],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "error": "품목은 1~100개로 입력하세요."
+  },
+  {
+   "id": "err-name",
+   "legacyInput": {
+    "quoteType": "vat",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": " ",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "vat",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": " ",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     }
+    ],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "error": "1번 품목명과 단위를 입력하세요."
+  },
+  {
+   "id": "err-unit",
+   "legacyInput": {
+    "quoteType": "vat",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "",
+      "qty": "1",
+      "price": "1"
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "vat",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "",
+      "qty": "1",
+      "price": "1"
+     }
+    ],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "error": "1번 품목명과 단위를 입력하세요."
+  },
+  {
+   "id": "err-qty-zero",
+   "legacyInput": {
+    "quoteType": "vat",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "0",
+      "price": "1"
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "vat",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "0",
+      "price": "1"
+     }
+    ],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "error": "1번 수량은 양수(소수 셋째 자리까지), 단가는 0 이상의 정수로 입력하세요."
+  },
+  {
+   "id": "err-qty-decimals",
+   "legacyInput": {
+    "quoteType": "vat",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1.0001",
+      "price": "1"
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "vat",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1.0001",
+      "price": "1"
+     }
+    ],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "error": "1번 수량은 양수(소수 셋째 자리까지), 단가는 0 이상의 정수로 입력하세요."
+  },
+  {
+   "id": "err-qty-max",
+   "legacyInput": {
+    "quoteType": "vat",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1000001",
+      "price": "1"
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "vat",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1000001",
+      "price": "1"
+     }
+    ],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "error": "1번 수량은 양수(소수 셋째 자리까지), 단가는 0 이상의 정수로 입력하세요."
+  },
+  {
+   "id": "err-price-fraction",
+   "legacyInput": {
+    "quoteType": "vat",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1.5"
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "vat",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1.5"
+     }
+    ],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "error": "1번 수량은 양수(소수 셋째 자리까지), 단가는 0 이상의 정수로 입력하세요."
+  },
+  {
+   "id": "err-price-max",
+   "legacyInput": {
+    "quoteType": "vat",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "100000000001"
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "vat",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "100000000001"
+     }
+    ],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "error": "1번 수량은 양수(소수 셋째 자리까지), 단가는 0 이상의 정수로 입력하세요."
+  },
+  {
+   "id": "err-rate",
+   "legacyInput": {
+    "quoteType": "vat",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1",
+      "priceRate": "100.01"
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "vat",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1",
+      "priceRate": "100.01"
+     }
+    ],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "error": "1번 적용률은 0~100%, 소수 둘째 자리까지 입력하세요."
+  },
+  {
+   "id": "err-rate-decimals",
+   "legacyInput": {
+    "quoteType": "vat",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1",
+      "priceRate": "99.999"
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "vat",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1",
+      "priceRate": "99.999"
+     }
+    ],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "error": "1번 적용률은 0~100%, 소수 둘째 자리까지 입력하세요."
+  },
+  {
+   "id": "err-cost-missing",
+   "legacyInput": {
+    "quoteType": "cost",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "material": "1",
+      "labor": "1"
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "cost",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "material": "1",
+      "labor": "1"
+     }
+    ],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "error": "1번 재료비·노무비·경비를 모두 입력하세요. 없는 비용은 0으로 입력하세요."
+  },
+  {
+   "id": "err-cost-fraction",
+   "legacyInput": {
+    "quoteType": "cost",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "material": "1",
+      "labor": "1",
+      "expense": "0.5"
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "cost",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "material": "1",
+      "labor": "1",
+      "expense": "0.5"
+     }
+    ],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "error": "1번 비용은 0 이상의 원 단위 정수로 입력하세요."
+  },
+  {
+   "id": "err-item-long",
+   "legacyInput": {
+    "quoteType": "vat",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "ㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱ",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "vat",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "ㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱ",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     }
+    ],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "error": "1번 품목의 문구를 확인하세요."
+  },
+  {
+   "id": "ok-catalog-item-long",
+   "legacyInput": {
+    "quoteType": "catalog",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "ㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱ",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     }
+    ],
+    "catalogRevision": "3b104e7d714761054484defffbac7c9adf74843383b5c0206a9bd360c159d0f7"
+   },
+   "input": {
+    "quoteType": "catalog",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "ㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱ",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     }
+    ],
+    "catalogRevision": "3b104e7d714761054484defffbac7c9adf74843383b5c0206a9bd360c159d0f7",
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "expected": {
+    "quoteType": "catalog",
+    "customer": "시험 거래처",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "validity": "견적 유효기간 : 발행일로부터 30일",
+    "delivery": "납품 : 협의",
+    "payment": "결제 : 고객사와 협의",
+    "staffPhone": "010-0000-0001",
+    "staffDisplay": "홍길동 차장",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "staffId": "a",
+    "items": [
+     {
+      "imageIds": [],
+      "name": "ㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱ",
+      "category": "",
+      "unit": "식",
+      "note": "",
+      "qty": 1.0,
+      "price": 1,
+      "priceRate": 100.0
+     }
+    ]
+   }
+  },
+  {
+   "id": "err-notes-long",
+   "legacyInput": {
+    "quoteType": "vat",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가",
+     "나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나"
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "vat",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "category": "장비",
+      "name": "시험 품목",
+      "unit": "식",
+      "qty": "1",
+      "price": "1000",
+      "priceRate": 100
+     }
+    ],
+    "staffId": "a",
+    "notes": "가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가\n나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나나",
+    "format": "pdf"
+   },
+   "error": "참고사항을 확인하세요."
+  },
+  {
+   "id": "err-total-overflow",
+   "legacyInput": {
+    "quoteType": "vat",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1000000",
+      "price": "100000000000"
+     }
+    ]
+   },
+   "input": {
+    "quoteType": "vat",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1000000",
+      "price": "100000000000"
+     }
+    ],
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "error": "견적 합계가 지원 범위를 초과합니다."
+  },
+  {
+   "id": "err-catalog-revision",
+   "legacyInput": {
+    "quoteType": "catalog",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     }
+    ],
+    "catalogRevision": "old"
+   },
+   "input": {
+    "quoteType": "catalog",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     }
+    ],
+    "catalogRevision": "old",
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "error": "제품 엑셀이 변경되었습니다. 최신 내용을 불러온 후 다시 만들어주세요."
+  },
+  {
+   "id": "err-catalog-missing",
+   "legacyInput": {
+    "quoteType": "catalog",
+    "outputFormat": "pdf",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "numberManual": true,
+    "date": "2026-10-26",
+    "staff": "홍길동",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "notes": [
+     "1. 해당 건에 대한 견적가격입니다.",
+     ""
+    ],
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "catalogId": "gone",
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     }
+    ],
+    "catalogRevision": "3b104e7d714761054484defffbac7c9adf74843383b5c0206a9bd360c159d0f7"
+   },
+   "input": {
+    "quoteType": "catalog",
+    "customer": " 시험 거래처 ",
+    "contact": "담당 과장",
+    "phone": "02-000-0000",
+    "email": "test@example.com",
+    "title": "시험 견적",
+    "number": "NSFF0-20261026-001",
+    "date": "2026-10-26",
+    "staffPhone": "010-0000-0001",
+    "validity": "발행일로부터 30일",
+    "delivery": "협의",
+    "payment": "고객사와 협의",
+    "showFee": true,
+    "mergeCategories": true,
+    "blankRows": true,
+    "items": [
+     {
+      "catalogId": "gone",
+      "name": "a",
+      "unit": "식",
+      "qty": "1",
+      "price": "1"
+     }
+    ],
+    "catalogRevision": "3b104e7d714761054484defffbac7c9adf74843383b5c0206a9bd360c159d0f7",
+    "staffId": "a",
+    "notes": "1. 해당 건에 대한 견적가격입니다.",
+    "format": "pdf"
+   },
+   "error": "1번 제품이 엑셀에서 삭제되거나 이름이 변경되었습니다. 다시 선택하세요."
+  }
+ ]
+}
