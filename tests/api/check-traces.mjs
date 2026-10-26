@@ -29,4 +29,19 @@ for (const route of ["catalog", "access-catalog"]) {
   contains(files(route), "generated/pricelists/catalog.json");
   contains(files(route), "generated/pricelists/access.json");
 }
+// 포함 검사만으로는 원본 가격표·비교 문서가 함께 들어간 과도한 추적을 놓친다.
+const apiDir = path.join(root, ".next/server/app/api");
+for (const entry of readdirSync(apiDir, { recursive: true })) {
+  if (!entry.endsWith(".nft.json")) continue;
+  const tracePath = path.join(apiDir, entry);
+  for (const file of JSON.parse(readFileSync(tracePath, "utf8")).files) {
+    const absolute = path.resolve(path.dirname(tracePath), file);
+    const relative = path.relative(root, absolute).replaceAll("\\", "/");
+    assert(relative !== ".." && !relative.startsWith("../") && !path.isAbsolute(relative), "서버 번들에 프로젝트 외부 경로가 있습니다.");
+    assert(!/^(?:\.dryforge|\.git|tests|tools)(?:\/|$)/i.test(relative), "서버 번들에 개발용 자료가 있습니다.");
+    assert(!/^\.env(?:\.|$)/i.test(relative), "서버 번들에 환경 변수 원본이 있습니다.");
+    assert(!/^private(?:\/|$)/i.test(relative) || /^private\/fonts\/[^/]+\.ttf$/i.test(relative), "서버 번들에 글꼴 외 비공개 원본 자료가 있습니다.");
+  }
+}
 console.log(`서버 번들 포함 확인 통과: 가격표 2개, 사진 ${images.length}개, 글꼴 4개, 로고 3개, 열 비율`);
+console.log("서버 번들 제외 확인 통과: 프로젝트 외부·비공개 원본·환경 변수·개발용 자료 없음");
