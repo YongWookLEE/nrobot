@@ -13,14 +13,23 @@ def compact(text):
     return re.sub(r"\s", "", text)
 
 
+def contains_amount(text, value):
+    if re.fullmatch(r"\d[\d,]*", value):
+        # 원문 공백·줄바꿈을 보존해 수량과 옆 칸 금액을 붙이지 않는다.
+        # 1,000은 11,000이나 1,000,000의 일부로 일치하면 안 된다.
+        return re.search(r"(?<![\d,.])" + re.escape(value) + r"(?![\d,.])", text) is not None
+    # 한글 금액은 PDF의 글자 간 공백·줄바꿈 차이만 허용한다.
+    return compact(value) in compact(text)
+
+
 def compare_pair(old_path, new_path, expected, output, label, font_file, dpi=96):
     """두 문서의 모든 쪽을 검사한다. 검사 실패도 비교 그림과 보고서로 남긴다."""
     output.mkdir(parents=True, exist_ok=True)
     with pymupdf.open(old_path) as old, pymupdf.open(new_path) as new:
-        old_text = compact("".join(page.get_text() for page in old))
-        new_text = compact("".join(page.get_text() for page in new))
-        missing_old = sorted({value for value in expected if compact(value) not in old_text})
-        missing_new = sorted({value for value in expected if compact(value) not in new_text})
+        old_text = "\n".join(page.get_text() for page in old)
+        new_text = "\n".join(page.get_text() for page in new)
+        missing_old = sorted({value for value in expected if not contains_amount(old_text, value)})
+        missing_new = sorted({value for value in expected if not contains_amount(new_text, value)})
         images = []
         for index in range(max(len(old), len(new))):
             left = old[index] if index < len(old) else None

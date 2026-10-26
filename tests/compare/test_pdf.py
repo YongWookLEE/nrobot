@@ -50,6 +50,25 @@ class ComparePdfTest(unittest.TestCase):
                 self.assertEqual(MODULE.main(["--root", directory]), 1)
             self.assertFalse((Path(directory) / "private/compare/report.json").exists())
 
+    def test_amount_must_not_match_part_of_a_larger_amount(self):
+        with tempfile.TemporaryDirectory() as directory:
+            folder = Path(directory)
+            old, new = folder / "old.pdf", folder / "new.pdf"
+            self.make_pdf(old, ["1,000"])
+            self.make_pdf(new, ["11,000"])
+            result = MODULE.compare_pair(old, new, ["1,000"], folder / "images", "case", ROOT / "assets/fonts/KoPubDotum-Medium.ttf", 72)
+            self.assertFalse(result["ok"])
+            self.assertEqual(result["missing_new_amounts"], ["1,000"])
+
+    def test_quantity_and_price_remain_separate_numbers(self):
+        with tempfile.TemporaryDirectory() as directory:
+            folder = Path(directory)
+            old, new = folder / "old.pdf", folder / "new.pdf"
+            self.make_pdf(old, ["1\n1,000"])
+            self.make_pdf(new, ["1\n1,000"])
+            result = MODULE.compare_pair(old, new, ["1,000"], folder / "images", "case", ROOT / "assets/fonts/KoPubDotum-Medium.ttf", 72)
+            self.assertTrue(result["ok"])
+
 
 if __name__ == "__main__":
     unittest.main()
