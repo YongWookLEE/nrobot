@@ -22,7 +22,7 @@ nrobot-web/
 │   ├── pricelists/              ← 가격표 xlsx 해석·변환·서버 로더
 │   ├── auth/ + proxy.ts         ← 공용 비밀번호 입장(서명 쿠키)
 │   ├── staff/                   ← STAFF_CONFIG 환경 변수 읽기·검증
-│   ├── output/                  ← PDF·Excel 생성기 (모양은 사용자 승인 대기)
+│   ├── output/                  ← PDF·Excel 생성기 (합성 입력 비교 모양 승인 완료)
 │   └── app/                     ← 페이지·API (입장 화면만 있음, 메인 화면 미구현)
 ├── scripts/prepare-data.ts      ← 빌드 전 가격표 변환(private/prices → generated/pricelists)
 ├── tools/golden/generate.py     ← 기존 Python 코드로 기준 정답 생성(일회성)
